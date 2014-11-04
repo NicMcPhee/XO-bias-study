@@ -1,0 +1,190 @@
+
+| ECJ
+| An evolutionary computation system (version 21)
+| By Sean Luke
+| Contributors: L. Panait, G. Balan, S. Paus, Z. Skolicki, R. Kicinger,
+|               E. Popovici, K. Sullivan, J. Harrison, J. Bassett, R. Hubley,
+|               A. Desai, A. Chircop, J. Compton, W. Haddon, S. Donnelly,
+|               B. Jamil, J. Zelibor, E. Kangas, F. Abidi, H. Mooers,
+|               J. O'Beirne, L. Manzoni, K. Talukder, and J. McDermott
+| URL: http://cs.gmu.edu/~eclab/projects/ecj/
+| Mail: ecj-help@cs.gmu.edu
+|       (better: join ECJ-INTEREST at URL above)
+| Date: May 1, 2013
+| Current Java: 1.8.0_20 / Java HotSpot(TM) 64-Bit Server VM-25.20-b23
+| Required Minimum Java: 1.5
+
+
+Threads:  breed/1 eval/1
+Seed: 2030545816 
+Job: 0
+Setting up
+Processing GP Types
+Processing GP Node Constraints
+Processing GP Function Sets
+Processing GP Tree Constraints
+{0.0,0.0},
+{0.1013418129032258,0.10116843580080967},
+{0.2026836258064516,0.2012987442057504},
+{0.3040254387096774,0.29936345043487556},
+{0.4053672516129032,0.39435627562958214},
+{0.5067090645161291,0.48530246265870547},
+{0.6080508774193548,0.5712687784683051},
+{0.7093926903225807,0.6513730903372668},
+{0.8107345032258064,0.7247934177731555},
+{0.9120763161290322,0.7907763671634128},
+{1.0134181290322581,0.8486448626307651},
+{1.114759941935484,0.8978050937636262},
+{1.2161017548387096,0.9377526089282201},
+{1.3174435677419354,0.9680774916366526},
+{1.4187853806451614,0.9884685668542701},
+{1.520127193548387,0.9987165940838062},
+{1.6214690064516128,0.9987164144608743},
+{1.7228108193548388,0.9884680298286528},
+{1.8241526322580643,0.968076602718972},
+{1.9254944451612903,0.937751377239995},
+{2.0268362580645163,0.8978035319436728},
+{2.1281780709677416,0.8486429867055063},
+{2.229519883870968,0.7907741963824234},
+{2.3308616967741935,0.7247909744116361},
+{2.4322035096774193,0.6513703994674698},
+{2.5335453225806455,0.5712658677022578},
+{2.6348871354838708,0.48529936186487455},
+{2.7362289483870965,0.3943530166263797},
+{2.8375707612903227,0.2993600666641597},
+{2.9389125741935485,0.20129527038966633},
+{3.040254387096774,0.10116490758549165},
+{3.1415962,-3.5464102067039848E-6},
+{3.2429380129032257,-0.10117196401485519},
+{3.3442798258064514,-0.2013022180193025},
+{3.4456216387096776,-0.2993668342018264},
+{3.546963451612903,-0.3943595346278247},
+{3.6483052645161287,-0.4853055634464326},
+{3.749647077419355,-0.5712716892271674},
+{3.8509888903225806,-0.6513757811988714},
+{3.9523307032258064,-0.724795861125559},
+{4.053672516129033,-0.790778537934457},
+{4.155014329032259,-0.8486467385453509},
+{4.256356141935483,-0.8978066555722872},
+{4.357697954838709,-0.9377538406046511},
+{4.459039767741936,-0.9680783805421577},
+{4.560381580645161,-0.9884691038674553},
+{4.661723393548387,-0.9987167736941773},
+{4.763065206451613,-0.9987162348253815},
+{4.8644070193548385,-0.9884674927906035},
+{4.965748832258065,-0.9680757137891156},
+{5.067090645161291,-0.9377501455399755},
+{5.168432458064516,-0.897801970112428},
+{5.2697742709677415,-0.848641110769574},
+{5.371116083870968,-0.7907720255914883},
+{5.472457896774193,-0.7247885310410014},
+{5.573799709677419,-0.6513677085894805},
+{5.675141522580645,-0.5712629569290261},
+{5.776483335483871,-0.48529626106493984},
+{5.877825148387097,-0.39434975761821695},
+{5.979166961290323,-0.29935668288967854},
+{6.080508774193548,-0.20129179657105065},
+{6.181850587096774,-0.10116137936890177},
+Initializing Generation 0
+Subpop 0 best fitness of generation Fitness: Standardized=21.857069 Adjusted=0.04375014 Hits=2
+Generation 1
+Subpop 0 best fitness of generation Fitness: Standardized=21.856798 Adjusted=0.04375066 Hits=0
+Generation 2
+Subpop 0 best fitness of generation Fitness: Standardized=21.390263 Adjusted=0.04466227 Hits=1
+Generation 3
+Subpop 0 best fitness of generation Fitness: Standardized=21.565594 Adjusted=0.044315252 Hits=1
+Generation 4
+Subpop 0 best fitness of generation Fitness: Standardized=20.976835 Adjusted=0.045502458 Hits=3
+Generation 5
+Subpop 0 best fitness of generation Fitness: Standardized=19.438087 Adjusted=0.048928257 Hits=1
+Generation 6
+Subpop 0 best fitness of generation Fitness: Standardized=19.44848 Adjusted=0.04890339 Hits=1
+Generation 7
+Subpop 0 best fitness of generation Fitness: Standardized=17.997078 Adjusted=0.052639674 Hits=5
+Generation 8
+Subpop 0 best fitness of generation Fitness: Standardized=17.997078 Adjusted=0.052639674 Hits=5
+Generation 9
+Subpop 0 best fitness of generation Fitness: Standardized=18.017923 Adjusted=0.052581977 Hits=1
+Generation 10
+Subpop 0 best fitness of generation Fitness: Standardized=17.646631 Adjusted=0.05362899 Hits=2
+Generation 11
+Subpop 0 best fitness of generation Fitness: Standardized=17.646631 Adjusted=0.05362899 Hits=2
+Generation 12
+Subpop 0 best fitness of generation Fitness: Standardized=17.19182 Adjusted=0.05496976 Hits=0
+Generation 13
+Subpop 0 best fitness of generation Fitness: Standardized=16.504341 Adjusted=0.057128686 Hits=3
+Generation 14
+Subpop 0 best fitness of generation Fitness: Standardized=16.504341 Adjusted=0.057128686 Hits=3
+Generation 15
+Subpop 0 best fitness of generation Fitness: Standardized=16.203844 Adjusted=0.058126543 Hits=1
+Generation 16
+Subpop 0 best fitness of generation Fitness: Standardized=16.124023 Adjusted=0.05839749 Hits=2
+Generation 17
+Subpop 0 best fitness of generation Fitness: Standardized=15.983955 Adjusted=0.0588791 Hits=2
+Generation 18
+Subpop 0 best fitness of generation Fitness: Standardized=15.969425 Adjusted=0.058929514 Hits=0
+Generation 19
+Subpop 0 best fitness of generation Fitness: Standardized=15.822433 Adjusted=0.05944443 Hits=5
+Generation 20
+Subpop 0 best fitness of generation Fitness: Standardized=15.700385 Adjusted=0.059878856 Hits=2
+Generation 21
+Subpop 0 best fitness of generation Fitness: Standardized=15.571242 Adjusted=0.0603455 Hits=2
+Generation 22
+Subpop 0 best fitness of generation Fitness: Standardized=14.987372 Adjusted=0.06254937 Hits=3
+Generation 23
+Subpop 0 best fitness of generation Fitness: Standardized=14.987372 Adjusted=0.06254937 Hits=3
+Generation 24
+Subpop 0 best fitness of generation Fitness: Standardized=14.916584 Adjusted=0.06282755 Hits=2
+Generation 25
+Subpop 0 best fitness of generation Fitness: Standardized=13.821539 Adjusted=0.06746938 Hits=7
+Generation 26
+Subpop 0 best fitness of generation Fitness: Standardized=12.5707 Adjusted=0.07368817 Hits=3
+Generation 27
+Subpop 0 best fitness of generation Fitness: Standardized=11.770336 Adjusted=0.078306474 Hits=2
+Generation 28
+Subpop 0 best fitness of generation Fitness: Standardized=11.746136 Adjusted=0.07845515 Hits=0
+Generation 29
+Subpop 0 best fitness of generation Fitness: Standardized=11.129206 Adjusted=0.08244563 Hits=0
+Generation 30
+Subpop 0 best fitness of generation Fitness: Standardized=10.001277 Adjusted=0.090898536 Hits=0
+Generation 31
+Subpop 0 best fitness of generation Fitness: Standardized=9.930222 Adjusted=0.09148946 Hits=2
+Generation 32
+Subpop 0 best fitness of generation Fitness: Standardized=8.561844 Adjusted=0.10458234 Hits=1
+Generation 33
+Subpop 0 best fitness of generation Fitness: Standardized=8.539306 Adjusted=0.10482943 Hits=1
+Generation 34
+Subpop 0 best fitness of generation Fitness: Standardized=8.539306 Adjusted=0.10482943 Hits=1
+Generation 35
+Subpop 0 best fitness of generation Fitness: Standardized=8.041035 Adjusted=0.11060681 Hits=0
+Generation 36
+Subpop 0 best fitness of generation Fitness: Standardized=8.008062 Adjusted=0.11101166 Hits=3
+Generation 37
+Subpop 0 best fitness of generation Fitness: Standardized=7.8587832 Adjusted=0.112882316 Hits=3
+Generation 38
+Subpop 0 best fitness of generation Fitness: Standardized=7.7700806 Adjusted=0.114024036 Hits=3
+Generation 39
+Subpop 0 best fitness of generation Fitness: Standardized=7.6021237 Adjusted=0.116250366 Hits=3
+Generation 40
+Subpop 0 best fitness of generation Fitness: Standardized=7.577849 Adjusted=0.116579354 Hits=2
+Generation 41
+Subpop 0 best fitness of generation Fitness: Standardized=7.577849 Adjusted=0.116579354 Hits=2
+Generation 42
+Subpop 0 best fitness of generation Fitness: Standardized=7.577849 Adjusted=0.116579354 Hits=2
+Generation 43
+Subpop 0 best fitness of generation Fitness: Standardized=7.547585 Adjusted=0.116992116 Hits=2
+Generation 44
+Subpop 0 best fitness of generation Fitness: Standardized=7.504728 Adjusted=0.11758165 Hits=5
+Generation 45
+Subpop 0 best fitness of generation Fitness: Standardized=7.296382 Adjusted=0.12053447 Hits=3
+Generation 46
+Subpop 0 best fitness of generation Fitness: Standardized=7.0529194 Adjusted=0.124178566 Hits=3
+Generation 47
+Subpop 0 best fitness of generation Fitness: Standardized=7.0456543 Adjusted=0.1242907 Hits=3
+Generation 48
+Subpop 0 best fitness of generation Fitness: Standardized=6.467337 Adjusted=0.13391654 Hits=8
+Generation 49
+Subpop 0 best fitness of generation Fitness: Standardized=6.467337 Adjusted=0.13391654 Hits=8
+Generation 50
+Subpop 0 best fitness of generation Fitness: Standardized=6.136397 Adjusted=0.14012673 Hits=4
+Subpop 0 best fitness of run: Fitness: Standardized=6.136397 Adjusted=0.14012673 Hits=4
