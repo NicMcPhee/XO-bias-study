@@ -1,0 +1,603 @@
+##AlfredToDo 3.0
+Job -title {Test of ECJ cluster runs with sine problem} -subtasks {
+    Task -title {Test of ECJ cluster runs with sine problem - run 0} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out0_false.stat &> ../Results/sine/log0_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 0} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out0_true.stat &> ../Results/sine/log0_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 1} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out1_false.stat &> ../Results/sine/log1_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 1} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out1_true.stat &> ../Results/sine/log1_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 2} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out2_false.stat &> ../Results/sine/log2_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 2} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out2_true.stat &> ../Results/sine/log2_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 3} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out3_false.stat &> ../Results/sine/log3_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 3} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out3_true.stat &> ../Results/sine/log3_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 4} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out4_false.stat &> ../Results/sine/log4_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 4} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out4_true.stat &> ../Results/sine/log4_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 5} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out5_false.stat &> ../Results/sine/log5_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 5} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out5_true.stat &> ../Results/sine/log5_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 6} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out6_false.stat &> ../Results/sine/log6_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 6} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out6_true.stat &> ../Results/sine/log6_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 7} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out7_false.stat &> ../Results/sine/log7_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 7} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out7_true.stat &> ../Results/sine/log7_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 8} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out8_false.stat &> ../Results/sine/log8_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 8} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out8_true.stat &> ../Results/sine/log8_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 9} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out9_false.stat &> ../Results/sine/log9_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 9} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out9_true.stat &> ../Results/sine/log9_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 10} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out10_false.stat &> ../Results/sine/log10_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 10} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out10_true.stat &> ../Results/sine/log10_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 11} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out11_false.stat &> ../Results/sine/log11_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 11} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out11_true.stat &> ../Results/sine/log11_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 12} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out12_false.stat &> ../Results/sine/log12_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 12} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out12_true.stat &> ../Results/sine/log12_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 13} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out13_false.stat &> ../Results/sine/log13_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 13} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out13_true.stat &> ../Results/sine/log13_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 14} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out14_false.stat &> ../Results/sine/log14_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 14} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out14_true.stat &> ../Results/sine/log14_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 15} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out15_false.stat &> ../Results/sine/log15_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 15} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out15_true.stat &> ../Results/sine/log15_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 16} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out16_false.stat &> ../Results/sine/log16_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 16} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out16_true.stat &> ../Results/sine/log16_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 17} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out17_false.stat &> ../Results/sine/log17_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 17} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out17_true.stat &> ../Results/sine/log17_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 18} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out18_false.stat &> ../Results/sine/log18_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 18} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out18_true.stat &> ../Results/sine/log18_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 19} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out19_false.stat &> ../Results/sine/log19_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 19} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out19_true.stat &> ../Results/sine/log19_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 20} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out20_false.stat &> ../Results/sine/log20_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 20} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out20_true.stat &> ../Results/sine/log20_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 21} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out21_false.stat &> ../Results/sine/log21_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 21} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out21_true.stat &> ../Results/sine/log21_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 22} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out22_false.stat &> ../Results/sine/log22_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 22} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out22_true.stat &> ../Results/sine/log22_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 23} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out23_false.stat &> ../Results/sine/log23_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 23} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out23_true.stat &> ../Results/sine/log23_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 24} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out24_false.stat &> ../Results/sine/log24_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 24} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out24_true.stat &> ../Results/sine/log24_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 25} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out25_false.stat &> ../Results/sine/log25_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 25} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out25_true.stat &> ../Results/sine/log25_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 26} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out26_false.stat &> ../Results/sine/log26_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 26} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out26_true.stat &> ../Results/sine/log26_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 27} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out27_false.stat &> ../Results/sine/log27_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 27} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out27_true.stat &> ../Results/sine/log27_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 28} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out28_false.stat &> ../Results/sine/log28_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 28} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out28_true.stat &> ../Results/sine/log28_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 29} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out29_false.stat &> ../Results/sine/log29_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 29} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out29_true.stat &> ../Results/sine/log29_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 30} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out30_false.stat &> ../Results/sine/log30_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 30} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out30_true.stat &> ../Results/sine/log30_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 31} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out31_false.stat &> ../Results/sine/log31_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 31} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out31_true.stat &> ../Results/sine/log31_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 32} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out32_false.stat &> ../Results/sine/log32_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 32} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out32_true.stat &> ../Results/sine/log32_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 33} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out33_false.stat &> ../Results/sine/log33_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 33} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out33_true.stat &> ../Results/sine/log33_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 34} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out34_false.stat &> ../Results/sine/log34_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 34} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out34_true.stat &> ../Results/sine/log34_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 35} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out35_false.stat &> ../Results/sine/log35_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 35} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out35_true.stat &> ../Results/sine/log35_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 36} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out36_false.stat &> ../Results/sine/log36_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 36} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out36_true.stat &> ../Results/sine/log36_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 37} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out37_false.stat &> ../Results/sine/log37_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 37} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out37_true.stat &> ../Results/sine/log37_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 38} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out38_false.stat &> ../Results/sine/log38_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 38} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out38_true.stat &> ../Results/sine/log38_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 39} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out39_false.stat &> ../Results/sine/log39_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 39} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out39_true.stat &> ../Results/sine/log39_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 40} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out40_false.stat &> ../Results/sine/log40_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 40} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out40_true.stat &> ../Results/sine/log40_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 41} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out41_false.stat &> ../Results/sine/log41_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 41} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out41_true.stat &> ../Results/sine/log41_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 42} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out42_false.stat &> ../Results/sine/log42_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 42} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out42_true.stat &> ../Results/sine/log42_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 43} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out43_false.stat &> ../Results/sine/log43_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 43} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out43_true.stat &> ../Results/sine/log43_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 44} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out44_false.stat &> ../Results/sine/log44_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 44} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out44_true.stat &> ../Results/sine/log44_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 45} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out45_false.stat &> ../Results/sine/log45_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 45} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out45_true.stat &> ../Results/sine/log45_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 46} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out46_false.stat &> ../Results/sine/log46_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 46} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out46_true.stat &> ../Results/sine/log46_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 47} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out47_false.stat &> ../Results/sine/log47_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 47} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out47_true.stat &> ../Results/sine/log47_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 48} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out48_false.stat &> ../Results/sine/log48_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 48} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out48_true.stat &> ../Results/sine/log48_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 49} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out49_false.stat &> ../Results/sine/log49_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 49} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out49_true.stat &> ../Results/sine/log49_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 50} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out50_false.stat &> ../Results/sine/log50_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 50} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out50_true.stat &> ../Results/sine/log50_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 51} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out51_false.stat &> ../Results/sine/log51_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 51} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out51_true.stat &> ../Results/sine/log51_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 52} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out52_false.stat &> ../Results/sine/log52_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 52} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out52_true.stat &> ../Results/sine/log52_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 53} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out53_false.stat &> ../Results/sine/log53_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 53} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out53_true.stat &> ../Results/sine/log53_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 54} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out54_false.stat &> ../Results/sine/log54_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 54} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out54_true.stat &> ../Results/sine/log54_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 55} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out55_false.stat &> ../Results/sine/log55_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 55} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out55_true.stat &> ../Results/sine/log55_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 56} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out56_false.stat &> ../Results/sine/log56_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 56} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out56_true.stat &> ../Results/sine/log56_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 57} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out57_false.stat &> ../Results/sine/log57_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 57} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out57_true.stat &> ../Results/sine/log57_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 58} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out58_false.stat &> ../Results/sine/log58_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 58} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out58_true.stat &> ../Results/sine/log58_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 59} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out59_false.stat &> ../Results/sine/log59_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 59} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out59_true.stat &> ../Results/sine/log59_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 60} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out60_false.stat &> ../Results/sine/log60_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 60} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out60_true.stat &> ../Results/sine/log60_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 61} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out61_false.stat &> ../Results/sine/log61_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 61} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out61_true.stat &> ../Results/sine/log61_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 62} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out62_false.stat &> ../Results/sine/log62_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 62} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out62_true.stat &> ../Results/sine/log62_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 63} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out63_false.stat &> ../Results/sine/log63_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 63} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out63_true.stat &> ../Results/sine/log63_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 64} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out64_false.stat &> ../Results/sine/log64_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 64} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out64_true.stat &> ../Results/sine/log64_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 65} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out65_false.stat &> ../Results/sine/log65_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 65} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out65_true.stat &> ../Results/sine/log65_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 66} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out66_false.stat &> ../Results/sine/log66_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 66} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out66_true.stat &> ../Results/sine/log66_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 67} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out67_false.stat &> ../Results/sine/log67_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 67} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out67_true.stat &> ../Results/sine/log67_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 68} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out68_false.stat &> ../Results/sine/log68_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 68} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out68_true.stat &> ../Results/sine/log68_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 69} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out69_false.stat &> ../Results/sine/log69_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 69} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out69_true.stat &> ../Results/sine/log69_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 70} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out70_false.stat &> ../Results/sine/log70_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 70} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out70_true.stat &> ../Results/sine/log70_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 71} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out71_false.stat &> ../Results/sine/log71_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 71} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out71_true.stat &> ../Results/sine/log71_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 72} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out72_false.stat &> ../Results/sine/log72_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 72} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out72_true.stat &> ../Results/sine/log72_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 73} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out73_false.stat &> ../Results/sine/log73_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 73} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out73_true.stat &> ../Results/sine/log73_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 74} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out74_false.stat &> ../Results/sine/log74_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 74} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out74_true.stat &> ../Results/sine/log74_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 75} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out75_false.stat &> ../Results/sine/log75_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 75} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out75_true.stat &> ../Results/sine/log75_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 76} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out76_false.stat &> ../Results/sine/log76_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 76} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out76_true.stat &> ../Results/sine/log76_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 77} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out77_false.stat &> ../Results/sine/log77_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 77} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out77_true.stat &> ../Results/sine/log77_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 78} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out78_false.stat &> ../Results/sine/log78_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 78} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out78_true.stat &> ../Results/sine/log78_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 79} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out79_false.stat &> ../Results/sine/log79_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 79} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out79_true.stat &> ../Results/sine/log79_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 80} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out80_false.stat &> ../Results/sine/log80_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 80} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out80_true.stat &> ../Results/sine/log80_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 81} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out81_false.stat &> ../Results/sine/log81_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 81} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out81_true.stat &> ../Results/sine/log81_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 82} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out82_false.stat &> ../Results/sine/log82_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 82} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out82_true.stat &> ../Results/sine/log82_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 83} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out83_false.stat &> ../Results/sine/log83_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 83} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out83_true.stat &> ../Results/sine/log83_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 84} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out84_false.stat &> ../Results/sine/log84_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 84} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out84_true.stat &> ../Results/sine/log84_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 85} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out85_false.stat &> ../Results/sine/log85_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 85} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out85_true.stat &> ../Results/sine/log85_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 86} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out86_false.stat &> ../Results/sine/log86_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 86} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out86_true.stat &> ../Results/sine/log86_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 87} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out87_false.stat &> ../Results/sine/log87_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 87} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out87_true.stat &> ../Results/sine/log87_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 88} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out88_false.stat &> ../Results/sine/log88_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 88} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out88_true.stat &> ../Results/sine/log88_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 89} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out89_false.stat &> ../Results/sine/log89_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 89} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out89_true.stat &> ../Results/sine/log89_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 90} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out90_false.stat &> ../Results/sine/log90_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 90} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out90_true.stat &> ../Results/sine/log90_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 91} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out91_false.stat &> ../Results/sine/log91_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 91} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out91_true.stat &> ../Results/sine/log91_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 92} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out92_false.stat &> ../Results/sine/log92_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 92} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out92_true.stat &> ../Results/sine/log92_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 93} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out93_false.stat &> ../Results/sine/log93_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 93} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out93_true.stat &> ../Results/sine/log93_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 94} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out94_false.stat &> ../Results/sine/log94_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 94} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out94_true.stat &> ../Results/sine/log94_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 95} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out95_false.stat &> ../Results/sine/log95_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 95} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out95_true.stat &> ../Results/sine/log95_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 96} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out96_false.stat &> ../Results/sine/log96_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 96} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out96_true.stat &> ../Results/sine/log96_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 97} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out97_false.stat &> ../Results/sine/log97_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 97} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out97_true.stat &> ../Results/sine/log97_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 98} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out98_false.stat &> ../Results/sine/log98_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 98} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out98_true.stat &> ../Results/sine/log98_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 99} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/sine//out99_false.stat &> ../Results/sine/log99_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with sine problem - run 99} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/regression/sine_erc.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/sine//out99_true.stat &> ../Results/sine/log99_true.txt; echo Finished Run"} -service {cluster}
+    }
+}
