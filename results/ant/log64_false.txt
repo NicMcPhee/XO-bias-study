@@ -1,0 +1,128 @@
+
+| ECJ
+| An evolutionary computation system (version 21)
+| By Sean Luke
+| Contributors: L. Panait, G. Balan, S. Paus, Z. Skolicki, R. Kicinger,
+|               E. Popovici, K. Sullivan, J. Harrison, J. Bassett, R. Hubley,
+|               A. Desai, A. Chircop, J. Compton, W. Haddon, S. Donnelly,
+|               B. Jamil, J. Zelibor, E. Kangas, F. Abidi, H. Mooers,
+|               J. O'Beirne, L. Manzoni, K. Talukder, and J. McDermott
+| URL: http://cs.gmu.edu/~eclab/projects/ecj/
+| Mail: ecj-help@cs.gmu.edu
+|       (better: join ECJ-INTEREST at URL above)
+| Date: May 1, 2013
+| Current Java: 1.7.0_51 / Java HotSpot(TM) 64-Bit Server VM-24.51-b03
+| Required Minimum Java: 1.5
+
+
+Threads:  breed/1 eval/1
+Seed: -2098622148 
+Job: 0
+Setting up
+Processing GP Types
+Processing GP Node Constraints
+Processing GP Function Sets
+Processing GP Tree Constraints
+Initializing Generation 0
+Subpop 0 best fitness of generation Fitness: Standardized=24.0 Adjusted=0.04 Hits=65
+Generation 1
+Subpop 0 best fitness of generation Fitness: Standardized=24.0 Adjusted=0.04 Hits=65
+Generation 2
+Subpop 0 best fitness of generation Fitness: Standardized=39.0 Adjusted=0.025 Hits=50
+Generation 3
+Subpop 0 best fitness of generation Fitness: Standardized=40.0 Adjusted=0.024390243 Hits=49
+Generation 4
+Subpop 0 best fitness of generation Fitness: Standardized=39.0 Adjusted=0.025 Hits=50
+Generation 5
+Subpop 0 best fitness of generation Fitness: Standardized=33.0 Adjusted=0.029411765 Hits=56
+Generation 6
+Subpop 0 best fitness of generation Fitness: Standardized=39.0 Adjusted=0.025 Hits=50
+Generation 7
+Subpop 0 best fitness of generation Fitness: Standardized=39.0 Adjusted=0.025 Hits=50
+Generation 8
+Subpop 0 best fitness of generation Fitness: Standardized=35.0 Adjusted=0.027777778 Hits=54
+Generation 9
+Subpop 0 best fitness of generation Fitness: Standardized=35.0 Adjusted=0.027777778 Hits=54
+Generation 10
+Subpop 0 best fitness of generation Fitness: Standardized=35.0 Adjusted=0.027777778 Hits=54
+Generation 11
+Subpop 0 best fitness of generation Fitness: Standardized=35.0 Adjusted=0.027777778 Hits=54
+Generation 12
+Subpop 0 best fitness of generation Fitness: Standardized=35.0 Adjusted=0.027777778 Hits=54
+Generation 13
+Subpop 0 best fitness of generation Fitness: Standardized=34.0 Adjusted=0.028571429 Hits=55
+Generation 14
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 15
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 16
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 17
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 18
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 19
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 20
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 21
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 22
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 23
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 24
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 25
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 26
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 27
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 28
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 29
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 30
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 31
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 32
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 33
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 34
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 35
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 36
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 37
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 38
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 39
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 40
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 41
+Subpop 0 best fitness of generation Fitness: Standardized=23.0 Adjusted=0.041666668 Hits=66
+Generation 42
+Subpop 0 best fitness of generation Fitness: Standardized=20.0 Adjusted=0.04761905 Hits=69
+Generation 43
+Subpop 0 best fitness of generation Fitness: Standardized=20.0 Adjusted=0.04761905 Hits=69
+Generation 44
+Subpop 0 best fitness of generation Fitness: Standardized=20.0 Adjusted=0.04761905 Hits=69
+Generation 45
+Subpop 0 best fitness of generation Fitness: Standardized=20.0 Adjusted=0.04761905 Hits=69
+Generation 46
+Subpop 0 best fitness of generation Fitness: Standardized=20.0 Adjusted=0.04761905 Hits=69
+Generation 47
+Subpop 0 best fitness of generation Fitness: Standardized=18.0 Adjusted=0.05263158 Hits=71
+Generation 48
+Subpop 0 best fitness of generation Fitness: Standardized=18.0 Adjusted=0.05263158 Hits=71
+Generation 49
+Subpop 0 best fitness of generation Fitness: Standardized=18.0 Adjusted=0.05263158 Hits=71
+Generation 50
+Subpop 0 best fitness of generation Fitness: Standardized=18.0 Adjusted=0.05263158 Hits=71
+Subpop 0 best fitness of run: Fitness: Standardized=18.0 Adjusted=0.05263158 Hits=71

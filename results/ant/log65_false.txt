@@ -1,0 +1,57 @@
+
+| ECJ
+| An evolutionary computation system (version 21)
+| By Sean Luke
+| Contributors: L. Panait, G. Balan, S. Paus, Z. Skolicki, R. Kicinger,
+|               E. Popovici, K. Sullivan, J. Harrison, J. Bassett, R. Hubley,
+|               A. Desai, A. Chircop, J. Compton, W. Haddon, S. Donnelly,
+|               B. Jamil, J. Zelibor, E. Kangas, F. Abidi, H. Mooers,
+|               J. O'Beirne, L. Manzoni, K. Talukder, and J. McDermott
+| URL: http://cs.gmu.edu/~eclab/projects/ecj/
+| Mail: ecj-help@cs.gmu.edu
+|       (better: join ECJ-INTEREST at URL above)
+| Date: May 1, 2013
+| Current Java: 1.7.0_51 / Java HotSpot(TM) 64-Bit Server VM-24.51-b03
+| Required Minimum Java: 1.5
+
+
+Threads:  breed/1 eval/1
+Seed: -2098621693 
+Job: 0
+Setting up
+Processing GP Types
+Processing GP Node Constraints
+Processing GP Function Sets
+Processing GP Tree Constraints
+Initializing Generation 0
+Subpop 0 best fitness of generation Fitness: Standardized=44.0 Adjusted=0.022222223 Hits=45
+Generation 1
+Subpop 0 best fitness of generation Fitness: Standardized=49.0 Adjusted=0.02 Hits=40
+Generation 2
+Subpop 0 best fitness of generation Fitness: Standardized=49.0 Adjusted=0.02 Hits=40
+Generation 3
+Subpop 0 best fitness of generation Fitness: Standardized=49.0 Adjusted=0.02 Hits=40
+Generation 4
+Subpop 0 best fitness of generation Fitness: Standardized=49.0 Adjusted=0.02 Hits=40
+Generation 5
+Subpop 0 best fitness of generation Fitness: Standardized=39.0 Adjusted=0.025 Hits=50
+Generation 6
+Subpop 0 best fitness of generation Fitness: Standardized=37.0 Adjusted=0.02631579 Hits=52
+Generation 7
+Subpop 0 best fitness of generation Fitness: Standardized=32.0 Adjusted=0.030303031 Hits=57
+Generation 8
+Subpop 0 best fitness of generation Fitness: Standardized=24.0 Adjusted=0.04 Hits=65
+Generation 9
+Subpop 0 best fitness of generation Fitness: Standardized=24.0 Adjusted=0.04 Hits=65
+Generation 10
+Subpop 0 best fitness of generation Fitness: Standardized=24.0 Adjusted=0.04 Hits=65
+Generation 11
+Subpop 0 best fitness of generation Fitness: Standardized=1.0 Adjusted=0.5 Hits=88
+Generation 12
+Subpop 0 best fitness of generation Fitness: Standardized=1.0 Adjusted=0.5 Hits=88
+Generation 13
+Subpop 0 best fitness of generation Fitness: Standardized=1.0 Adjusted=0.5 Hits=88
+Generation 14
+Subpop 0 best fitness of generation Fitness: Standardized=0.0 Adjusted=1.0 Hits=89
+Found Ideal Individual
+Subpop 0 best fitness of run: Fitness: Standardized=0.0 Adjusted=1.0 Hits=89

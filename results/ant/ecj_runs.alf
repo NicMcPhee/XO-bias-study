@@ -1,0 +1,603 @@
+##AlfredToDo 3.0
+Job -title {Test of ECJ cluster runs with Santa Fe ant problem} -subtasks {
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 0} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out0_false.stat &> ../Results/ant/log0_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 0} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out0_true.stat &> ../Results/ant/log0_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 1} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out1_false.stat &> ../Results/ant/log1_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 1} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out1_true.stat &> ../Results/ant/log1_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 2} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out2_false.stat &> ../Results/ant/log2_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 2} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out2_true.stat &> ../Results/ant/log2_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 3} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out3_false.stat &> ../Results/ant/log3_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 3} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out3_true.stat &> ../Results/ant/log3_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 4} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out4_false.stat &> ../Results/ant/log4_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 4} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out4_true.stat &> ../Results/ant/log4_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 5} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out5_false.stat &> ../Results/ant/log5_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 5} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out5_true.stat &> ../Results/ant/log5_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 6} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out6_false.stat &> ../Results/ant/log6_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 6} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out6_true.stat &> ../Results/ant/log6_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 7} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out7_false.stat &> ../Results/ant/log7_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 7} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out7_true.stat &> ../Results/ant/log7_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 8} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out8_false.stat &> ../Results/ant/log8_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 8} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out8_true.stat &> ../Results/ant/log8_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 9} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out9_false.stat &> ../Results/ant/log9_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 9} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out9_true.stat &> ../Results/ant/log9_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 10} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out10_false.stat &> ../Results/ant/log10_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 10} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out10_true.stat &> ../Results/ant/log10_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 11} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out11_false.stat &> ../Results/ant/log11_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 11} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out11_true.stat &> ../Results/ant/log11_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 12} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out12_false.stat &> ../Results/ant/log12_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 12} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out12_true.stat &> ../Results/ant/log12_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 13} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out13_false.stat &> ../Results/ant/log13_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 13} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out13_true.stat &> ../Results/ant/log13_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 14} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out14_false.stat &> ../Results/ant/log14_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 14} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out14_true.stat &> ../Results/ant/log14_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 15} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out15_false.stat &> ../Results/ant/log15_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 15} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out15_true.stat &> ../Results/ant/log15_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 16} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out16_false.stat &> ../Results/ant/log16_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 16} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out16_true.stat &> ../Results/ant/log16_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 17} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out17_false.stat &> ../Results/ant/log17_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 17} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out17_true.stat &> ../Results/ant/log17_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 18} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out18_false.stat &> ../Results/ant/log18_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 18} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out18_true.stat &> ../Results/ant/log18_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 19} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out19_false.stat &> ../Results/ant/log19_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 19} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out19_true.stat &> ../Results/ant/log19_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 20} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out20_false.stat &> ../Results/ant/log20_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 20} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out20_true.stat &> ../Results/ant/log20_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 21} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out21_false.stat &> ../Results/ant/log21_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 21} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out21_true.stat &> ../Results/ant/log21_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 22} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out22_false.stat &> ../Results/ant/log22_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 22} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out22_true.stat &> ../Results/ant/log22_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 23} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out23_false.stat &> ../Results/ant/log23_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 23} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out23_true.stat &> ../Results/ant/log23_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 24} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out24_false.stat &> ../Results/ant/log24_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 24} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out24_true.stat &> ../Results/ant/log24_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 25} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out25_false.stat &> ../Results/ant/log25_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 25} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out25_true.stat &> ../Results/ant/log25_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 26} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out26_false.stat &> ../Results/ant/log26_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 26} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out26_true.stat &> ../Results/ant/log26_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 27} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out27_false.stat &> ../Results/ant/log27_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 27} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out27_true.stat &> ../Results/ant/log27_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 28} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out28_false.stat &> ../Results/ant/log28_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 28} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out28_true.stat &> ../Results/ant/log28_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 29} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out29_false.stat &> ../Results/ant/log29_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 29} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out29_true.stat &> ../Results/ant/log29_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 30} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out30_false.stat &> ../Results/ant/log30_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 30} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out30_true.stat &> ../Results/ant/log30_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 31} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out31_false.stat &> ../Results/ant/log31_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 31} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out31_true.stat &> ../Results/ant/log31_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 32} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out32_false.stat &> ../Results/ant/log32_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 32} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out32_true.stat &> ../Results/ant/log32_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 33} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out33_false.stat &> ../Results/ant/log33_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 33} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out33_true.stat &> ../Results/ant/log33_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 34} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out34_false.stat &> ../Results/ant/log34_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 34} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out34_true.stat &> ../Results/ant/log34_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 35} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out35_false.stat &> ../Results/ant/log35_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 35} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out35_true.stat &> ../Results/ant/log35_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 36} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out36_false.stat &> ../Results/ant/log36_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 36} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out36_true.stat &> ../Results/ant/log36_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 37} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out37_false.stat &> ../Results/ant/log37_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 37} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out37_true.stat &> ../Results/ant/log37_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 38} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out38_false.stat &> ../Results/ant/log38_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 38} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out38_true.stat &> ../Results/ant/log38_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 39} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out39_false.stat &> ../Results/ant/log39_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 39} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out39_true.stat &> ../Results/ant/log39_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 40} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out40_false.stat &> ../Results/ant/log40_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 40} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out40_true.stat &> ../Results/ant/log40_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 41} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out41_false.stat &> ../Results/ant/log41_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 41} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out41_true.stat &> ../Results/ant/log41_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 42} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out42_false.stat &> ../Results/ant/log42_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 42} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out42_true.stat &> ../Results/ant/log42_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 43} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out43_false.stat &> ../Results/ant/log43_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 43} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out43_true.stat &> ../Results/ant/log43_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 44} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out44_false.stat &> ../Results/ant/log44_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 44} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out44_true.stat &> ../Results/ant/log44_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 45} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out45_false.stat &> ../Results/ant/log45_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 45} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out45_true.stat &> ../Results/ant/log45_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 46} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out46_false.stat &> ../Results/ant/log46_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 46} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out46_true.stat &> ../Results/ant/log46_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 47} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out47_false.stat &> ../Results/ant/log47_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 47} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out47_true.stat &> ../Results/ant/log47_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 48} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out48_false.stat &> ../Results/ant/log48_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 48} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out48_true.stat &> ../Results/ant/log48_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 49} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out49_false.stat &> ../Results/ant/log49_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 49} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out49_true.stat &> ../Results/ant/log49_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 50} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out50_false.stat &> ../Results/ant/log50_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 50} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out50_true.stat &> ../Results/ant/log50_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 51} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out51_false.stat &> ../Results/ant/log51_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 51} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out51_true.stat &> ../Results/ant/log51_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 52} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out52_false.stat &> ../Results/ant/log52_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 52} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out52_true.stat &> ../Results/ant/log52_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 53} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out53_false.stat &> ../Results/ant/log53_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 53} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out53_true.stat &> ../Results/ant/log53_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 54} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out54_false.stat &> ../Results/ant/log54_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 54} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out54_true.stat &> ../Results/ant/log54_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 55} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out55_false.stat &> ../Results/ant/log55_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 55} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out55_true.stat &> ../Results/ant/log55_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 56} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out56_false.stat &> ../Results/ant/log56_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 56} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out56_true.stat &> ../Results/ant/log56_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 57} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out57_false.stat &> ../Results/ant/log57_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 57} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out57_true.stat &> ../Results/ant/log57_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 58} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out58_false.stat &> ../Results/ant/log58_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 58} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out58_true.stat &> ../Results/ant/log58_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 59} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out59_false.stat &> ../Results/ant/log59_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 59} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out59_true.stat &> ../Results/ant/log59_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 60} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out60_false.stat &> ../Results/ant/log60_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 60} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out60_true.stat &> ../Results/ant/log60_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 61} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out61_false.stat &> ../Results/ant/log61_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 61} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out61_true.stat &> ../Results/ant/log61_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 62} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out62_false.stat &> ../Results/ant/log62_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 62} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out62_true.stat &> ../Results/ant/log62_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 63} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out63_false.stat &> ../Results/ant/log63_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 63} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out63_true.stat &> ../Results/ant/log63_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 64} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out64_false.stat &> ../Results/ant/log64_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 64} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out64_true.stat &> ../Results/ant/log64_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 65} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out65_false.stat &> ../Results/ant/log65_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 65} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out65_true.stat &> ../Results/ant/log65_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 66} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out66_false.stat &> ../Results/ant/log66_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 66} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out66_true.stat &> ../Results/ant/log66_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 67} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out67_false.stat &> ../Results/ant/log67_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 67} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out67_true.stat &> ../Results/ant/log67_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 68} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out68_false.stat &> ../Results/ant/log68_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 68} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out68_true.stat &> ../Results/ant/log68_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 69} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out69_false.stat &> ../Results/ant/log69_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 69} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out69_true.stat &> ../Results/ant/log69_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 70} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out70_false.stat &> ../Results/ant/log70_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 70} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out70_true.stat &> ../Results/ant/log70_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 71} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out71_false.stat &> ../Results/ant/log71_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 71} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out71_true.stat &> ../Results/ant/log71_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 72} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out72_false.stat &> ../Results/ant/log72_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 72} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out72_true.stat &> ../Results/ant/log72_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 73} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out73_false.stat &> ../Results/ant/log73_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 73} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out73_true.stat &> ../Results/ant/log73_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 74} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out74_false.stat &> ../Results/ant/log74_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 74} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out74_true.stat &> ../Results/ant/log74_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 75} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out75_false.stat &> ../Results/ant/log75_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 75} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out75_true.stat &> ../Results/ant/log75_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 76} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out76_false.stat &> ../Results/ant/log76_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 76} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out76_true.stat &> ../Results/ant/log76_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 77} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out77_false.stat &> ../Results/ant/log77_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 77} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out77_true.stat &> ../Results/ant/log77_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 78} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out78_false.stat &> ../Results/ant/log78_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 78} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out78_true.stat &> ../Results/ant/log78_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 79} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out79_false.stat &> ../Results/ant/log79_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 79} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out79_true.stat &> ../Results/ant/log79_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 80} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out80_false.stat &> ../Results/ant/log80_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 80} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out80_true.stat &> ../Results/ant/log80_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 81} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out81_false.stat &> ../Results/ant/log81_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 81} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out81_true.stat &> ../Results/ant/log81_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 82} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out82_false.stat &> ../Results/ant/log82_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 82} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out82_true.stat &> ../Results/ant/log82_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 83} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out83_false.stat &> ../Results/ant/log83_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 83} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out83_true.stat &> ../Results/ant/log83_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 84} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out84_false.stat &> ../Results/ant/log84_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 84} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out84_true.stat &> ../Results/ant/log84_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 85} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out85_false.stat &> ../Results/ant/log85_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 85} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out85_true.stat &> ../Results/ant/log85_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 86} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out86_false.stat &> ../Results/ant/log86_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 86} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out86_true.stat &> ../Results/ant/log86_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 87} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out87_false.stat &> ../Results/ant/log87_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 87} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out87_true.stat &> ../Results/ant/log87_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 88} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out88_false.stat &> ../Results/ant/log88_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 88} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out88_true.stat &> ../Results/ant/log88_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 89} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out89_false.stat &> ../Results/ant/log89_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 89} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out89_true.stat &> ../Results/ant/log89_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 90} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out90_false.stat &> ../Results/ant/log90_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 90} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out90_true.stat &> ../Results/ant/log90_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 91} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out91_false.stat &> ../Results/ant/log91_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 91} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out91_true.stat &> ../Results/ant/log91_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 92} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out92_false.stat &> ../Results/ant/log92_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 92} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out92_true.stat &> ../Results/ant/log92_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 93} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out93_false.stat &> ../Results/ant/log93_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 93} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out93_true.stat &> ../Results/ant/log93_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 94} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out94_false.stat &> ../Results/ant/log94_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 94} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out94_true.stat &> ../Results/ant/log94_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 95} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out95_false.stat &> ../Results/ant/log95_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 95} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out95_true.stat &> ../Results/ant/log95_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 96} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out96_false.stat &> ../Results/ant/log96_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 96} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out96_true.stat &> ../Results/ant/log96_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 97} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out97_false.stat &> ../Results/ant/log97_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 97} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out97_true.stat &> ../Results/ant/log97_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 98} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out98_false.stat &> ../Results/ant/log98_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 98} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out98_true.stat &> ../Results/ant/log98_true.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 99} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=false -p stat.file=/home/nmcphee/ecj//../Results/ant//out99_false.stat &> ../Results/ant/log99_false.txt; echo Finished Run"} -service {cluster}
+    }
+    Task -title {Test of ECJ cluster runs with Santa Fe ant problem - run 99} -cmds {
+        RemoteCmd {/bin/sh -c "echo Starting run;export PATH=$PATH:/usr/java/latest/bin; cd /home/nmcphee/ecj/;java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=true -p stat.file=/home/nmcphee/ecj//../Results/ant//out99_true.stat &> ../Results/ant/log99_true.txt; echo Finished Run"} -service {cluster}
+    }
+}

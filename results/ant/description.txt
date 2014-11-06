@@ -1,0 +1,8 @@
+COMMAND:
+java -jar /home/nmcphee/ecj/build/jar/ECJ.jar -file src/ec/app/ant/ant.params -p pop.subpop.0.size=4096 -p gp.koza.xover.include-xover-bias=
+
+TRACTOR TITLE:
+Test of ECJ cluster runs with Santa Fe ant problem
+
+DESCRIPTION:
+This description will be stored in a file alongside the logs from the runs. This is just a test using the odd problem.
