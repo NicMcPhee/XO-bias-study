@@ -1,3 +1,4 @@
+Use.bias Bias Pop.size Elite.prop Tourny.size Standardized.fitness Adjusted.fitness Hits
 false 1.000000 10240 0.000000 2 89.92656 0.010997887 28
 false 1.000000 10240 0.000000 3 28.669317 0.033704855 528
 false 1.000000 10240 0.000000 5 69.83403 0.014117508 192
