@@ -1,0 +1,88 @@
+% Research Paper for MICS 2015
+% by David Donatucci, Kirbie Dramdahl, and Nic McPhee
+
+\documentclass[12pt]{article}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textwidth}{6in}
+\setlength{\textheight}{9in}
+\setlength{\parindent}{0in} 
+
+\usepackage{parskip}
+\usepackage{times} %For typeface
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithm,algorithmic}
+\usepackage[justification=centering]{caption}[2007/12/23]
+\usepackage{url}
+\sloppy
+
+\usepackage{float}
+\newfloat{Query}{tbp}{lop}
+
+\newcommand{\inset}[1]{$\in \{ {#1} \}$}
+
+\newcommand{\citep}[1]{\cite{#1}}
+\newcommand{\PPLR}[1]{$\eta_M$}
+\newcommand{\LLR}[1]{$\eta_L$}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{[Insert Title]}
+
+\author{
+ 		David Donatucci, M. Kirbie Dramdahl, and Nicholas Freitag McPhee\\
+        Division of Science and Mathematics\\
+        University of Minnesota, Morris\\
+        Morris, MN 56267\\
+        donat056@morris.umn.edu\\
+        dramd002@morris.umn.edu\\
+        mcphee@morris.umn.edu\\
+}
+\date{} 
+
+\begin{document}
+\pagestyle{plain}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Introduction} \label{Introduction}
+
+\section{Genetic Programming} \label{Genetic Programming}
+
+\section{Graph Databases} \label{Graph Databases}
+
+\section{Experimental Setup} \label{Experiments}
+
+\subsection{Genetic Programming Setup} \label{Gentic Programming Setup}
+
+\subsection{Neo4j Setup} \label{Neo4j Setup}
+
+\section{Results} \label{Results}
+
+\subsection{Number of Initial Individuals With Final Generation Descendants} \label{Number Initial Individuals With Descendants}
+
+\subsection{Effectiveness of Mutation and Crossover} \label{Effectiveness Mutation Crossover}
+
+\subsection{Winning Root Ancestry Line Fitness} \label{Winning Root Line Fitness}
+
+\subsection{Most Recent Common Ancestor} \label{Most Recent Common Ancestor}
+
+\section{Conclusions} \label{Conclusions}
+
+\section*{Acknowledgements}
+
+\pagebreak
+
+\bibliographystyle{acm}
+\bibliography{Research_2015}
+
+\end{document}
