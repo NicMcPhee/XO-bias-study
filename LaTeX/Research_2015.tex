@@ -1,5 +1,5 @@
-% Research Paper for MICS 2015
-% by David Donatucci, Kirbie Dramdahl, and Nic McPhee
+% Research Paper for GECCO 2015
+% by Nic McPhee, Kirbie Dramdahl, and David Donatucci
 
 \documentclass[12pt]{article}
 
@@ -32,16 +32,16 @@
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
-\title{[Insert Title]}
+\title{Impact of Crossover Bias in Genetic Programming}
 
 \author{
- 		David Donatucci, M. Kirbie Dramdahl, and Nicholas Freitag McPhee\\
+ 	Nicholas Freitag McPhee, M. Kirbie Dramdahl, and David Donatucci\\
         Division of Science and Mathematics\\
         University of Minnesota, Morris\\
         Morris, MN 56267\\
-        donat056@morris.umn.edu\\
-        dramd002@morris.umn.edu\\
         mcphee@morris.umn.edu\\
+        dramd002@morris.umn.edu\\
+        donat056@morris.umn.edu\\
 }
 \date{} 
 
@@ -52,9 +52,29 @@
 
 \begin{abstract}
 
-In genetic programming, crossover occurs when two individuals are selected from the current generation and combined to form a new individual in the next generation. The individual from the current generation whose base, or root, becomes the root of the new individual in the next generation is referred to as the root parent. In previous research, we discovered that when the root parent had greater fitness than the non-root parent, the fitness of the child tended to be better than if the reverse were true. For this paper, we decided to examine these results in greater detail, by researching the impact of crossover bias – the deliberate selection of the individual in the current generation with the better fitness to be the root parent – on the success of genetic programming runs. To test these effects, we implemented several levels of crossover bias – including 0\% bias (root individual chosen randomly), 100\% bias (bias implemented always), 50\% bias (bias implemented in half the cases, and the other half chosen randomly), and reverse bias (individual with worse fitness always chosen as root parent) – and applied it to many problems of different types.
+In genetic programming, crossover occurs when two individuals are selected from the current generation and 
+combined to form a new individual in the next generation. The individual from the current generation whose 
+base, or root, becomes the root of the new individual in the next generation is referred to as the root parent. In 
+previous research, we discovered that when the root parent had greater fitness than the non-root parent, the 
+fitness of the child tended to be better than if the reverse were true. For this paper, we decided to examine 
+these results in greater detail, by researching the impact of crossover bias -- the deliberate selection of the 
+individual in the current generation with the better fitness to be the root parent -- on the success of genetic 
+programming runs. To test these effects, we implemented several levels of crossover bias -- including 0\% bias 
+(root individual chosen randomly), 100\% bias (bias implemented always), 50\% bias (bias implemented in half 
+the cases, and the other half chosen randomly), and reverse bias (individual with worse fitness always chosen 
+as root parent) -- and applied it to many problems of different types.
 
-Our results demonstrate that the effectiveness of crossover bias is highly subjective. Depending on various circumstances, crossover bias may or may not improve the performance of a genetic programming run. For example, elitism – copying over a set percentage of the most fit individuals from the current generation to the next generation – has the potential to affect the influence of crossover bias. A possible explanation for this is that if the most fit individuals are automatically being carried over, there is perhaps less need to produce new, fitter individuals via crossover, reducing or even eliminating the usefulness of crossover bias. Other factors which we found to have potential impact on the effectiveness of crossover bias were tournament size, population size, and possibly the difference in parental fitness. Our results also indicate the possibility that crossover bias may increase selection pressure and premature convergence – undesirable behavior, as it encourages a genetic programming run to arrive at a solution too quickly, in the process potentially excluding more accurate solutions for a more generalized one.
+Our results demonstrate that the effectiveness of crossover bias is highly subjective. Depending on various 
+circumstances, crossover bias may or may not improve the performance of a genetic programming run. For 
+example, elitism -- copying over a set percentage of the most fit individuals from the current generation to the 
+next generation -- has the potential to affect the influence of crossover bias. A possible explanation for this is 
+that if the most fit individuals are automatically being carried over, there is perhaps less need to produce new, 
+fitter individuals via crossover, reducing or even eliminating the usefulness of crossover bias. Other factors 
+which we found to have potential impact on the effectiveness of crossover bias were tournament size, 
+population size, and possibly the difference in parental fitness. Our results also indicate the possibility that 
+crossover bias may increase selection pressure and premature convergence -- undesirable behavior, as it 
+encourages a genetic programming run to arrive at a solution too quickly, in the process potentially excluding 
+more accurate solutions for a more generalized one.
 
 \begin{itemize}
 	\item Explain the idea of XO bias, where it came from and why
@@ -83,7 +103,8 @@ Our results demonstrate that the effectiveness of crossover bias is highly subje
 
 \section{Results} \label{Results}
 
-\subsection{Number of Initial Individuals With Final Generation Descendants} \label{Number Initial Individuals With Descendants}
+\subsection{Number of Initial Individuals With Final Generation Descendants} \label{Number Initial Individuals 
+With Descendants}
 
 \subsection{Effectiveness of Mutation and Crossover} \label{Effectiveness Mutation Crossover}
 
