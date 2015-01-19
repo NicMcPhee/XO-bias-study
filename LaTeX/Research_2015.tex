@@ -1,16 +1,7 @@
 % Research Paper for GECCO 2015
 % by Nic McPhee, Kirbie Dramdahl, and David Donatucci
 
-\documentclass[12pt]{article}
-
-\setlength{\oddsidemargin}{0in}
-\setlength{\evensidemargin}{0in}
-\setlength{\topmargin}{0in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\textwidth}{6in}
-\setlength{\textheight}{9in}
-\setlength{\parindent}{0in} 
+\documentclass{sig-alternate}
 
 \usepackage{parskip}
 \usepackage{times} %For typeface
@@ -21,38 +12,62 @@
 \usepackage{url}
 \sloppy
 
-\usepackage{float}
-\newfloat{Query}{tbp}{lop}
-
-\newcommand{\inset}[1]{$\in \{ {#1} \}$}
-
 \newcommand{\citep}[1]{\cite{#1}}
-\newcommand{\PPLR}[1]{$\eta_M$}
-\newcommand{\LLR}[1]{$\eta_L$}
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
+\begin{document}
+
+\conferenceinfo{GECCO'15,} {July 11-15, 2015, Madrid, Spain.}
+\CopyrightYear{2015}
+\crdata{TBA}
+\clubpenalty=10000
+\widowpenalty = 10000
+    
 \title{Impact of Crossover Bias in Genetic Programming}
 
+\numberofauthors{1}
 \author{
- 	Nicholas Freitag McPhee, M. Kirbie Dramdahl, and David Donatucci\\
-        Division of Science and Mathematics\\
-        University of Minnesota, Morris\\
-        Morris, MN 56267\\
-        mcphee@morris.umn.edu\\
-        dramd002@morris.umn.edu\\
-        donat056@morris.umn.edu\\
+\alignauthor
+Nicholas Freitag McPhee, M. Kirbie Dramdahl, David Donatucci\\
+	\affaddr{Division of Science and Mathematics}\\
+	\affaddr{University of Minnesota, Morris}\\
+	\affaddr{Morris, MN USA-56267}\\
+	\email{\{mcphee, dramd002, donat056\}@morris.umn.edu}
 }
+
+% This is more like how it "should" be done, but I think the previous approach might look nicer. They
+% may force us to change it, though, to make it easier to scrape information.
+
+%\numberofauthors{3}
+%\author{
+%\alignauthor
+%Nicholas Freitag McPhee\\
+%	\affaddr{Division of Science and Mathematics}\\
+%	\affaddr{University of Minnesota, Morris}\\
+%	\affaddr{Morris, MN USA-56267}\\
+%	\email{mcphee@morris.umn.edu}
+%\alignauthor
+%M. Kirbie Dramdahl\\
+%	\affaddr{Division of Science and Mathematics}\\
+%	\affaddr{University of Minnesota, Morris}\\
+%	\affaddr{Morris, MN USA-56267}\\
+%	\email{dramd002@morris.umn.edu}
+%\alignauthor
+%David Donatucci\\
+%	\affaddr{Division of Science and Mathematics}\\
+%	\affaddr{University of Minnesota, Morris}\\
+%	\affaddr{Morris, MN USA-56267}\\
+%	\email{donat056@morris.umn.edu}
+%}
+
 \date{} 
-
-\begin{document}
-\pagestyle{plain}
-
+    
 \maketitle
 
 \begin{abstract}
 
-\marginpar{\scriptsize This is probably too long. People often recommend keeping the abstract to somewhere between 150 and 250 words, and this is closer to 500. For the initial submission that's OK, but we may want to move some of this to the introduction and trim down the abstract somewhat.}
+\emph{\scriptsize This is probably too long. People often recommend keeping the abstract to somewhere between 150 and 250 words, and this is closer to 500. For the initial submission that's OK, but we may want to move some of this to the introduction and trim down the abstract somewhat.}
 
 In tree-based genetic programming with sub-tree crossover, the parent contributing the root portion of the tree (which 
 we call the \emph{root parent}) often contributes more to the semantics of the resulting child than the other parent (the 
@@ -86,6 +101,10 @@ which we found to have potential impact on the effectiveness of crossover bias w
 population size, and possibly the difference in parental fitness.
 
 \end{abstract}
+
+\category{}{}{}
+\terms{}
+\keywords{genetic programming, crossover bias, root parent}
 
 \section{Introduction} \label{Introduction}
 
