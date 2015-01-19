@@ -70,7 +70,7 @@ Nicholas Freitag McPhee, M. Kirbie Dramdahl, David Donatucci\\
 \emph{\scriptsize This is probably too long. People often recommend keeping the abstract to somewhere between 150 and 250 words, and this is closer to 500. For the initial submission that's OK, but we may want to move some of this to the introduction and trim down the abstract somewhat.}
 
 In tree-based genetic programming with sub-tree crossover, the parent contributing the root portion of the tree (which 
-we call the \emph{root parent}) often contributes more to the semantics of the resulting child than the other parent (the 
+we refer to as the \emph{root parent}) often contributes more to the semantics of the resulting child than the other parent (the 
 \emph{non-root parent}). In previous research, we discovered that when the root parent had greater fitness than the 
 non-root parent, the fitness of the child tended to be better than if the reverse were true. Here we explore the 
 significance of that asymmetry by introducing the notion of \emph{crossover bias}, which allows us to bias the system 
@@ -78,7 +78,7 @@ in favor of having the more fit parent be the root parent. To test these effects
 crossover bias, including 0\% bias 
 (root individual chosen randomly), 100\% bias (the stronger parent is always chosen to be the root parent), 50\% bias 
 (bias implemented in half 
-the cases, and the other half chosen randomly), and reverse bias (individual with worse fitness always chosen 
+the cases, and the other half chosen randomly), and reverse bias (the weaker parent is always chosen 
 as root parent). 
 
 We applied crossover bias to a variety of problems. In most cases we found that using crossover bias 
@@ -94,7 +94,7 @@ particular it appears that crossover bias has the largest impact when selection 
 in the fitness of the parents is thus likely to be larger. We also found that the use of elitism 
 reduced the influence of crossover bias. It's possible that crossover bias acts to some degree as an 
 ``elitism'' operator, making it more likely that the semantics of more fit individuals are copied into the next generation; 
-thus if traditional elitism is being employed this effect is less visible. more A possible explanation for this is 
+thus if traditional elitism is being employed this effect is less visible. Another possible explanation for this is 
 that if the most fit individuals are automatically being carried over, there is perhaps less need to produce new, 
 fitter individuals via crossover, reducing or even eliminating the usefulness of crossover bias. Other factors 
 which we found to have potential impact on the effectiveness of crossover bias were tournament size, 
