@@ -52,40 +52,38 @@
 
 \begin{abstract}
 
-In genetic programming, crossover occurs when two individuals are selected from the current generation and 
-combined to form a new individual in the next generation. The individual from the current generation whose 
-base, or root, becomes the root of the new individual in the next generation is referred to as the root parent. In 
-previous research, we discovered that when the root parent had greater fitness than the non-root parent, the 
-fitness of the child tended to be better than if the reverse were true. For this paper, we decided to examine 
-these results in greater detail, by researching the impact of crossover bias -- the deliberate selection of the 
-individual in the current generation with the better fitness to be the root parent -- on the success of genetic 
-programming runs. To test these effects, we implemented several levels of crossover bias -- including 0\% bias 
-(root individual chosen randomly), 100\% bias (bias implemented always), 50\% bias (bias implemented in half 
-the cases, and the other half chosen randomly), and reverse bias (individual with worse fitness always chosen 
-as root parent) -- and applied it to many problems of different types.
+\marginpar{\scriptsize This is probably too long. People often recommend keeping the abstract to somewhere between 150 and 250 words, and this is closer to 500. For the initial submission that's OK, but we may want to move some of this to the introduction and trim down the abstract somewhat.}
 
-Our results demonstrate that the effectiveness of crossover bias is highly subjective. Depending on various 
-circumstances, crossover bias may or may not improve the performance of a genetic programming run. For 
-example, elitism -- copying over a set percentage of the most fit individuals from the current generation to the 
-next generation -- has the potential to affect the influence of crossover bias. A possible explanation for this is 
-that if the most fit individuals are automatically being carried over, there is perhaps less need to produce new, 
-fitter individuals via crossover, reducing or even eliminating the usefulness of crossover bias. Other factors 
-which we found to have potential impact on the effectiveness of crossover bias were tournament size, 
-population size, and possibly the difference in parental fitness. Our results also indicate the possibility that 
+In tree-based genetic programming with sub-tree crossover, the parent contributing the root portion of the tree (which 
+we call the \emph{root parent}) often contributes more to the semantics of the resulting child than the other parent (the 
+\emph{non-root parent}). In previous research, we discovered that when the root parent had greater fitness than the 
+non-root parent, the fitness of the child tended to be better than if the reverse were true. Here we explore the 
+significance of that asymmetry by introducing the notion of \emph{crossover bias}, which allows us to bias the system 
+in favor of having the more fit parent be the root parent. To test these effects, we implemented several levels of 
+crossover bias, including 0\% bias 
+(root individual chosen randomly), 100\% bias (the stronger parent is always chosen to be the root parent), 50\% bias 
+(bias implemented in half 
+the cases, and the other half chosen randomly), and reverse bias (individual with worse fitness always chosen 
+as root parent). 
+
+We applied crossover bias to a variety of problems. In most cases we found that using crossover bias 
+either improved performance or had no impact. 
+Our results do, however, indicate the possibility that 
 crossover bias may increase selection pressure and premature convergence -- undesirable behavior, as it 
 encourages a genetic programming run to arrive at a solution too quickly, in the process potentially excluding 
 more accurate solutions for a more generalized one.
 
-\begin{itemize}
-	\item Explain the idea of XO bias, where it came from and why
-	\item XO bias rates
-	\item Does seem to improve performance in certain circumstances
-	\item Doesn't always improve things
-	\item Probably depends on things like tournament size and elitism and pop size
-		\item May depend the difference in parental fitness
-	\item May increase selection pressure and (premature) convergence
-	\item Applied to many problems of different types
-\end{itemize}
+Our results also demonstrate that the effectiveness of 
+crossover bias is somewhat dependent on the problem, and significantly dependent on other parameter choices. In 
+particular it appears that crossover bias has the largest impact when selection pressure is weaker, and the differences 
+in the fitness of the parents is thus likely to be larger. We also found that the use of elitism 
+reduced the influence of crossover bias. It's possible that crossover bias acts to some degree as an 
+``elitism'' operator, making it more likely that the semantics of more fit individuals are copied into the next generation; 
+thus if traditional elitism is being employed this effect is less visible. more A possible explanation for this is 
+that if the most fit individuals are automatically being carried over, there is perhaps less need to produce new, 
+fitter individuals via crossover, reducing or even eliminating the usefulness of crossover bias. Other factors 
+which we found to have potential impact on the effectiveness of crossover bias were tournament size, 
+population size, and possibly the difference in parental fitness.
 
 \end{abstract}
 
