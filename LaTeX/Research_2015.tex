@@ -135,6 +135,100 @@ population size, and possibly the difference in parental fitness.
 
 \subsection{Structural problems}
 
+\subsubsection{K-Landscapes problems}
+
+\textbf{Do we want to to include reverse bias (indicated with -1 in the plots) in all our analysis? If memory servers, 
+nothing much interesting ever comes of it, and we've arguably got more data than we can analyze/discuss here, so 
+I'm inclined to either remove it altogether, or just mention it once somewhere, maybe with one example in a plot. 
+Thoughts?}
+
+We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ and $K=6$. \textbf{All I have 
+added so far is the $K=6$ data, which is more interesting than the $K=2$ data because the problem is harder. Do we 
+want to include both, or just forgot the $K=2$ results?}
+
+\begin{itemize}
+	\item XO bias of reverse, 0, 0.25, 0.5, 0.75, and 1
+	\item Population sizes of 1,024 and 10,240
+	\item Elitism of 0\% or 1\%
+	\item Tournament sizes of 2, 3, 5, and 7
+\end{itemize}
+
+Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the 
+combinations of parameter values. Increasing the amount of crossover bias appears to consistently improve the 
+fitness of the results. All the differences are statistically significant ($p < 0.012$) except for the difference between 
+reverse bias (-1) and no bias (0), and the difference between bias probability 0.75 and 1.0.
+
+%> pairwise.wilcox.test(klandscapes6$Fitness, klandscapes6$Bias.probability)
+%
+%	Pairwise comparisons using Wilcoxon rank sum test 
+%
+%data:  klandscapes6$Fitness and klandscapes6$Bias.probability 
+%
+%     -1      0       0.25    0.5     0.75   
+%0    0.99997 -       -       -       -      
+%0.25 1.8e-06 1.8e-06 -       -       -      
+%0.5  1.7e-12 2.3e-12 0.01136 -       -      
+%0.75 < 2e-16 < 2e-16 6.0e-10 0.00032 -      
+%1    < 2e-16 < 2e-16 3.7e-15 2.2e-07 0.15773
+%
+%P value adjustment method: holm 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact.pdf}
+\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$.}
+\label{fig:KLandscapes6_results}
+\end{figure}
+
+Figure~\ref{fig:KLandscapes6_strong_results} shows the subset set of this information with just binary tournament 
+selection, no elitism, and population size of 10,240. It's clear that the impact of crossover bias is much stronger in this 
+case than in the general case shown in Figure~\ref{fig:KLandscapes6_results}. Here all the differences are strongly 
+statistically significant ($p < 10^{-11}$) except for the difference between reverse bias (-1) and no bias (0). Increasing 
+the crossover bias increases the number of ``perfect'' solutions discovered as well as just increasing the fitness. 15 
+solutions were discovered in the 100 runs with crossover bias at 1.0, where only 1 or 2 solutions were discovered for 
+each of the other crossover bias probabilities; this difference is statistically significant with $p \leq 0.3$ using a 
+pairwise test of proportions.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_strong_impact.pdf}
+\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$, restricted to binary tournament 
+selection, no elitism, and population size 10,240.}
+\label{fig:KLandscapes6_strong_results}
+\end{figure}
+
+%> pairwise.wilcox.test(strong$Fitness, strong$Bias.probability)
+%
+%	Pairwise comparisons using Wilcoxon rank sum test 
+%
+%data:  strong$Fitness and strong$Bias.probability 
+%
+%     -1      0       0.25    0.5     0.75   
+%0    0.18    -       -       -       -      
+%0.25 < 2e-16 < 2e-16 -       -       -      
+%0.5  < 2e-16 < 2e-16 < 2e-16 -       -      
+%0.75 < 2e-16 < 2e-16 < 2e-16 < 2e-16 -      
+%1    < 2e-16 < 2e-16 < 2e-16 < 2e-16 2.3e-12
+%
+%P value adjustment method: holm 
+
+%> countSuccesses(strong)
+%[1]  1  2  2  1  2 15
+%> pairwise.prop.test(countSuccesses(strong), rep(100, 6))
+%
+%	Pairwise comparisons using Pairwise comparison of proportions 
+%
+%data:  countSuccesses(strong) out of rep(100, 6) 
+%
+%  1     2     3     4     5    
+%2 1.000 -     -     -     -    
+%3 1.000 1.000 -     -     -    
+%4 1.000 1.000 1.000 -     -    
+%5 1.000 1.000 1.000 1.000 -    
+%6 0.011 0.030 0.030 0.011 0.030
+%
+%P value adjustment method: holm 
+
 \subsubsection{Order tree problem}
 
 \begin{figure}
