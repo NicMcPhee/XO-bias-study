@@ -67,16 +67,24 @@ Nicholas Freitag McPhee, M. Kirbie Dramdahl, David Donatucci\\
 
 \begin{abstract}
 
-\emph{\scriptsize This is probably too long. People often recommend keeping the abstract to somewhere between 150 and 250 words, and this is closer to 500. For the initial submission that's OK, but we may want to move some of this to the introduction and trim down the abstract somewhat.}
+\emph{\scriptsize This is probably too long. People often recommend keeping the abstract to somewhere 
+between 150 and 250 words, and this is closer to 500. For the initial submission that's OK, but we may want 
+to move some of this to the introduction and trim down the abstract somewhat.}
 
-In tree-based genetic programming with sub-tree crossover, the parent contributing the root portion of the tree (which 
-we refer to as the \emph{root parent}) often contributes more to the semantics of the resulting child than the other parent (the 
-\emph{non-root parent}). In previous research, we discovered that when the root parent had greater fitness than the 
+In tree-based genetic programming with sub-tree crossover, the parent contributing the root portion of the tree 
+(which 
+we refer to as the \emph{root parent}) often contributes more to the semantics of the resulting child than the 
+other parent (the 
+\emph{non-root parent}). In previous research, we discovered that when the root parent had greater fitness 
+than the 
 non-root parent, the fitness of the child tended to be better than if the reverse were true. Here we explore the 
-significance of that asymmetry by introducing the notion of \emph{crossover bias}, which allows us to bias the system 
-in favor of having the more fit parent be the root parent. To test these effects, we implemented several levels of 
+significance of that asymmetry by introducing the notion of \emph{crossover bias}, which allows us to bias the 
+system 
+in favor of having the more fit parent be the root parent. To test these effects, we implemented several levels 
+of 
 crossover bias, including 0\% bias 
-(root individual chosen randomly), 100\% bias (the stronger parent is always chosen to be the root parent), 50\% bias 
+(root individual chosen randomly), 100\% bias (the stronger parent is always chosen to be the root parent), 
+50\% bias 
 (bias implemented in half 
 the cases, and the other half chosen randomly), and reverse bias (the weaker parent is always chosen 
 as root parent). 
@@ -89,11 +97,14 @@ encourages a genetic programming run to arrive at a solution too quickly, in the
 more accurate solutions for a more generalized one.
 
 Our results also demonstrate that the effectiveness of 
-crossover bias is somewhat dependent on the problem, and significantly dependent on other parameter choices. In 
-particular it appears that crossover bias has the largest impact when selection pressure is weaker, and the differences 
+crossover bias is somewhat dependent on the problem, and significantly dependent on other parameter 
+choices. In 
+particular it appears that crossover bias has the largest impact when selection pressure is weaker, and the 
+differences 
 in the fitness of the parents is thus likely to be larger. We also found that the use of elitism 
 reduced the influence of crossover bias. It's possible that crossover bias acts to some degree as an 
-``elitism'' operator, making it more likely that the semantics of more fit individuals are copied into the next generation; 
+``elitism'' operator, making it more likely that the semantics of more fit individuals are copied into the next 
+generation; 
 thus if traditional elitism is being employed this effect is less visible. Another possible explanation for this is 
 that if the most fit individuals are automatically being carried over, there is perhaps less need to produce new, 
 fitter individuals via crossover, reducing or even eliminating the usefulness of crossover bias. Other factors 
@@ -150,14 +161,16 @@ population size, and possibly the difference in parental fitness.
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/US_change_hits_tourny2_noElitism.png}
-\caption{Impact of crossover bias on the number of hits for the US Change problem, limited to binary tournaments and no elitism.}
+\caption{Impact of crossover bias on the number of hits for the US Change problem, limited to binary 
+tournaments and no elitism.}
 \label{fig:USChange_Hits_tourny2_noElitism}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/US_change_successes_tourny2_noElitism.png}
-\caption{Impact of crossover bias on the number of successes runs for the US Change problem, limited to binary tournaments and no elitism.}
+\caption{Impact of crossover bias on the number of successes runs for the US Change problem, limited to 
+binary tournaments and no elitism.}
 \label{fig:USChange_Successes}
 \end{figure}
 
@@ -206,30 +219,42 @@ population size, and possibly the difference in parental fitness.
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_Hits_vs_Bias.png}
-\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem. Unfortunately I'm not immediately sure what (sub)set of data this includes.}
+\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem. 
+Unfortunately I'm not immediately sure what (sub)set of data this includes.}
 \label{fig:Pagie1Hits}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_Successes_vs_Bias.png}
-\caption{Impact of crossover bias on the number of successes (runs that exactly solve the problem) for the Pagie-1 symbolic regression problem. Unfortunately I'm not immediately sure what (sub)set of data this includes.}
+\caption{Impact of crossover bias on the number of successes (runs that exactly solve the problem) for the 
+Pagie-1 symbolic regression problem. Unfortunately I'm not immediately sure what (sub)set of data this 
+includes.}
 \label{fig:Pagie1Successes}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie-1-koza2_no_Tarpeian.png}
-\caption{Impact of crossover bias on the number of hits when using the koza2 function set for the Pagie-1 symbolic regression problem.}
+\caption{Impact of crossover bias on the number of hits when using the koza2 function set for the Pagie-1 
+symbolic regression problem.}
 \label{fig:Pagie1Koza2}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie-1-tarp.png}
-\caption{Impact of crossover bias on the number of hits when using the koza2 function set and Tarpeian bloat control for the Pagie-1 symbolic regression problem.}
+\caption{Impact of crossover bias on the number of hits when using the koza2 function set and Tarpeian bloat 
+control for the Pagie-1 symbolic regression problem.}
 \label{fig:Pagie1Koza2Tarpeian}
 \end{figure}
+
+\subsection{Santa Fe Trail problem}
+
+I did a small-ish set of runs early on, so the setup for this isn't really the same as for the later problems. The 
+only ``parameter sweep'' I did was XO bias on (i.e., 1) or off (i.e., 0). I only ran 50 generations, and the setting 
+to stop early if a solution was found was turned on, so not all the runs went out to 50 generations. There were 
+200 runs total, 100 with bias and 100 without.
 
 \section{Conclusions} \label{Conclusions}
 
