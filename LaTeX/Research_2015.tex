@@ -120,14 +120,116 @@ population size, and possibly the difference in parental fitness.
 
 \section{Results} \label{Results}
 
-\subsection{Number of Initial Individuals With Final Generation Descendants} \label{Number Initial Individuals 
-With Descendants}
+\subsection{Structural problems}
 
-\subsection{Effectiveness of Mutation and Crossover} \label{Effectiveness Mutation Crossover}
+\subsubsection{Order tree problem}
 
-\subsection{Winning Root Ancestry Line Fitness} \label{Winning Root Line Fitness}
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results.png}
+\caption{Impact of crossover bias on fitness for Ordertree problem for various tournament sizes.}
+\label{fig:Ordertree_results}
+\end{figure}
 
-\subsection{Most Recent Common Ancestor} \label{Most Recent Common Ancestor}
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Ordertree_XO_bias_prob_binary_tournaments.png}
+\caption{Impact of crossover bias on fitness for Ordertree problem for binary tournaments.}
+\label{fig:Ordertree_results_binary_tournaments}
+\end{figure}
+
+\subsection{U.S. Change problem}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/US_change_hits.png}
+\caption{Impact of crossover bias on the number of hits for the US Change problem.}
+\label{fig:USChange_Hits}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/US_change_hits_tourny2_noElitism.png}
+\caption{Impact of crossover bias on the number of hits for the US Change problem, limited to binary tournaments and no elitism.}
+\label{fig:USChange_Hits_tourny2_noElitism}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/US_change_successes_tourny2_noElitism.png}
+\caption{Impact of crossover bias on the number of successes runs for the US Change problem, limited to binary tournaments and no elitism.}
+\label{fig:USChange_Successes}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/US_change_Bias_impact_vs_success.png}
+\caption{Relationship between proportion of successful runs and the impact of crossover bias.}
+\label{fig:USChangeBiasImpactVsSuccess}
+\end{figure}
+
+\subsection{Symbolic regression problems}
+
+\subsubsection{Sine problem}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Sine_bias_results.png}
+\caption{Impact of crossover bias on the sine symbolic regression problem}
+\label{fig:sineBiasResults}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Sine_generations.png}
+\caption{Impact of crossover bias on the fitness over time for the sine symbolic regression problem}
+\label{fig:sineFitnessOverTime}
+\end{figure}
+
+\subsubsection{Pagie-1 problem}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_fitness_vs_time.png}
+\caption{Impact of crossover bias on the fitness over time for the Pagie-1 symbolic regression problem}
+\label{fig:Pagie1FitnessOverTime}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_size_vs_time.png}
+\caption{Impact of crossover bias on the tree size over time for the Pagie-1 symbolic regression problem}
+\label{fig:Pagie1SizeOverTime}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_Hits_vs_Bias.png}
+\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem. Unfortunately I'm not immediately sure what (sub)set of data this includes.}
+\label{fig:Pagie1Hits}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_Successes_vs_Bias.png}
+\caption{Impact of crossover bias on the number of successes (runs that exactly solve the problem) for the Pagie-1 symbolic regression problem. Unfortunately I'm not immediately sure what (sub)set of data this includes.}
+\label{fig:Pagie1Successes}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Pagie-1-koza2_no_Tarpeian.png}
+\caption{Impact of crossover bias on the number of hits when using the koza2 function set for the Pagie-1 symbolic regression problem.}
+\label{fig:Pagie1Koza2}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Pagie-1-tarp.png}
+\caption{Impact of crossover bias on the number of hits when using the koza2 function set and Tarpeian bloat control for the Pagie-1 symbolic regression problem.}
+\label{fig:Pagie1Koza2Tarpeian}
+\end{figure}
 
 \section{Conclusions} \label{Conclusions}
 
