@@ -253,10 +253,48 @@ control for the Pagie-1 symbolic regression problem.}
 
 \subsection{Santa Fe Trail problem}
 
-I did a small-ish set of runs early on, so the setup for this isn't really the same as for the later problems. The 
+I did this small-ish set of runs early on, so the setup for this isn't really the same as for the later problems. The 
 only ``parameter sweep'' I did was XO bias on (i.e., 1) or off (i.e., 0). I only ran 50 generations, and the setting 
 to stop early if a solution was found was turned on, so not all the runs went out to 50 generations. There were 
-200 runs total, 100 with bias and 100 without.
+200 runs total, 100 with bias and 100 without. The population sizes are 4,096 and the tournament size is the ECJ default of 7; there's no elitism or Tarpeian bloat control.
+
+These were early runs of the ant problem on the cluster. There are only 50 generations, and all we (currently) have is 
+bias off and bias fully on (i.e., bias rate of either 0 or 1). The population sizes are 4096 (instead of either 1,024 or 
+10,240 as on most of the other problems). The tournament size is the ECJ default (7), and there’s no elitism or 
+Tarpeian bloat control.
+
+As we can see in Figure~\ref{fig:SantaFeTrailHits}, using crossover bias on this problem appears to reduce the 
+number of hits; this difference isn't statistically significant, however. ($p$-value of 0.2003 using a Wilcoxon rank sum 
+test.) There are 39 successes without crossover bias, i.e., 39 out of 100 runs attained the best fitness of 89 hits, and 
+31 with crossover bias. This is also not statistically significant ($p$-value of 0.2994 using a 2-sample test for equality 
+of proportions).
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/SantaFeTrail_XO_Bias_boxplot.pdf}
+\caption{Impact of crossover bias on the number of hits for the Santa Fe Trail problem; the difference isn't statistically 
+significant.}
+\label{fig:SantaFeTrailHits}
+\end{figure}
+
+Figure~\ref{fig:SantaFeTrailHitsVsGeneration} shows the hits over time, although it's skewed because runs that found 
+the solution terminated early and thus ``disappear'' from this plot. It does, however, suggest that using crossover bias 
+may be causing premature convergence that is limiting the ability to continue exploring and find a solution.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/SantaFeTrail_Hits_vs_Generation.pdf}
+\caption{Number of hits over time for the Santa Fe Trail problem, both with and without crossover bias. This plot is 
+skewed because runs that found the solution (89 hits) ended early, and thus ``disappear'' from the plot. This explains 
+the slight dip in the line for runs with crossover bias turned on (the \emph{true} line) towards the end.}
+\label{fig:SantaFeTrailHitsVsGeneration}
+\end{figure}
+
+\textbf{These results really don't tell us anything since none of the differences are statistically significant. Given what 
+we've learned in other places, we could re-run these with small tournaments and larger populations. That would 
+certainly be more consistent with our other runs, and it might turn up something interesting. Or we could just decide 
+we don't care about this problem (it's not a particularly favored problem these days, and not recommended in the 
+benchmarks paper) and drop all this. Thoughts?}
 
 \section{Conclusions} \label{Conclusions}
 
