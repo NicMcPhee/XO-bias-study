@@ -234,11 +234,20 @@ of Figures~\ref{fig:KLandscapes6_results} and~\ref{fig:KLandscapes6_strong_resul
 plots. I think I definitely prefer the violin plots in Fig~\ref{fig:KLandscapes6_strong_results} (the nice stair step plot), 
 but I'm less certain about the other one. Thoughts?}
 
+\textbf{Figure~\ref{fig:KLandscapes6_results_transformed_violin} is the same as Figure~\ref{fig:KLandscapes6_results_violin}, but with the scale transformed by squaring the values. It turns out that log didn't work; it just increased the compression up at the top because the values are between 0 and 1.}
+
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_violin.pdf}
 \caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$.}
 \label{fig:KLandscapes6_results_violin}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_transformed_violin.pdf}
+\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$.}
+\label{fig:KLandscapes6_results_transformed_violin}
 \end{figure}
 
 \begin{figure}
