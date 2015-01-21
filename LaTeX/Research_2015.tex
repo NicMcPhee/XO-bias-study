@@ -303,6 +303,41 @@ binary tournaments and no elitism.}
 
 \subsubsection{Sine problem}
 
+Figure~\ref{fig:sineBiasResultsStrong} shows the results for the sine regression problem (without reverse bias -- I 
+think I figured we were going to drop it when I ran these.). Figure~\ref{fig:sineBiasResultsStrongViolin} is the same 
+data, but with violin plots instead of box plots. All these differences are statistically significant ($p < 10^{-5}$ using a 
+pairwise Wilcoxon rank sum test) except for the difference between the bias of 0.75 and 1.0.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_impact_strong_boxplot.pdf}
+\caption{Impact of crossover bias on the sine symbolic regression problem with binary tournaments, no elitism, and 
+population size 10,240}
+\label{fig:sineBiasResultsStrong}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_impact_strong_violin.pdf}
+\caption{Impact of crossover bias on the sine symbolic regression problem with binary tournaments, no elitism, and 
+population size 10,240}
+\label{fig:sineBiasResultsStrongViolin}
+\end{figure}
+
+%> pairwise.wilcox.test(sine_strong_final$Hits, sine_strong_final$Bias)
+%
+%	Pairwise comparisons using Wilcoxon rank sum test 
+%
+%data:  sine_strong_final$Hits and sine_strong_final$Bias 
+%
+%     0       0.25    0.5     0.75  
+%0.25 1.9e-07 -       -       -     
+%0.5  4.0e-15 0.0017  -       -     
+%0.75 < 2e-16 1.2e-12 8.9e-06 -     
+%1    < 2e-16 1.3e-13 2.9e-07 0.1938
+%
+%P value adjustment method: holm 
+
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Sine_bias_results.png}
