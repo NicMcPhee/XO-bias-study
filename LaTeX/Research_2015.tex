@@ -402,7 +402,12 @@ population size 1,024.}
 \end{figure}
 
 Figures~\ref{fig:sineBiasFitnessVsGenStrong} and~\ref{fig:sineBiasFitnessVsGenWeak} show the change in fitness 
-over time for the strong and weak configurations.
+over time for the strong and weak configurations. Figure~\ref{fig:sineBiasFitnessVsGenT2E01P10K} shows fitness over 
+time for the ``weak'' configuration with population size 10,240 (instead of 1,024 for the ``normal'' weak configuration). 
+Increasing the pop size definitely improves the performance by quite a lot (no surprise). The different bias levels are all 
+essentially the same at the end of the 100 generations, but interestingly there is definitely a spread around 15-20 
+generations that is a really clean ``more bias is better'' demonstration except for the fact that 0.75 and 1.0 are 
+essentially the same.
 
 \begin{figure}
 \centering
@@ -418,6 +423,14 @@ population size 10,240.}
 \caption{Impact of crossover bias on the sine symbolic regression problem with tournament size 7, 0.1\% elitism, and 
 population size 1,024.}
 \label{fig:sineBiasFitnessVsGenWeak}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_fitness_vs_gen_t2_e01_p10K.pdf}
+\caption{Impact of crossover bias on the sine symbolic regression problem with tournament size 7, 0.1\% elitism, and 
+population size 10,240.}
+\label{fig:sineBiasFitnessVsGenT2E01P10K}
 \end{figure}
 
 \begin{figure}
