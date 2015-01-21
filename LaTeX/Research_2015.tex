@@ -77,15 +77,17 @@ In tree-based genetic programming with sub-tree crossover, the parent contributi
 (which 
 we refer to as the \emph{root parent}) often contributes more to the semantics of the resulting child than the 
 other parent (the 
-\emph{non-root parent}). In previous research, we discovered that when the root parent had greater fitness 
+\emph{non-root parent}). In previous research, we found that when the root parent had greater fitness 
 than the 
 non-root parent, the fitness of the child tended to be better than if the reverse were true. Here we explore the 
 significance of that asymmetry by introducing the notion of \emph{crossover bias}, which allows us to bias the 
 system 
-in favor of having the more fit parent be the root parent. To test these effects, we implemented several levels 
+in favor of having the more fit parent be the root parent. To better understand the impact of this bias, 
+we implemented several levels 
 of 
 crossover bias, including 0\% bias 
-(root individual chosen randomly), 100\% bias (the stronger parent is always chosen to be the root parent), 
+(root individual chosen randomly, as in traditional sub-tree crossover), 
+100\% bias (the stronger parent is always chosen to be the root parent), 
 50\% bias 
 (bias implemented in half 
 the cases, and the other half chosen randomly), and reverse bias (the weaker parent is always chosen 
