@@ -186,7 +186,7 @@ case than in the general case shown in Figure~\ref{fig:KLandscapes6_results}. He
 statistically significant ($p < 10^{-11}$) except for the difference between reverse bias (-1) and no bias (0). Increasing 
 the crossover bias increases the number of ``perfect'' solutions discovered as well as just increasing the fitness. 15 
 solutions were discovered in the 100 runs with crossover bias at 1.0, where only 1 or 2 solutions were discovered for 
-each of the other crossover bias probabilities; this difference is statistically significant with $p \leq 0.3$ using a 
+each of the other crossover bias probabilities; this difference is statistically significant with $p \leq 0.03$ using a 
 pairwise test of proportions.
 
 \begin{figure}
@@ -237,8 +237,7 @@ but I'm less certain about the other one. Thoughts?}
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_violin.pdf}
-\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$, restricted to binary tournament 
-selection, no elitism, and population size 10,240.}
+\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$.}
 \label{fig:KLandscapes6_results_violin}
 \end{figure}
 
@@ -304,9 +303,12 @@ binary tournaments and no elitism.}
 \subsubsection{Sine problem}
 
 Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem (without reverse bias -- I 
-think I figured we were going to drop it when I ran these.) with the ``strong treatment'', i.e., binary tournaments, no elitism, and the large population (10,240). Figure~\ref{fig:sineBiasResultsStrongViolin} is the same 
+think I figured we were going to drop it when I ran these.) with the ``strong treatment'', i.e., binary tournaments, no 
+elitism, and the large population (10,240). Figure~\ref{fig:sineBiasResultsStrongViolin} is the same 
 data, but with violin plots instead of box plots. All these differences are statistically significant ($p < 10^{-5}$ using a 
-pairwise Wilcoxon rank sum test) except for the difference between the bias of 0.75 and 1.0. Figure~\ref{fig:sineBiasFitnessResultsStrongViolin} shows the same results, but for fitness (probably sum of error?) instead of hits. Again, all of these are significant except for bias of 0.75 and 1.0.
+pairwise Wilcoxon rank sum test) except for the difference between the bias of 0.75 and 1.0. Figure~
+\ref{fig:sineBiasFitnessResultsStrongViolin} shows the same results, but for fitness (probably sum of error?) instead of 
+hits. Again, all of these are significant except for bias of 0.75 and 1.0.
 
 \begin{figure}
 \centering
@@ -390,7 +392,8 @@ population size 1,024.}
 \label{fig:sineBiasFitnessResultsWeakViolin}
 \end{figure}
 
-Figures~\ref{fig:sineBiasFitnessVsGenStrong} and~\ref{fig:sineBiasFitnessVsGenWeak} show the change in fitness over time for the strong and weak configurations.
+Figures~\ref{fig:sineBiasFitnessVsGenStrong} and~\ref{fig:sineBiasFitnessVsGenWeak} show the change in fitness 
+over time for the strong and weak configurations.
 
 \begin{figure}
 \centering
@@ -476,7 +479,8 @@ control for the Pagie-1 symbolic regression problem.}
 I did this small-ish set of runs early on, so the setup for this isn't really the same as for the later problems. The 
 only ``parameter sweep'' I did was XO bias on (i.e., 1) or off (i.e., 0). I only ran 50 generations, and the setting 
 to stop early if a solution was found was turned on, so not all the runs went out to 50 generations. There were 
-200 runs total, 100 with bias and 100 without. The population sizes are 4,096 and the tournament size is the ECJ default of 7; there's no elitism or Tarpeian bloat control.
+200 runs total, 100 with bias and 100 without. The population sizes are 4,096 and the tournament size is the ECJ 
+default of 7; there's no elitism or Tarpeian bloat control.
 
 These were early runs of the ant problem on the cluster. There are only 50 generations, and all we (currently) have is 
 bias off and bias fully on (i.e., bias rate of either 0 or 1). The population sizes are 4096 (instead of either 1,024 or 
