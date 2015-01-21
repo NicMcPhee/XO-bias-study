@@ -304,7 +304,7 @@ binary tournaments and no elitism.}
 \subsubsection{Sine problem}
 
 Figure~\ref{fig:sineBiasResultsStrong} shows the results for the sine regression problem (without reverse bias -- I 
-think I figured we were going to drop it when I ran these.). Figure~\ref{fig:sineBiasResultsStrongViolin} is the same 
+think I figured we were going to drop it when I ran these.) with the ``strong treatment'', i.e., binary tournaments, no elitism, and the large population (10,240). Figure~\ref{fig:sineBiasResultsStrongViolin} is the same 
 data, but with violin plots instead of box plots. All these differences are statistically significant ($p < 10^{-5}$ using a 
 pairwise Wilcoxon rank sum test) except for the difference between the bias of 0.75 and 1.0.
 
@@ -337,6 +337,28 @@ population size 10,240}
 %1    < 2e-16 1.3e-13 2.9e-07 0.1938
 %
 %P value adjustment method: holm 
+
+Figure~\ref{fig:sineBiasResultsWeak} shows the results for the sine regression problem (without reverse bias -- I 
+think I figured we were going to drop it when I ran these.) with the ``weak treatment'', i.e., tournament size 7, 0.1\% 
+elitism, and the small population (1,024). Figure~\ref{fig:sineBiasResultsWeakViolin} is the same 
+data, but with violin plots instead of box plots. None of these differences are statistically significant using a 
+pairwise Wilcoxon rank sum test.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_impact_weak_boxplot.pdf}
+\caption{Impact of crossover bias on the sine symbolic regression problem with tournament size 7, 0.1\% elitism, and 
+population size 1,024.}
+\label{fig:sineBiasResultsWeak}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_impact_weak_violin.pdf}
+\caption{Impact of crossover bias on the sine symbolic regression problem with tournament size 7, 0.1\% elitism, and 
+population size 1,024.}
+\label{fig:sineBiasResultsWeakViolin}
+\end{figure}
 
 \begin{figure}
 \centering
