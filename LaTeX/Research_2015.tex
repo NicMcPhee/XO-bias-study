@@ -545,6 +545,28 @@ certainly be more consistent with our other runs, and it might turn up something
 we don't care about this problem (it's not a particularly favored problem these days, and not recommended in the 
 benchmarks paper) and drop all this. Thoughts?}
 
+\section{Discussion}
+
+Why does all this happen this way? For example, why does crossover bias have a much stronger effect when using 
+binary tournaments than when using larger tournament sizes such as 7. One possible explanation is that with large 
+tournaments, the difference in fitness between the two parents is likely to be closer, because the larger tournaments 
+help ensure that both parents are from the more highly fit part of the population. To better understand this, blah, blah, 
+blah {\textbf We need to turn this into actual text}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Parent_fitnesses_sine.pdf}
+\caption{Plot of the fitnesses of all individuals chosen as parents from some sine runs. \textbf{Explain this}.}
+\label{fig:parentFitnessesSine}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Parent_diffs_sine.pdf}
+\caption{Plot of the differences in parent fitnesses from some sine runs. \textbf{Explain this}.}
+\label{fig:parentDiffsSine}
+\end{figure}
+
 \section{Conclusions} \label{Conclusions}
 
 \section*{Acknowledgements}
