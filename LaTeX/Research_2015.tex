@@ -139,14 +139,7 @@ population size, and possibly the difference in parental fitness.
 
 \subsubsection{K-Landscapes problems}
 
-\textbf{Do we want to to include reverse bias (indicated with -1 in the plots) in all our analysis? If memory servers, 
-nothing much interesting ever comes of it, and we've arguably got more data than we can analyze/discuss here, so 
-I'm inclined to either remove it altogether, or just mention it once somewhere, maybe with one example in a plot. 
-Thoughts?}
-
-We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ and $K=6$. \textbf{All I have 
-added so far is the $K=6$ data, which is more interesting than the $K=2$ data because the problem is harder. Do we 
-want to include both, or just forgot the $K=2$ results?}
+We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ and $K=6$.
 
 \begin{itemize}
 	\item XO bias of reverse, 0, 0.25, 0.5, 0.75, and 1
@@ -178,7 +171,7 @@ reverse bias (-1) and no bias (0), and the difference between bias probability 0
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact.pdf}
-\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$.}
+\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$. \textbf{Redraw this figure with a squaring y-axis and transparency on the boxes so we can see the points. Also do non-transparent so we can choose.}}
 \label{fig:KLandscapes6_results}
 \end{figure}
 
@@ -195,7 +188,7 @@ pairwise test of proportions.
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_strong_impact.pdf}
 \caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$, restricted to binary tournament 
-selection, no elitism, and population size 10,240.}
+selection, no elitism, and population size 10,240. \textbf{Redraw this with transparent boxes so we can see the points.}}
 \label{fig:KLandscapes6_strong_results}
 \end{figure}
 
@@ -231,17 +224,12 @@ selection, no elitism, and population size 10,240.}
 %
 %P value adjustment method: holm 
 
-\textbf{Figures~\ref{fig:KLandscapes6_results_violin} and~\ref{fig:KLandscapes6_strong_results_violin} are variants 
-of Figures~\ref{fig:KLandscapes6_results} and~\ref{fig:KLandscapes6_strong_results} using violin plots instead of box 
-plots. I think I definitely prefer the violin plots in Fig~\ref{fig:KLandscapes6_strong_results} (the nice stair step plot), 
-but I'm less certain about the other one. Thoughts?}
-
 \textbf{Figure~\ref{fig:KLandscapes6_results_transformed_violin} is the same as Figure~\ref{fig:KLandscapes6_results_violin}, but with the scale transformed by squaring the values. It turns out that log didn't work; it just increased the compression up at the top because the values are between 0 and 1.}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_violin.pdf}
-\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$.}
+\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$. \textbf{Drop this.}}
 \label{fig:KLandscapes6_results_violin}
 \end{figure}
 
@@ -257,7 +245,7 @@ transformed to provide more detail in the upper end of the fitness range.}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_strong_impact_violin.pdf}
 \caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$, restricted to binary tournament 
-selection, no elitism, and population size 10,240.}
+selection, no elitism, and population size 10,240. \textbf{Drop this.}}
 \label{fig:KLandscapes6_strong_results_violin}
 \end{figure}
 
@@ -266,7 +254,7 @@ selection, no elitism, and population size 10,240.}
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results.png}
-\caption{Impact of crossover bias on fitness for Ordertree problem for various tournament sizes.}
+\caption{Impact of crossover bias on fitness for Ordertree problem for various tournament sizes. \textbf{Redraw this as PDF and mention how improvement drops as tournament sizes grow.}}
 \label{fig:Ordertree_results}
 \end{figure}
 
@@ -504,6 +492,8 @@ control for the Pagie-1 symbolic regression problem.}
 \end{figure}
 
 \subsection{Santa Fe Trail problem}
+
+\textbf{We agreed to drop this problem rather than spend time on it.}
 
 I did this small-ish set of runs early on, so the setup for this isn't really the same as for the later problems. The 
 only ``parameter sweep'' I did was XO bias on (i.e., 1) or off (i.e., 0). I only ran 50 generations, and the setting 
