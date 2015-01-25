@@ -121,19 +121,17 @@ population size, and possibly the difference in parental fitness.
 \terms{}
 \keywords{genetic programming, crossover bias, root parent}
 
-\section{Introduction} \label{Introduction}
+\section{Introduction} \label{sec:Introduction}
 
-\section{Genetic Programming} \label{Genetic Programming}
+\textbf{Nic should try to capture some nice things Lee Spector said about the importance of asymmetrical 
+recombination operators (which are very common in biology, e.g., sex-linked traits) and how we've identified an 
+asymmetry in subtree crossover and a way to potentially exploit that.}
 
-\section{Graph Databases} \label{Graph Databases}
+\section{Crossover bias} \label{sec:XObias}
 
-\section{Experimental Setup} \label{Experiments}
+\section{Experimental Setup} \label{sec:Experiments}
 
-\subsection{Genetic Programming Setup} \label{Genetic Programming Setup}
-
-\subsection{Neo4j Setup} \label{Neo4j Setup}
-
-\section{Results} \label{Results}
+\section{Results} \label{sec:Results}
 
 \subsection{Structural problems}
 
@@ -149,9 +147,9 @@ We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ a
 \end{itemize}
 
 Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the 
-combinations of parameter values. Increasing the amount of crossover bias appears to consistently improve the 
-fitness of the results. All the differences are statistically significant ($p < 0.012$) except for the difference between 
-reverse bias (-1) and no bias (0), and the difference between bias probability 0.75 and 1.0.
+combinations of parameter values. Increasing the amount of crossover bias consistently improves the 
+fitness of the results. All the differences are statistically significant ($p < 0.012$) except for the difference between
+between bias probability 0.75 and 1.0.
 
 %> pairwise.wilcox.test(klandscapes6$Fitness, klandscapes6$Bias.probability)
 %
@@ -170,14 +168,14 @@ reverse bias (-1) and no bias (0), and the difference between bias probability 0
 
 \begin{figure}
 \centering
-\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact.pdf}
-\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$. \textbf{Redraw this figure with a squaring y-axis and transparency on the boxes so we can see the points. Also do non-transparent so we can choose.}}
+\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_transformed_boxplot_alpha075.pdf}
+\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$ for a variety of treatments.}
 \label{fig:KLandscapes6_results}
 \end{figure}
 
 Figure~\ref{fig:KLandscapes6_strong_results} shows the subset set of this information with just binary tournament 
 selection, no elitism, and population size of 10,240. It's clear that the impact of crossover bias is much stronger in this 
-case than in the general case shown in Figure~\ref{fig:KLandscapes6_results}. Here all the differences are strongly 
+case than in the more general case shown in Figure~\ref{fig:KLandscapes6_results}. Here all the differences are strongly 
 statistically significant ($p < 10^{-11}$) except for the difference between reverse bias (-1) and no bias (0). Increasing 
 the crossover bias increases the number of ``perfect'' solutions discovered as well as just increasing the fitness. 15 
 solutions were discovered in the 100 runs with crossover bias at 1.0, where only 1 or 2 solutions were discovered for 
@@ -186,9 +184,9 @@ pairwise test of proportions.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_strong_impact.pdf}
+\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_strong_impact_alpha_075.pdf}
 \caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$, restricted to binary tournament 
-selection, no elitism, and population size 10,240. \textbf{Redraw this with transparent boxes so we can see the points.}}
+selection, no elitism, and population size 10,240.}
 \label{fig:KLandscapes6_strong_results}
 \end{figure}
 
@@ -223,31 +221,6 @@ selection, no elitism, and population size 10,240. \textbf{Redraw this with tran
 %6 0.011 0.030 0.030 0.011 0.030
 %
 %P value adjustment method: holm 
-
-\textbf{Figure~\ref{fig:KLandscapes6_results_transformed_violin} is the same as Figure~\ref{fig:KLandscapes6_results_violin}, but with the scale transformed by squaring the values. It turns out that log didn't work; it just increased the compression up at the top because the values are between 0 and 1.}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_violin.pdf}
-\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$. \textbf{Drop this.}}
-\label{fig:KLandscapes6_results_violin}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_transformed_violin.pdf}
-\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$. Note the $y$-axis has been 
-transformed to provide more detail in the upper end of the fitness range.}
-\label{fig:KLandscapes6_results_transformed_violin}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_strong_impact_violin.pdf}
-\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$, restricted to binary tournament 
-selection, no elitism, and population size 10,240. \textbf{Drop this.}}
-\label{fig:KLandscapes6_strong_results_violin}
-\end{figure}
 
 \subsubsection{Order tree problem}
 
@@ -539,7 +512,7 @@ certainly be more consistent with our other runs, and it might turn up something
 we don't care about this problem (it's not a particularly favored problem these days, and not recommended in the 
 benchmarks paper) and drop all this. Thoughts?}
 
-\section{Discussion}
+\section{Discussion} \label{sec:Discussion}
 
 Why does all this happen this way? For example, why does crossover bias have a much stronger effect when using 
 binary tournaments than when using larger tournament sizes such as 7. One possible explanation is that with large 
@@ -561,7 +534,11 @@ blah \textbf{We need to turn this into actual text}.
 \label{fig:parentDiffsSine}
 \end{figure}
 
-\section{Conclusions} \label{Conclusions}
+\section{Conclusions} \label{sec:Conclusions}
+
+In most of these experiments we found better results with tournament sizes of 7 than with binary tournaments, and in 
+general using larger tournaments appears to wash out much of the impact of crossover bias, so there's a fair question 
+about whether one should just use larger tournaments and ignore crossover bias. \textbf{How do we respond to this?}
 
 \section*{Acknowledgements}
 
