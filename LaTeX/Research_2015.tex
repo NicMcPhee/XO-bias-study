@@ -527,22 +527,47 @@ blah \textbf{We need to turn this into actual text}.
 \label{fig:parentErrorsSine}
 \end{figure}
 
+Figure~\ref{fig:parentDiffsSine} shows the distribution of relative difference in parent errors in the sine regression 
+problem. For each crossover event, the relative difference in parent errors is
+\[
+	|e_A - e_B] / (e_A + e_B)
+\]
+where $e_A$ and $e_B$ are the errors of the two chosen parents $A$ and $B$. This has a minimum value of 0 when 
+the two errors are the same, and a maximum value approaching 1 for the case where one of the errors is nearly 0.
+
 \begin{figure}
 \centering
-\includegraphics[width=0.45 \textwidth]{Plots/Parent_error_diffs_sine.pdf}
-\caption{Plot of the differences in parent errors from some sine runs. \textbf{Explain this}.}
+\includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_error_diffs_sine.pdf}
+\caption{Plot of the normalized differences in parent errors from some sine runs. \textbf{Explain this}.}
 \label{fig:parentDiffsSine}
+\end{figure}
+
+We see similar results for the K-Landscapes problem, as illustrated in Figures~\ref{fig:parentFitnessesKLandscapes} and~\ref{fig:parentDiffsKLandscapes}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Parent_fitnesses_KLandscapes.pdf}
+\caption{Plot of the fitnesses of all individuals chosen as parents from some K-Landscape runs. \textbf{Explain this.} \textbf{Do we want/need this plot?}}
+\label{fig:parentFitnessesKLandscapes}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_fitness_diffs_KLandscapes.pdf}
+\caption{Plot of the normalized differences in parent fitnesses from some K-Landscape runs. \textbf{Explain this}.}
+\label{fig:parentDiffsKLandscapes}
 \end{figure}
 
 \section{Conclusions} \label{sec:Conclusions}
 
 In most of these experiments we found better results with tournament sizes of 7 than with binary tournaments, and in 
 general using larger tournaments appears to wash out much of the impact of crossover bias, so there's a fair question 
-about whether one should just use larger tournaments and ignore crossover bias. \textbf{How do we respond to this?}
+about whether one should just use larger tournaments and ignore crossover bias. \textbf{How do we respond to this? I 
+think the answer is something like ``It doesn't hurt (at least in our experiments), and it sometimes helps, even for 
+tournament size 7 and with elitism. For interesting problems, you also don't know in advance what your best parameter 
+choices are, so it's at least worth including in your arsenal.''}
 
 \section*{Acknowledgements}
-
-\pagebreak
 
 \bibliographystyle{acm}
 \bibliography{Research_2015}
