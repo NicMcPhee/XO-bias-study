@@ -226,12 +226,23 @@ selection, no elitism, and population size 10,240.}
 %
 %P value adjustment method: holm 
 
-\subsubsection{Order tree problem}
+\subsubsection{Ordertree problem}
+
+\textbf{Everything in this section at the moment is really just Nic chatting about the results that we have, hoping for 
+some ideas/feedback from Kirbie and David. Thoughts, suggestions, questions, changes, actual usable text, etc., all 
+greatly appreciated.}
+
+We have two groups of Ordertree results, the first from November 2014, and the second from January 20145. The 
+earlier results just varied the tournament size and the bias probability, leaving the population size at 500 (the default in 
+ECJ for that problem) and no elitism (also the default). Those results are where Figures~\ref{fig:Ordertree_results} 
+and~\ref{fig:Ordertree_results_binary_tournaments} come from. These plots are nice and ``clean'' and say what we 
+want to say without complicating things.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results.png}
-\caption{Impact of crossover bias on fitness for Ordertree problem for various tournament sizes. \textbf{Redraw this as PDF and mention how improvement drops as tournament sizes grow.}}
+\caption{Impact of crossover bias on fitness for Ordertree problem for various tournament sizes. \textbf{Redraw this 
+as PDF and mention how improvement drops as tournament sizes grow.}}
 \label{fig:Ordertree_results}
 \end{figure}
 
@@ -242,9 +253,84 @@ selection, no elitism, and population size 10,240.}
 \label{fig:Ordertree_results_binary_tournaments}
 \end{figure}
 
-\subsubsection{Lid problem}
+The later runs are more in keeping with what we'd been doing on other problems. They do a full sweep of bias 
+probabilities, all four tournament sizes (2, 3, 5, and 7), and with and without elitism (1\% when used). The population 
+size was only 1,024 because the trees get really big for this problem and we'd run out of memory if we used 10K 
+pops.
 
-\textbf{We need to add plots for this problem.}
+The rub is that the results are different with the larger populations, and it's not clear how we want to handle this in the 
+paper. In particular, the fitnesses are actually a little \emph{worse} for bias 1.0 than for bias 0.75, i.e., the performance 
+``curve'' goes up and then begins to dip down.
+
+Figure~\ref{fig:Ordertree_results_Jan15_facets} shows the results of runs both with and without crossover bias (i.e,. 
+crossover bias probability either 1 or 0) for all four tournament sizes, and in each case adding crossover bias 
+improves fitness. All these differences are statistically significant ($p < 0.002$ for each pairing using a pairwise 
+Wilcoxon with Holm correction).
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results_Jan15_facets.pdf}
+\caption{Impact of crossover bias on fitness for Ordertree problem for various tournament sizes.}
+\label{fig:Ordertree_results_Jan15_facets}
+\end{figure}
+
+Figure~\ref{fig:Ordertree_results_binary_tournaments_Jan15} shows the impact of a range of crossover bias values 
+limited to binary tournaments. Here we see the drop in fitness for bias 1.0, actually dropping slightly below that for 0.5 
+as well as 0.75. All these differences are statistically significant ($p < 0.03$) except for the difference between bias 
+0.25 and bias 1.0, so bias of 0.75 is the clear winner here. \textbf{I (Nic) suspect this is actually quite interesting and 
+might open interesting doors to things like premature convergence and need for being able to have a least a little 
+variation in the system for a problem like this. Maybe we should talk about that in the "Future work" section?} Figure~
+\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this to cover all four tournament sizes (so the leftmost 
+panel of this figure is essentially the preceding figure). Here we see that the fitness drops for bias 1.0 for all four 
+tournament sizes. In general the impact of crossover bias lessens with the larger tournament sizes, both in the 
+increase in fitness up to bias 0.75, and the drop from there to bias 1.0.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results_binary_tournaments_Jan15.pdf}
+\caption{Impact of crossover bias on fitness for Ordertree problem for binary tournaments.}
+\label{fig:Ordertree_results_binary_tournaments_Jan15}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results_all_tournaments_Jan15.pdf}
+\caption{Impact of crossover bias on fitness for Ordertree problem for multiple tournament sizes.}
+\label{fig:Ordertree_results_all_tournaments_Jan15}
+\end{figure}
+
+Just to check that this wasn't happening everywhere, Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets} plots 
+the corresponding data from the K-Landscapes runs. It's clear that for binary tournaments, increasing the crossover 
+bias probability continues to improve the fitness. This continues to be true for tournament size 3. For tournament 7, 
+however, it does look like the reverse is true, where increasing crossover actually hurts fitness. Almost none of the 
+differences for tournament size 7 are statistically significant, however, with the only exception being the difference 
+between 0.25 and 1.0 ($p=0.21$ using a pairwise Wilcoxon test with Holm correction). \textbf{This paragraph might 
+move to the Discussion or Conclusions section if we keep it, or something like it.}
+
+% None of the differences are significant for tourney size 5. All the differences are significant for TS=3 except for bias 
+0.5 and 0.75 and that was very close ($p=0.05620$). All the differences for binary are \emph{strongly} significant 
+($p<6e-08$).
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_facets.pdf}
+\caption{Impact of crossover bias on fitness for K-Landcapes problem, K=6, for various tournament sizes.}
+\label{fig:KLandscapes6_XO_bias_impact_facets}
+\end{figure}
+
+%> pairwise.wilcox.test(subset(klandscapes6, Tourny.size==7)$Fitness, subset(klandscapes6, Tourny.size==7)$Bias.probability)
+%
+%	Pairwise comparisons using Wilcoxon rank sum test 
+%
+%data:  subset(klandscapes6, Tourny.size == 7)$Fitness and subset(klandscapes6, Tourny.size == 7)$Bias.probability 
+%
+%     0     0.25  0.5   0.75 
+%0.25 1.000 -     -     -    
+%0.5  1.000 1.000 -     -    
+%0.75 1.000 0.556 1.000 -    
+%1    0.075 0.021 0.556 1.000
+%
+%P value adjustment method: holm 
 
 \subsection{U.S. Change problem}
 
