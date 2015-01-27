@@ -334,36 +334,105 @@ move to the Discussion or Conclusions section if we keep it, or something like i
 
 \subsection{U.S. Change problem}
 
+For the U.S. Change problem, we'll use ``Hits'' (the number of test cases that are correctly solved) as the measure of 
+the success of a run. There are 150 test cases in our implementation, so an optimal program will have a ``Hits'' score 
+of 150.
+
+Figure~\ref{fig:USChange_Hits} shows the impact of crossover bias on the number of hits for the U.S. Change 
+problem across the full collection of parameter settings. This suggests that in in general there is little consistent 
+impact of crossover bias, but a pairwise Wilcoxon test with Holm correction indicates that while most of the 
+differences in this plot aren't statistically significant, two are: The differences between crossover bias 0 and crossover 
+bias 0.5 and 0.75 are both statistically significant ($p \leq 0.015$), even if numerically small.
+
 \begin{figure}
 \centering
-\includegraphics[width=0.45 \textwidth]{Plots/US_change_hits.png}
+\includegraphics[width=0.45 \textwidth]{Plots/US_change_hits.pdf}
 \caption{Impact of crossover bias on the number of hits for the US Change problem.}
 \label{fig:USChange_Hits}
 \end{figure}
 
+%> pairwise.wilcox.test(us_change$Hits, us_change$Bias, conf.int=TRUE)
+%
+%	Pairwise comparisons using Wilcoxon rank sum test 
+%
+%data:  us_change$Hits and us_change$Bias 
+%
+%     0     0.25  0.5   0.75 
+%0.25 0.117 -     -     -    
+%0.5  0.011 1.000 -     -    
+%0.75 0.015 1.000 1.000 -    
+%1    0.083 1.000 1.000 1.000
+%
+%P value adjustment method: holm 
+
+If we limit our attention to binary tournaments, no elitism, and the larger population size (10,240), then we find that 
+crossover bias has a substantial and statistically significant impact, as is seen in Figure~
+\ref{fig:USChange_Hits_strong}. Here the bulk of these pairwise differences are statistically significant ($p<0.0002$ 
+using a pairwise Wilcoxon test with Holm correction). The major exception is the difference between crossover bias 
+0.75 and 1.0 ($p=0.43078$). Two other adjacent pairs have $p$-values slightly above 0.05: Crossover bias 0.25 
+\emph{vs.} 0.5 ($p=0.05036$), and 0.5 \emph{vs.} 0.75 ($p=0.08019$). \textbf{We could put all the $p$ values in a 
+table, bolding the ones that are significant. This is somewhat common in the literature, but would use quite a bit more 
+space, especially since half the table would be empty. Thoughts?}
+
 \begin{figure}
 \centering
-\includegraphics[width=0.45 \textwidth]{Plots/US_change_hits_tourny2_noElitism.png}
+\includegraphics[width=0.45 \textwidth]{Plots/US_change_hits_strong.pdf}
 \caption{Impact of crossover bias on the number of hits for the US Change problem, limited to binary 
-tournaments and no elitism.}
-\label{fig:USChange_Hits_tourny2_noElitism}
+tournaments, no elitism, and population size 10,240.}
+\label{fig:USChange_Hits_strong}
 \end{figure}
+
+%> pairwise.wilcox.test(us_change_strong$Hits, us_change_strong$Bias)
+%
+%	Pairwise comparisons using Wilcoxon rank sum test 
+%
+%data:  us_change_strong$Hits and us_change_strong$Bias 
+%
+%     0       0.25    0.5     0.75   
+%0.25 0.00013 -       -       -      
+%0.5  3.4e-09 0.05036 -       -      
+%0.75 1.1e-12 0.00016 0.08019 -      
+%1    3.2e-15 5.1e-06 0.01652 0.43078
+%
+%P value adjustment method: holm 
+
+If complete success was considered vital (which might be the case if we were evolving software for use in a 
+production system), then it would make sense to see if crossover bias has a significant impact on the success rate. 
+Figure~\ref{fig:USChange_Successes_strong} shows the number of successes for the various crossover bias values 
+when using binary tournaments, no elitism, and population size 10.240. A pairwise test of proportions (chi-squared) 
+with Holm correction indicates that while non of the adjacent differences (e.g., crossover bias 0.5 \emph{vs.} 0.75) are 
+statistically significant, most of the non-adjacent differences (e.g., crossover bias 0.25 \emph{vs.} 0.75) are 
+statistically significant, with the exceptions being crossover bias 0 \emph{vs.} 0.5, and bias 0.5 and 1.0 ($p=0.09361$ 
+in both cases). 
 
 \begin{figure}
 \centering
-\includegraphics[width=0.45 \textwidth]{Plots/US_change_successes_tourny2_noElitism.png}
-\caption{Impact of crossover bias on the number of successes runs for the US Change problem, limited to 
-binary tournaments and no elitism.}
-\label{fig:USChange_Successes}
+\includegraphics[width=0.45 \textwidth]{Plots/US_change_successes_strong.pdf}
+\caption{Impact of crossover bias on the number of successes runs for the US Change problem when using 
+binary tournaments, no elitism, and population size 10,240.}
+\label{fig:USChange_Successes_strong}
 \end{figure}
 
+%> pairwise.prop.test(c(6, 12, 18, 30, 34), rep(100, 5))
+%
+%	Pairwise comparisons using Pairwise comparison of proportions 
+%
+%data:  c(6, 12, 18, 30, 34) out of rep(100, 5) 
+%
+%  1       2       3       4      
+%2 0.65003 -       -       -      
+%3 0.09361 0.65003 -       -      
+%4 0.00021 0.02215 0.27429 -      
+%5 1.8e-05 0.00334 0.09361 0.65003
+%
+%P value adjustment method: holm 
 
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/US_change_Bias_impact_vs_success.png}
-\caption{Relationship between proportion of successful runs and the impact of crossover bias.}
-\label{fig:USChangeBiasImpactVsSuccess}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.45 \textwidth]{Plots/US_change_Bias_impact_vs_success.png}
+%\caption{Relationship between proportion of successful runs and the impact of crossover bias.}
+%\label{fig:USChangeBiasImpactVsSuccess}
+%\end{figure}
 
 \subsection{Symbolic regression problems}
 
