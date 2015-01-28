@@ -143,7 +143,15 @@ it was found that if the root parent had a greater fitness (a better-fitting sol
 the non-root parent, the fitness of the individual produced tended to be greater than in the reverse scenario. In this
 work, in order to further research this occurrence, we implemented what we refer to crossover bias, which allowed us to
 force the genetic programming system to assign the individual with the greater fitness to be the root parent in a
-certain percentage of cases. The details of this are discussed further in Section~\ref{sec:Experiments}.
+certain percentage of cases. For this work, we implemented six levels of crossover bias:
+\begin{itemize}
+\item -1 bias - system forced to always select the less fit parent as the root parent, also referred to as reverse bias;
+\item 0 bias - no crossover bias occurred, also referred to as no bias;
+\item 0.25 bias - system forced to select the more fit parent as the root parent in 25\% of cases;
+\item 0.50 bias - system forced to select the more fit parent as the root parent in 50\% of cases;
+\item 0.75 bias - system forced to select the more fit parent as the root parent in 75\% of cases; and
+\item 1 bias - system forced to always select the more fit parent as the root parent, as referred to as simply bias.
+\end{itemize}
 
 \section{Experimental Setup} \label{sec:Experiments}
 
