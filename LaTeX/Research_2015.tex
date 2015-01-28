@@ -248,27 +248,6 @@ selection, no elitism, and population size 10,240.}
 some ideas/feedback from Kirbie and David. Thoughts, suggestions, questions, changes, actual usable text, etc., all 
 greatly appreciated.}
 
-We have two groups of Ordertree results, the first from November 2014, and the second from January 20145. The 
-earlier results just varied the tournament size and the bias probability, leaving the population size at 500 (the default in 
-ECJ for that problem) and no elitism (also the default). Those results are where Figures~\ref{fig:Ordertree_results} 
-and~\ref{fig:Ordertree_results_binary_tournaments} come from. These plots are nice and ``clean'' and say what we 
-want to say without complicating things.
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results.png}
-\caption{Impact of crossover bias on fitness for Ordertree problem for various tournament sizes. \textbf{Redraw this 
-as PDF and mention how improvement drops as tournament sizes grow.}}
-\label{fig:Ordertree_results}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Ordertree_XO_bias_prob_binary_tournaments.png}
-\caption{Impact of crossover bias on fitness for Ordertree problem for binary tournaments.}
-\label{fig:Ordertree_results_binary_tournaments}
-\end{figure}
-
 The later runs are more in keeping with what we'd been doing on other problems. They do a full sweep of bias 
 probabilities, all four tournament sizes (2, 3, 5, and 7), and with and without elitism (1\% when used). The population 
 size was only 1,024 because the trees get really big for this problem and we'd run out of memory if we used 10K 
