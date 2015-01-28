@@ -127,7 +127,23 @@ population size, and possibly the difference in parental fitness.
 recombination operators (which are very common in biology, e.g., sex-linked traits) and how we've identified an 
 asymmetry in subtree crossover and a way to potentially exploit that.}
 
-\section{Crossover bias} \label{sec:XObias}
+\section{Crossover Bias} \label{sec:XObias}
+
+In tree-based genetic programming, one common means of reproduction (the creation of a new set number of individuals
+from the current set) is referred to as subtree crossover or simply crossover. Crossover occurs when a node in one
+individual from the current generation is replaced with a node from another individual from the current generation to
+create a single new individual in the next generation. Because of the rooted nature of tree structures, the entire
+subtree rooted at the replaced node is also replaced. In this paper, the individual in which the node is replaced is
+referred to as the root parent (so named because the root node of the new individual produced is taken from this
+parent) and the individual from which the replacement node is taken is referred to as the non-root parent. Furthermore,
+the root parent tends to contribute more to the semantics of the resulting individual than the non-root parent.
+
+In previous work~\cite{McPheeDonatucciDramdahl:2014} recording individual ancestry in tree-based genetic programming,
+it was found that if the root parent had a greater fitness (a better-fitting solution to the problem being solved) than
+the non-root parent, the fitness of the individual produced tended to be greater than in the reverse scenario. In this
+work, in order to further research this occurrence, we implemented what we refer to crossover bias, which allowed us to
+force the genetic programming system to assign the individual with the greater fitness to be the root parent in a
+certain percentage of cases. The details of this are discussed further in Section~\ref{sec:Experiments}.
 
 \section{Experimental Setup} \label{sec:Experiments}
 
@@ -137,9 +153,9 @@ proportions (chi-squared) or not, because I'm not sure how much we'll use it in 
 
 \section{Results} \label{sec:Results}
 
-\subsection{Structural problems}
+\subsection{Structural Problems}
 
-\subsubsection{K-Landscapes problems}
+\subsubsection{K-Landscapes Problems}
 
 We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ and $K=6$.
 
@@ -226,7 +242,7 @@ selection, no elitism, and population size 10,240.}
 %
 %P value adjustment method: holm 
 
-\subsubsection{Ordertree problem}
+\subsubsection{Ordertree Problem}
 
 \textbf{Everything in this section at the moment is really just Nic chatting about the results that we have, hoping for 
 some ideas/feedback from Kirbie and David. Thoughts, suggestions, questions, changes, actual usable text, etc., all 
@@ -332,7 +348,7 @@ move to the Discussion or Conclusions section if we keep it, or something like i
 %
 %P value adjustment method: holm 
 
-\subsection{U.S. Change problem}
+\subsection{U.S. Change Problem}
 
 For the U.S. Change problem, we'll use ``Hits'' (the number of test cases that are correctly solved) as the measure of 
 the success of a run. There are 150 test cases in our implementation, so an optimal program will have a ``Hits'' score 
@@ -434,9 +450,9 @@ binary tournaments, no elitism, and population size 10,240.}
 %\label{fig:USChangeBiasImpactVsSuccess}
 %\end{figure}
 
-\subsection{Symbolic regression problems}
+\subsection{Symbolic Regression Problems}
 
-\subsubsection{Pagie-1 problem}
+\subsubsection{Pagie-1 Problem}
 
 \textbf{How do we want to handle the quite substantial difference in the behavior of the two different function sets? It 
 could be argued that it's not really our fight and that we can/should just pick one and go with it and not get all bogged 
@@ -610,7 +626,7 @@ said, the difference is substantial, though, so it might be worth mentioning.}}
 \label{fig:Pagie1SizeOverTime}
 \end{figure}
 
-\subsubsection{Sine problem}
+\subsubsection{Sine Problem}
 
 Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem using binary 
 tournaments, no 
