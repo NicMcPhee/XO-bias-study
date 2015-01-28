@@ -257,19 +257,12 @@ The rub is that the results are different with the larger populations, and it's 
 paper. In particular, the fitnesses are actually a little \emph{worse} for bias 1.0 than for bias 0.75, i.e., the performance 
 ``curve'' goes up and then begins to dip down.
 
-Figure~\ref{fig:Ordertree_results_Jan15_facets} shows the results of runs both with and without crossover bias (i.e,. 
+The results of runs both with and without crossover bias (i.e,. 
 crossover bias probability either 1 or 0) for all four tournament sizes, and in each case adding crossover bias 
 improves fitness. All these differences are statistically significant ($p < 0.002$ for each pairing using a pairwise 
 Wilcoxon with Holm correction).
 
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results_Jan15_facets.pdf}
-\caption{Impact of crossover bias on fitness for Ordertree problem for various tournament sizes.}
-\label{fig:Ordertree_results_Jan15_facets}
-\end{figure}
-
-Figure~\ref{fig:Ordertree_results_binary_tournaments_Jan15} shows the impact of a range of crossover bias values 
+The impact of a range of crossover bias values 
 limited to binary tournaments. Here we see the drop in fitness for bias 1.0, actually dropping slightly below that for 0.5 
 as well as 0.75. All these differences are statistically significant ($p < 0.03$) except for the difference between bias 
 0.25 and bias 1.0, so bias of 0.75 is the clear winner here. \textbf{I (Nic) suspect this is actually quite interesting and 
@@ -279,13 +272,6 @@ variation in the system for a problem like this. Maybe we should talk about that
 panel of this figure is essentially the preceding figure). Here we see that the fitness drops for bias 1.0 for all four 
 tournament sizes. In general the impact of crossover bias lessens with the larger tournament sizes, both in the 
 increase in fitness up to bias 0.75, and the drop from there to bias 1.0.
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results_binary_tournaments_Jan15.pdf}
-\caption{Impact of crossover bias on fitness for Ordertree problem for binary tournaments.}
-\label{fig:Ordertree_results_binary_tournaments_Jan15}
-\end{figure}
 
 \begin{figure}
 \centering
