@@ -438,21 +438,32 @@ binary tournaments, no elitism, and population size 10,240.}
 
 \subsubsection{Pagie-1 problem}
 
-\textbf{How do we want to handle the quite substantial difference in the behavior of the two different function sets? It could be argued that it's not really our fight and that we can/should just pick one and go with it and not get all bogged down in trying to explain the differences between these and why they behave so differently. But if we just pick one, it kind of smells like cherry picking. The basic4 set clearly has the stronger ``bias is bad'' result for tournament size 7. If we keep both of function sets we also open the door to a discussion of the value of focusing on hits vs. error, which is another discussion I'm to sure we want to get distracted by here. Thoughts?}
+\textbf{How do we want to handle the quite substantial difference in the behavior of the two different function sets? It 
+could be argued that it's not really our fight and that we can/should just pick one and go with it and not get all bogged 
+down in trying to explain the differences between these and why they behave so differently. But if we just pick one, it 
+kind of smells like cherry picking. The basic4 set clearly has the stronger ``bias is bad'' result for tournament size 7. If 
+we keep both of function sets we also open the door to a discussion of the value of focusing on hits vs. error, which is 
+another discussion I'm to sure we want to get distracted by here. Thoughts?}
 
-Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossover bias on the number of hits for the Pagie-1 regression problem, separated out by both tournament size and function set used; Figure~\ref{fig:Pagie1Fitness_Bias_Tournys_FunctionSet} is similar, but plots fitness (total error) instead of hits.
+Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossover bias on the number of hits for 
+the Pagie-1 regression problem, separated out by both tournament size and function set used; Figure~
+\ref{fig:Pagie1Fitness_Bias_Tournys_FunctionSet} is similar, but plots fitness (total error) instead of hits.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Hits_vs_Bias_Tournys_FunctionSet.pdf}
-\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, broken out for the four different tournament sizes (2, 3, 5, and 7) and the two different function sets (basic4 and koza2). The maximum number of possible hits is 676.}
+\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, broken out for 
+the four different tournament sizes (2, 3, 5, and 7) and the two different function sets (basic4 and koza2). The 
+maximum number of possible hits is 676.}
 \label{fig:Pagie1Hits_Bias_Tournys_FunctionSet}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Fitness_vs_Bias_Tournys_FunctionSet.pdf}
-\caption{Impact of crossover bias on the fitness (total error) for the Pagie-1 symbolic regression problem, broken out for the four different tournament sizes (2, 3, 5, and 7) and the two different function sets (basic4 and koza2). The best possible is an error of 0.}
+\caption{Impact of crossover bias on the fitness (total error) for the Pagie-1 symbolic regression problem, broken out 
+for the four different tournament sizes (2, 3, 5, and 7) and the two different function sets (basic4 and koza2). The best 
+possible is an error of 0.}
 \label{fig:Pagie1Fitness_Bias_Tournys_FunctionSet}
 \end{figure}
 
@@ -463,23 +474,38 @@ Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossov
 	\item Large population (10,240)
 	\item Tarpeian bloat control
 \end{itemize}
-\textbf{If we limit ourselves to these settings, then the complexities of Figures~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} and~\ref{fig:Pagie1Fitness_Bias_Tournys_FunctionSet} simplify to Figures~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet} and~\ref{fig:Pagie1StrongFitness_Bias_Tournys_FunctionSet}. For now I'm going to focus on that subset of the data.}
+\textbf{If we limit ourselves to these settings, then the complexities of Figures~
+\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} and~\ref{fig:Pagie1Fitness_Bias_Tournys_FunctionSet} simplify to 
+Figures~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet} and~
+\ref{fig:Pagie1StrongFitness_Bias_Tournys_FunctionSet}. For now I'm going to focus on that subset of the data.}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_strong_Hits_vs_Bias_Tournys_FunctionSet.pdf}
-\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, broken out by tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set (just $+, -, \times, \div$), no elitism, population size 10,240, and Tarpeian bloat control. The maximum number of possible hits is 676.}
+\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, broken out by 
+tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set (just $+, -, \times, \div$), no elitism, 
+population size 10,240, and Tarpeian bloat control. The maximum number of possible hits is 676.}
 \label{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_strong_Fitness_vs_Bias_Tournys_FunctionSet.pdf}
-\caption{Impact of crossover bias on the number of fitness (total error) for the Pagie-1 symbolic regression problem, broken out by tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set (just $+, -, \times, \div$), no elitism, population size 10,240, and Tarpeian bloat control. The best possible is an error of 0.}
+\caption{Impact of crossover bias on the number of fitness (total error) for the Pagie-1 symbolic regression problem, 
+broken out by tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set (just $+, -, \times, \div$), no 
+elitism, population size 10,240, and Tarpeian bloat control. The best possible is an error of 0.}
 \label{fig:Pagie1StrongFitness_Bias_Tournys_FunctionSet}
 \end{figure}
 
-Focussing on the data in Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}, the differences between crossover bias 0 (standard sub-tree crossover) and all the other positive crossover bias values are statistically significant ($p<10^{-12}$), and all of the differences between crossover bias 0.25 and higher biases are significant ($p<0.007$); none of the differences among 0.5, 0.75, and 1.0 are statistically significant. None of the differences for tournament sizes 3, 5, or 7 are statistically significant, although the difference between crossover biases 0 and 1 are very close ($p=0.053$) for tournament size 7. This indicates that for binary tournaments, including crossover bias substantially and significantly improves the hit rate, although all bias rates above 0.25 are very similar. For tournament size 7, however, it appears that adding crossover bias tends to reduce the hit rate, although in a less substantial and significant manner.
+Focussing on the data in Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}, the differences between 
+crossover bias 0 (standard sub-tree crossover) and all the other positive crossover bias values are statistically 
+significant ($p<10^{-12}$), and all of the differences between crossover bias 0.25 and higher biases are significant 
+($p<0.007$); none of the differences among 0.5, 0.75, and 1.0 are statistically significant. None of the differences for 
+tournament sizes 3, 5, or 7 are statistically significant, although the difference between crossover biases 0 and 1 are 
+very close ($p=0.053$) for tournament size 7. This indicates that for binary tournaments, including crossover bias 
+substantially and significantly improves the hit rate, although all bias rates above 0.25 are very similar. For tournament 
+size 7, however, it appears that adding crossover bias tends to reduce the hit rate, although in a less substantial and 
+significant manner.
 
 %> pairwise.wilcox.test(subset(pagie1_strong, Tourny.size==2)$Hits, subset(pagie1_strong, Tourny.size==2)$Bias)
 %
@@ -495,25 +521,40 @@ Focussing on the data in Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionS
 %
 %P value adjustment method: holm 
 
-The statistical significance in Figure~\ref{fig:Pagie1StrongFitness_Bias_Tournys_FunctionSet} is very similar to that in the previous figure (Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}). Here again adding bias for binary tournaments improves fitness, but none of the differences between biases 0.5, 0.75, and 1.0 are statistically significant. None of the differences for tournament sizes 3 and 5 are significant, and most of those for tournament size 7 aren't significant. The one exception for tournament size 7 is that the differences between crossover biases 0.0 and 1.0 is statistically significant ($p = 0.021$).
+The statistical significance in Figure~\ref{fig:Pagie1StrongFitness_Bias_Tournys_FunctionSet} is very similar to that in 
+the previous figure (Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}). Here again adding bias for binary 
+tournaments improves fitness, but none of the differences between biases 0.5, 0.75, and 1.0 are statistically 
+significant. None of the differences for tournament sizes 3 and 5 are significant, and most of those for tournament size 
+7 aren't significant. The one exception for tournament size 7 is that the differences between crossover biases 0.0 and 
+1.0 is statistically significant ($p = 0.021$).
 
-Figure~\ref{fig:Pagie1StrongSuccesses} shows the number of successes (runs that exactly solve the problem). Almost none of these differences are statistically significant, with the major exception being the small number of successes (3) for binary tournaments without bias, which is significantly different from all the other bias values for binary tournaments ($p<0.0002$). The one other exception is for tournament size 7, the difference between the number of successes without crossover biases 0.0 and 1.0 is significant ($p=0.015$).
+Figure~\ref{fig:Pagie1StrongSuccesses} shows the number of successes (runs that exactly solve the problem). 
+Almost none of these differences are statistically significant, with the major exception being the small number of 
+successes (3) for binary tournaments without bias, which is significantly different from all the other bias values for 
+binary tournaments ($p<0.0002$). The one other exception is for tournament size 7, the difference between the 
+number of successes without crossover biases 0.0 and 1.0 is significant ($p=0.015$).
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Strong_Successes_vs_Bias.pdf}
 \caption{Impact of crossover bias on the number of successes (runs that exactly solve the problem) for the 
-Pagie-1 symbolic regression problem broken out by tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set (just $+, -, \times, \div$), no elitism, population size 10,240, and Tarpeian bloat control.}
+Pagie-1 symbolic regression problem broken out by tournament size (2, 3, 5, and 7). These runs use the ``basic4'' 
+function set (just $+, -, \times, \div$), no elitism, population size 10,240, and Tarpeian bloat control.}
 \label{fig:Pagie1StrongSuccesses}
 \end{figure}
 
-\textbf{If we want a ``pretty'' graph that says that crossover bias is good, Figure~\ref{} does the job nicely. Here the only restriction is that we only look at binary tournaments, but otherwise we have everything (both pop sizes, both elitisms, both function sets, with and without bloat control). All the differences are statistically significant ($p \leq 0.03$) except for the difference between 0.5 and 0.75 ($p=0.067$). Do we want to keep/use this? How do we talk about it in the context of the other plots?}
+\textbf{If we want a ``pretty'' graph that says that crossover bias is good, 
+Figure~\ref{fig:Pagie1Hits_Binary_tournaments} does the job nicely. Here the only restriction is that we only look at binary 
+tournaments, but otherwise we have everything (both pop sizes, both elitisms, both function sets, with and without 
+bloat control). All the differences are statistically significant ($p \leq 0.03$) except for the difference between 0.5 and 
+0.75 ($p=0.067$). Do we want to keep/use this? How do we talk about it in the context of the other plots?}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Hits_binary_tournaments.pdf}
-\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem for binary tournaments, but no other parameter restrictions.}
-\label{fig:Pagie1Hits}
+\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem for binary 
+tournaments, but no other parameter restrictions.}
+\label{fig:Pagie1Hits_Binary_tournaments}
 \end{figure}
 
 %%%%%%%%%%%%%%%
@@ -563,13 +604,16 @@ control for the Pagie-1 symbolic regression problem.}
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_size_vs_time.png}
-\caption{Impact of crossover bias on the tree size over time for the Pagie-1 symbolic regression problem. \textbf{Do we want to keep this in the paper? We don't have data on any other problems, and I'm not sure what this tells us. That said, the difference is substantial, though, so it might be worth mentioning.}}
+\caption{Impact of crossover bias on the tree size over time for the Pagie-1 symbolic regression problem. \textbf{Do 
+we want to keep this in the paper? We don't have data on any other problems, and I'm not sure what this tells us. That 
+said, the difference is substantial, though, so it might be worth mentioning.}}
 \label{fig:Pagie1SizeOverTime}
 \end{figure}
 
 \subsubsection{Sine problem}
 
-Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem using binary tournaments, no 
+Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem using binary 
+tournaments, no 
 elitism, and population size 10,240. All these differences are statistically significant ($p < 10^{-5}$ using a 
 pairwise Wilcoxon rank sum test) except for the difference between the bias of 0.75 and 1.0.
 
