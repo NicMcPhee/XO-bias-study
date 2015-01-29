@@ -129,20 +129,50 @@ asymmetry in subtree crossover and a way to potentially exploit that.}
 
 \section{Crossover Bias} \label{sec:XObias}
 
-In tree-based genetic programming, sub-tree crossover remains a very common reproduction mechanism \cite{poli08:fieldguide}. Crossover occurs when a node in one
-individual from the current generation is replaced with a node from another individual from the current generation to
-create a single new individual in the next generation. Because of the rooted nature of tree structures, the entire
-subtree rooted at the replaced node is also replaced. In this paper, the individual in which the node is replaced is
-referred to as the root parent (so named because the root node of the new individual produced is taken from this
-parent) and the individual from which the replacement node is taken is referred to as the non-root parent. Furthermore,
-the root parent tends to contribute more to the semantics of the resulting individual than the non-root parent.
+In tree-based genetic programming, sub-tree crossover remains a very common reproduction mechanism 
+\cite{poli08:fieldguide}. As Figure~\ref{fig:root_parent_illustration} illustrates, sub-tree crossover is an inherently 
+asymmetric operation, with one parent contributing the root node and, in most cases, a substantially larger total 
+number of nodes than the other parent. In this work we will refer to the individual which contributes the root node as 
+the \emph{root parent} and the other as the \emph{non-root parent}. 
 
-In previous work~\cite{McPheeDonatucciDramdahl:2014} recording individual ancestry in tree-based genetic programming,
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/Root_parent_illustration.pdf}
+\caption{Sub-tree crossover, illustrating the asymmetric role of the \emph{root} and \emph{non-root} parents.}
+\label{fig:root_parent_illustration}
+\end{figure}
+
+Crucial to this work, it has been previously noted \cite{McPheeDonatucciDramdahl:2014, McPhee:2008:SBB:
+1792694.1792707} that in many cases the root parent also tends to contribute more to the semantics of the resulting 
+individual than the non-root parent. This is in part because of the tendency of the root parent to contribute more 
+overall nodes, but is also because for most function sets the root node (and the nodes near it) have an especially 
+strong impact on the result of evaluating the tree in question. While the details and impact of this asymmetry will 
+depend a great deal on the details of the function set and the particular trees chosen as parents, in many common 
+tree-based GP settings the asymmetry has a quite substantial impact on the semantics of the offspring.
+
+While this paper focuses on the asymmetry in the context of tree-based GP and sub-tree crossover, it's important to 
+note that asymmetries like this are common in many evolutionary systems, both biological and artificial. Much 
+eukaryote reproduction is sexual, and brings with it numerous sex-linked traits and related asymmetries, for example. 
+\textbf{Do we want a bib entry here? Something as simple as a Wikipedia reference, or something ``fancier'' like a 
+review article on sex-linked traits?} Many evolutionary computation systems other than tree-based GP also have 
+significant asymmetries. Many linear GP systems (\textbf{cite something - Wolfgang's book?}) and stack-based GP 
+systems (\textbf{cite PUSH}), for example, have asymmetries where the last instructions executed can have a 
+disproportionate impact on the results, and changes near the front of a grammatical evolution strings will have a 
+disproportionate impact by determining the important early choices in the grammar productions. In general these 
+asymmetries weren't intentional design goals, but were instead simple artifacts of other system design decisions, and 
+the potential impact of these asymmetries has been largely unstudied.
+
+In previous work~\cite{McPheeDonatucciDramdahl:2014} recording individual ancestry in tree-based genetic 
+programming,
 it was found that if the root parent had a greater fitness (a better-fitting solution to the problem being solved) than
 the non-root parent, the fitness of the individual produced tended to be greater than in the reverse scenario. In this
-work, in order to further research this occurrence, we implemented what we refer to crossover bias, which allowed us to
+work, in order to further research this occurrence, we implemented what we refer to crossover bias, which allowed us 
+to
 force the genetic programming system to assign the individual with the greater fitness to be the root parent in a
-certain percentage of cases. For this work, we implemented six levels of crossover bias:
+certain percentage of cases.
+
+\textbf{I'm starting to think that most of the preceding text in this section really belongs in the introduction, leaving this section to focus on the details of how we implemented XO bias. Thoughts?}
+For this work, we implemented six levels of crossover bias:
 \begin{itemize}
 \item -1 bias - system forced to always select the less fit parent as the root parent, also referred to as reverse bias;
 \item 0 bias - no crossover bias occurred, also referred to as no bias;
