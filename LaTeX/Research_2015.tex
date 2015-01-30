@@ -3,16 +3,11 @@
 
 \documentclass{sig-alternate}
 
-\usepackage{parskip}
-\usepackage{times} %For typeface
 \usepackage{graphicx}
- \usepackage{algorithm}
+\usepackage{algorithm}
 \usepackage{algpseudocode}
-\usepackage[justification=centering]{caption}[2007/12/23]
 \usepackage{url}
 \sloppy
-
-\setlength{\parindent}{0.5cm} 
 
 \newcommand{\citep}[1]{\cite{#1}}
 
@@ -215,7 +210,7 @@ Non-bias-effective settings, conversely, are:
 \item population size of 1,024;
 \end{itemize}
 
-All experiments were run using a copy of ECJ 21\footnote{\url{http://cs.gmu.edu/~eclab/projects/ecj/}} that we modified to support crossover bias.\footnote{Our intent is to submit our modifications back to the ECJ group to make it easy for other ECJ users to experiment with crossover bias. \textbf{Do we want to bother saying this?}}
+All experiments were run using a copy of ECJ 21\footnote{\url{http://cs.gmu.edu/~eclab/projects/ecj/}} that we modified to support crossover bias.\footnote{Our intent is to submit our modifications back to the ECJ group to make it easy for other ECJ users to experiment with crossover bias.}
 
 \section{Results} \label{sec:Results}
 
@@ -369,7 +364,7 @@ keep it, or something like it.}
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_facets.pdf}
-\caption{Impact of crossover bias on fitness for K-Landcapes problem, K=6, for various tournament sizes.}
+\caption{Impact of crossover bias on fitness for K-Landcapes problem, K=6, for various tournament sizes. \textbf{Move this into the K-Landscapes section next to Figure 2, along with the associated discussion.}}
 \label{fig:KLandscapes6_XO_bias_impact_facets}
 \end{figure}
 
@@ -425,9 +420,7 @@ find that crossover bias has a substantial and statistically significant impact,
 Figure~\ref{fig:USChange_Hits_strong}. Here the bulk of these pairwise differences are statistically significant
 ($p<0.0002$ using a pairwise Wilcoxon test with Holm correction). The major exception is the difference between
 crossover bias 0.75 and 1.00 ($p=0.43078$). Two other adjacent pairs have $p$-values slightly above 0.05: crossover bias
-0.25 \emph{vs.} 0.50 ($p=0.05036$), and 0.50 \emph{vs.} 0.75 ($p=0.08019$). \textbf{We could put all the $p$ values in
-a table, bolding the ones that are significant. This is somewhat common in the literature, but would use quite a bit
-more space, especially since half the table would be empty. Thoughts?}
+0.25 \emph{vs.} 0.50 ($p=0.05036$), and 0.50 \emph{vs.} 0.75 ($p=0.08019$).
 
 \begin{figure}
 \centering
@@ -491,7 +484,11 @@ tournaments, no elitism, and population size 10,240.}
 
 \subsection{Symbolic Regression Problems}
 
+\textbf{We decided that we're going to just focus on hits for both regression problems, which means we should remove the fitness plots/discussion from the Pagie-1 section.}
+
 \subsubsection{Pagie-1 Problem}
+
+\textbf{We agreed to just drop everything about the koza2 function set, which includes redrawing Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} to only have basic4.}
 
 For the Pagie-1 problem we did runs across the following parameters:
 
@@ -615,14 +612,14 @@ would like as much information on it as possible before I remove it.}
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_fitness_vs_time.png}
-\caption{Impact of crossover bias on the fitness over time for the Pagie-1 symbolic regression problem. \textbf{What's the data set this comes from?}}
+\caption{Impact of crossover bias on the fitness over time for the Pagie-1 symbolic regression problem. \textbf{What's the data set this comes from?} \textbf{Drop this for now.}}
 \label{fig:Pagie1FitnessOverTime}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_size_vs_time.png}
-\caption{Impact of crossover bias on the tree size over time for the Pagie-1 symbolic regression problem.}
+\caption{Impact of crossover bias on the tree size over time for the Pagie-1 symbolic regression problem. \textbf{Drop this for now.}}
 \label{fig:Pagie1SizeOverTime}
 \end{figure}
 
@@ -700,7 +697,7 @@ as two ``panels'' like, e.g., in Figure~\ref{fig:parentErrorsSine}?}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_fitness_vs_gen_strong.pdf}
 \caption{Impact of crossover bias on the sine symbolic regression problem with binary tournaments, no elitism, and 
-population size 10,240.}
+population size 10,240. \textbf{Move this to where we define bias-effective parameters.}}
 \label{fig:sineBiasFitnessVsGenStrong}
 \end{figure}
 
@@ -708,7 +705,7 @@ population size 10,240.}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_fitness_vs_gen_weak.pdf}
 \caption{Impact of crossover bias on the sine symbolic regression problem with tournament size 7, 0.1\% elitism, and 
-population size 1,024.}
+population size 1,024.  \textbf{Move this to where we define non-bias-effective parameters, combined with the previous figure as a pair of panels.}}
 \label{fig:sineBiasFitnessVsGenWeak}
 \end{figure}
 
@@ -716,7 +713,7 @@ population size 1,024.}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_fitness_vs_gen_t2_e01_p10K.pdf}
 \caption{Impact of crossover bias on the sine symbolic regression problem with tournament size 7, 0.1\% elitism, and 
-population size 10,240.}
+population size 10,240. \textbf{Drop this.}}
 \label{fig:sineBiasFitnessVsGenT2E01P10K}
 \end{figure}
 
@@ -732,7 +729,7 @@ that both parents are from the more highly fit part of the population. To better
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Parent_errors_sine.pdf}
 \caption{Plot of the errors of all individuals chosen as parents from some sine runs. \textbf{Explain this.} \textbf{Do
-we want/need this plot?}}
+we want/need this plot?} \textbf{We agreed to get rid of this.}}
 \label{fig:parentErrorsSine}
 \end{figure}
 
@@ -758,7 +755,7 @@ and~\ref{fig:parentDiffsKLandscapes}.
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Parent_fitnesses_KLandscapes.pdf}
 \caption{Plot of the fitnesses of all individuals chosen as parents from some K-Landscape runs. \textbf{Explain this.}
-\textbf{Do we want/need this plot?}}
+\textbf{Do we want/need this plot?} \textbf{We agreed to get rid of this.}}
 \label{fig:parentFitnessesKLandscapes}
 \end{figure}
 
