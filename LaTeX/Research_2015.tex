@@ -186,34 +186,44 @@ We also experimented with \emph{reverse} bias, where the weaker parent was alway
 
 \section{Experimental Setup} \label{sec:Experiments}
 
-\textbf{Talk about the fact that we used pairwise Wilcoxon test with Holm corrections for the bulk of our statistical 
-tests, along with a reference/citation to R as generated inside R. I'm not sure if we want to mention pairwise test of 
-proportions (chi-squared) or not, because I'm not sure how much we'll use it in the paper.}
+To better understand the impact of crossover bias on genetic programming performance, we experimented with five problems:
+\begin{itemize}
+	\item K-Landscapes, with $K=6$
+	\item Order Tree
+	\item U.S. Change
+	\item Sine regression
+	\item Pagie-1 regression
+\end{itemize}
+Three of these (K-Landscapes, Order Tree, and Pagie-1 regression) are taken from recent benchmark suggestions~\cite{gp-benchmarks-2013}. U.S. Change is a program synthesis problem taken from~\cite{USChangeSource}, and sine regression is the example problem used in earlier work on the impact of root and non-root parents~\cite{McPheeDonatucciDramdahl:2014}.
 
-\textbf{Mention ECJ with a citation.}
+\textbf{Add a footnote about the two function sets for Pagie-1 and their impact.}
 
-In the following sections, the terms ``bias-effective settings'' and ``non-bias-effective settings'' are used to
-describe specific settings used in collecting data from runs. These terms are defined here, for convenience.
-
-Bias-effective settings were as follows:
+In the following sections, the terms \emph{``bias-effective settings''} and \emph{``non-bias-effective settings''} 
+are used to
+describe specific subsets of the parameters settings described above. As is seen in Section~\ref{sec:Results}, 
+there are parameter choices where crossover bias appears to have a fairly strong impact, and other choices 
+where crossover bias has almost no effect on the results. The ``bias-effective settings'' are:
 \begin{itemize}
 \item binary tournaments,
 \item no elitism, and
 \item population size of 10,240;
 \end{itemize}
-and are so named because, with these settings in place, crossover bias tended to have the strongest effect.
-
-Non-bias-effective settings, conversely, were as follows:
+Non-bias-effective settings, conversely, are:
 \begin{itemize}
 \item tournament sizes of seven individuals,
 \item elitism of either 0.1\% or 1\%, and
 \item population size of 1,024;
 \end{itemize}
-and are so named because, with these settings in place, crossover bias tended to have the weakest effect.
 
-\textbf{Add a footnote about the two function sets for Pagie-1 and their impact.}
+All experiments were run using a copy of ECJ 21\footnote{\url{http://cs.gmu.edu/~eclab/projects/ecj/}} that we modified to support crossover bias.\footnote{Our intent is to submit our modifications back to the ECJ group to make it easy for other ECJ users to experiment with crossover bias. \textbf{Do we want to bother saying this?}}
 
 \section{Results} \label{sec:Results}
+
+Unless noted otherwise, all mentions of statistical significance in this section are based on pairwise Wilcoxon tests with Holm corrections. All statistics calculations were performed with R \cite{R} and plots were generated using the ggplot2 package \cite{ggplot2Book}.
+
+\textbf{Talk about the fact that we used pairwise Wilcoxon test with Holm corrections for the bulk of our statistical 
+tests, along with a reference/citation to R as generated inside R. I'm not sure if we want to mention pairwise test of 
+proportions (chi-squared) or not, because I'm not sure how much we'll use it in the paper.}
 
 \subsection{Structural Problems}
 
