@@ -213,19 +213,19 @@ and are so named because, with these settings in place, crossover bias tended to
 
 \subsubsection{K-Landscapes Problems}
 
-We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ and $K=6$.
+We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ and $K=6$, using various combinations of the following:
 
 \begin{itemize}
-	\item XO bias of reverse, 0, 0.25, 0.5, 0.75, and 1
-	\item Population sizes of 1,024 and 10,240
-	\item Elitism of 0\% or 1\%
-	\item Tournament sizes of 2, 3, 5, and 7
+	\item crossover biases of -1, 0, 0.25, 0.5, 0.75, and 1;
+	\item population sizes of 1,024 and 10,240;
+	\item elitism percentages of 0\% or 1\%; and
+	\item tournament sizes of 2, 3, 5, and 7.
 \end{itemize}
 
 Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the 
-combinations of parameter values. Increasing the amount of crossover bias consistently improves the 
-fitness of the results. All the differences are statistically significant ($p < 0.012$) except for the difference between
-between bias probability 0.75 and 1.0.
+combinations of parameter values (excepting reverse bias). Increasing the amount of crossover bias consistently
+improves the fitness of the results. All the differences are statistically significant ($p < 0.012$) except for the
+difference between bias probability 0.75 and 1.0.
 
 %> pairwise.wilcox.test(klandscapes6$Fitness, klandscapes6$Bias.probability)
 %
@@ -249,13 +249,14 @@ between bias probability 0.75 and 1.0.
 \label{fig:KLandscapes6_results}
 \end{figure}
 
-Figure~\ref{fig:KLandscapes6_strong_results} shows the subset set of this information with just binary tournament 
-selection, no elitism, and population size of 10,240. It's clear that the impact of crossover bias is much stronger in this 
-case than in the more general case shown in Figure~\ref{fig:KLandscapes6_results}. Here all the differences are strongly 
-statistically significant ($p < 10^{-11}$) except for the difference between reverse bias (-1) and no bias (0). Increasing 
-the crossover bias increases the number of ``perfect'' solutions discovered as well as just increasing the fitness. 15 
-solutions were discovered in the 100 runs with crossover bias at 1.0, where only 1 or 2 solutions were discovered for 
-each of the other crossover bias probabilities; this difference is statistically significant with $p \leq 0.03$ using a 
+Figure~\ref{fig:KLandscapes6_strong_results} filters out only the data gathered using the bias-effective treatment,
+discussed in Section~\ref{sec:Experiments}. It is clear that the impact of crossover bias is much stronger in this case
+than in the more general case shown in Figure~\ref{fig:KLandscapes6_results}. Here all the differences are strongly
+statistically significant ($p < 10^{-11}$), with the exception of the difference between reverse bias (-1; not shown)
+and no bias (0). In addition to improvements in fitness, increasing the crossover bias also increases the number of
+``perfect'' solutions discovered. Out of 100 runs with a crossover bias setting of 1, 15 of these runs resulted in the
+discovery of a ``perfect'' solution. By comparison, only 1 or 2 runs out of 100 resulted in ``perfect'' solutions for
+each of the other crossover probabilities. This difference is statistically significant with $p \leq 0.03$ using a
 pairwise test of proportions.
 
 \begin{figure}
