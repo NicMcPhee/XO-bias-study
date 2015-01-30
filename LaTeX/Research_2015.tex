@@ -148,13 +148,12 @@ disproportionate impact by determining the important early choices in the gramma
 asymmetries weren't intentional design goals, but were instead simple artifacts of other system design decisions, and 
 the potential impact of these asymmetries has been largely unstudied.
 
-In previous work~\cite{McPheeDonatucciDramdahl:2014} recording individual ancestry in tree-based genetic 
-programming,
-it was found that if the root parent had a greater fitness (a better-fitting solution to the problem being solved) than
-the non-root parent, the fitness of the individual produced tended to be greater than in the reverse scenario. In this
-work, in order to further research this occurrence, we implemented what we refer to crossover bias, which allowed us to
-force the genetic programming system to assign the individual with the greater fitness to be the root parent in a
-certain percentage of cases.
+In previous work~\cite{McPheeDonatucciDramdahl:2014},
+it was noted that when performing crossover, if the root parent had a better fitness than
+the non-root parent, then the fitness of the offspring produced tended to be greater than in the reverse scenario 
+where the less fit parent was the root parent.
+To explore this further, we implemented what we refer to crossover bias, which allowed us to
+probabilistically force the genetic programming system to assign the individual with the greater fitness to be the root parent.
 
 \section{Crossover Bias} \label{sec:XObias}
 
