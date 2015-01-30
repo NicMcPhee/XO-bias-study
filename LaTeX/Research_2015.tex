@@ -305,30 +305,35 @@ selection, no elitism, and population size 10,240.}
 some ideas/feedback from Kirbie and David. Thoughts, suggestions, questions, changes, actual usable text, etc., all 
 greatly appreciated.}
 
-The later runs are more in keeping with what we'd been doing on other problems. They do a full sweep of bias 
-probabilities, all four tournament sizes (2, 3, 5, and 7), and with and without elitism (1\% when used). The population 
-size was only 1,024 because the trees get really big for this problem and we'd run out of memory if we used 10K 
-pops.
+For the OrderTree problem, a full sweep of the following parameters was used:
 
-The rub is that the results are different with the larger populations, and it's not clear how we want to handle this in the 
-paper. In particular, the fitnesses are actually a little \emph{worse} for bias 1.0 than for bias 0.75, i.e., the performance 
-``curve'' goes up and then begins to dip down.
+\begin{itemize}
+	\item crossover biases of -1, 0, 0.25, 0.5, 0.75, and 1;
+	\item population size of 1,024;
+	\item elitism percentages of 0\% or 1\%; and
+	\item tournament sizes of 2, 3, 5, and 7.
+\end{itemize}
 
-The results of runs both with and without crossover bias (i.e,. 
-crossover bias probability either 1 or 0) for all four tournament sizes, and in each case adding crossover bias 
-improves fitness. All these differences are statistically significant ($p < 0.002$ for each pairing using a pairwise 
-Wilcoxon with Holm correction).
+While similar to the parameters used for the K-Landscapes problem, one difference is apparent: the population size for
+the OrderTree runs was limited to 1,024. This was a consequence of the large trees generated for this problem,
+resulting in out of memory errors for the larger population size of 10,240.
 
-The impact of a range of crossover bias values 
-limited to binary tournaments. Here we see the drop in fitness for bias 1.0, actually dropping slightly below that for 0.5 
-as well as 0.75. All these differences are statistically significant ($p < 0.03$) except for the difference between bias 
-0.25 and bias 1.0, so bias of 0.75 is the clear winner here. \textbf{I (Nic) suspect this is actually quite interesting and 
-might open interesting doors to things like premature convergence and need for being able to have a least a little 
-variation in the system for a problem like this. Maybe we should talk about that in the "Future work" section?} Figure~
-\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this to cover all four tournament sizes (so the leftmost 
-panel of this figure is essentially the preceding figure). Here we see that the fitness drops for bias 1.0 for all four 
-tournament sizes. In general the impact of crossover bias lessens with the larger tournament sizes, both in the 
-increase in fitness up to bias 0.75, and the drop from there to bias 1.0.
+Initial runs of this problem with (1) and without (0) crossover bias across all four tournament sizes demonstrated that
+in each case, adding crossover bias improved fitness. Additionally, these improvements were statistically significant
+($p < 0.002$ for each pairing using a pairwise Wilcoxon with Holm correction).
+
+However, in the next set of runs, using the full range of crossover bias values but limited to binary tournaments, we
+observed a drop in fitness from bias 0.75 to bias 1, actually dropping slightly below that for 0.50 as well. All these
+differences are statistically significant ($p < 0.03$), with the exception of the difference between bias 0.25 and bias
+1, so bias 0.75 is the clear winner in this scenario. \textbf{I (Nic) suspect this is actually quite interesting and
+might open interesting doors to things like premature convergence and need for being able to have a least a little
+variation in the system for a problem like this. Maybe we should talk about that in the "Future work" section?}
+
+Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this to cover all four tournament sizes. The
+figure demonstrates that the drop in fitness for bias 1 observed for binary tournaments is consistent across the other
+three tournament sizes as well. However, it is also apparent from the figure that in general the impact of crossover
+bias lessens with the larger tournament sizes, both in the increase in fitness up to bias 0.75, and the drop from there
+to bias 1.
 
 \begin{figure}
 \centering
@@ -337,17 +342,16 @@ increase in fitness up to bias 0.75, and the drop from there to bias 1.0.
 \label{fig:Ordertree_results_all_tournaments_Jan15}
 \end{figure}
 
-Just to check that this wasn't happening everywhere, Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets} plots 
-the corresponding data from the K-Landscapes runs. It's clear that for binary tournaments, increasing the crossover 
-bias probability continues to improve the fitness. This continues to be true for tournament size 3. For tournament 7, 
-however, it does look like the reverse is true, where increasing crossover actually hurts fitness. Almost none of the 
-differences for tournament size 7 are statistically significant, however, with the only exception being the difference 
-between 0.25 and 1.0 ($p=0.21$ using a pairwise Wilcoxon test with Holm correction). \textbf{This paragraph might 
-move to the Discussion or Conclusions section if we keep it, or something like it.}
-
-% None of the differences are significant for tourney size 5. All the differences are significant for TS=3 except for bias 
-0.5 and 0.75 and that was very close ($p=0.05620$). All the differences for binary are \emph{strongly} significant 
-($p<6e-08$).
+Compare this to the results shown in Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets}, which plots the corresponding
+data from the K-Landscapes runs. It is clear that for binary tournaments, increasing the crossover bias probability
+continues to improve the fitness - all the differences are strongly statistically significant ($p<6e-08$). This
+continues to be true for tournament size 3 - all the differences are statistically significant except for that between
+bias 0.50 and 0.75 and that was very close ($p=0.05620$). None of the differences for tournament size 5 are
+significant, and so we will past over it here. For tournament 7, however, it does look like the reverse is true, where
+increasing crossover actually hurts fitness. Almost none of the differences for tournament size 7 are statistically
+significant, however, with the only exception being the difference between 0.25 and 1 ($p=0.21$ using a pairwise
+Wilcoxon test with Holm correction). \textbf{This paragraph might move to the Discussion or Conclusions section if we
+keep it, or something like it.}
 
 \begin{figure}
 \centering
