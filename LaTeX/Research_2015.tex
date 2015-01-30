@@ -113,8 +113,6 @@ population size, and possibly the difference in parental fitness.
 operators (which are very common in biology, e.g., sex-linked traits) and how we've identified an asymmetry in subtree
 crossover and a way to potentially exploit that.}
 
-\section{Crossover Bias} \label{sec:XObias}
-
 In tree-based genetic programming, sub-tree crossover remains a very common reproduction mechanism
 \cite{poli08:fieldguide}. As Figure~\ref{fig:root_parent_illustration} illustrates, sub-tree crossover is an inherently
 asymmetric operation, with one parent contributing the root node and, in most cases, a substantially larger total
@@ -158,8 +156,7 @@ work, in order to further research this occurrence, we implemented what we refer
 force the genetic programming system to assign the individual with the greater fitness to be the root parent in a
 certain percentage of cases.
 
-\textbf{I'm starting to think that most of the preceding text in this section really belongs in the introduction,
-leaving this section to focus on the details of how we implemented XO bias. Thoughts?}
+\section{Crossover Bias} \label{sec:XObias}
 
 For this work, we implemented six levels of crossover bias:
 \begin{itemize}
