@@ -106,18 +106,18 @@ population size, and possibly the difference in parental fitness.
 
 As Figure~\ref{fig:root_parent_illustration} illustrates, the widely used sub-tree crossover operator in tree-based 
 genetic programming (GP)~\cite{poli08:fieldguide} is an inherently
-asymmetric operation, with one parent contributing the root node and, in most cases, a substantially larger total
+asymmetric operation, with one parent contributing the root node and, in most cases, a substantially larger
 number of nodes than the other parent. This asymmetry has been noted before, e.g.,~\cite{mcphee1999analysis}
-where the parent that contributes the root node is referred to as the \emph{root parent} and the other parent as
+where they refer to parent that contributes the root node as the \emph{root parent} and the other parent as
 the \emph{non-root parent}.
-It has been previously observed 
+It has also been previously observed 
 \cite{McPheeDonatucciDramdahl:2014, McPhee:2008:SBB:1792694.1792707} 
-that in many cases the root parent also tends to contribute more to the semantics of the resulting 
-individual than the non-root parent. This is in part because of the tendency of the root parent to contribute more 
-overall nodes, but is also because for most function sets the root node (and the nodes near it) have an especially 
-strong impact on the result of evaluating the tree in question. While the details and impact of this asymmetry will 
-depend a great deal on the details of the function set and the particular trees chosen as parents, in many common 
-tree-based GP settings the asymmetry has a quite substantial impact on the semantics of the offspring.
+that the root parent often contributes more to the semantics of the resulting 
+individual. This is in part because of the tendency of the root parent to contribute more 
+overall nodes, but also because for most function sets the root node (and the nodes near it) have an especially 
+strong impact on the result of evaluating the tree in question. While the specific impact of this asymmetry will 
+depend on the details of the function set and the particular trees chosen as parents, in many common 
+tree-based GP settings the asymmetry does have a substantial effect on the semantics of the offspring.
 
 \begin{figure}
 \centering
@@ -127,7 +127,7 @@ tree-based GP settings the asymmetry has a quite substantial impact on the seman
 \end{figure}
 
 An important impact of this asymmetry was recently noted in~\cite{McPheeDonatucciDramdahl:2014},
-where it was observed that the fitness of the offspring tended to be better when the root parent had a better 
+where they observed that the fitness of the offspring tended to be better when the root parent had a better 
 fitness than
 the non-root parent.
 To explore this further, we implemented what we refer to \emph{crossover bias}, which allowed us to
@@ -135,9 +135,9 @@ probabilistically force the genetic programming system to assign the individual 
 fitness to be the root parent. Here we apply crossover bias (defined in Section~\ref{sec:XObias}) 
 to a variety of test problems (described in Section~\ref{sec:Experiments}). The results 
 (Section~\ref{sec:Results}) make it clear that crossover bias can have a substantial impact on the 
-results of GP runs, but that the results are heavily parameter dependent and, to a lesser degree 
+performance of GP runs, but that the results are heavily parameter dependent and, to a lesser degree 
 problem dependent. In general, however, we find (Section~\ref{sec:Discussion}) that incorporating 
-at least some crossover bias is, at least in these problems, usually either advantageous or neutral. 
+some crossover bias is, at least in these problems, usually either advantageous or neutral. 
 
 \textbf{Should this next paragraph be moved the Conclusions section instead of having it here?}
 
