@@ -104,14 +104,10 @@ population size, and possibly the difference in parental fitness.
 
 \section{Introduction} \label{sec:Introduction}
 
-\textbf{Nic should try to capture some nice things Lee Spector said about the importance of asymmetrical recombination
-operators (which are very common in biology, e.g., sex-linked traits) and how we've identified an asymmetry in subtree
-crossover and a way to potentially exploit that.}
-
 As Figure~\ref{fig:root_parent_illustration} illustrates, the widely used sub-tree crossover operator in tree-based 
-genetic programming (GP) \cite{poli08:fieldguide} is an inherently
+genetic programming (GP)~\cite{poli08:fieldguide} is an inherently
 asymmetric operation, with one parent contributing the root node and, in most cases, a substantially larger total
-number of nodes than the other parent. This asymmetry has been noted before, e.g., \cite{mcphee1999analysis}
+number of nodes than the other parent. This asymmetry has been noted before, e.g.,~\cite{mcphee1999analysis}
 where the parent that contributes the root node is referred to as the \emph{root parent} and the other parent as
 the \emph{non-root parent}.
 It has been previously observed 
@@ -148,11 +144,11 @@ at least some crossover bias is, at least in these problems, usually either adva
 While this paper focuses on the asymmetry in the context of tree-based GP and sub-tree crossover, it's important to 
 note that asymmetries like this are common in many evolutionary systems, both biological and artificial. Much 
 eukaryote reproduction is sexual, and brings with it numerous sex-linked traits and related asymmetries; this may
-play an important role in speciation \cite{qvarnstrom2009speciation}, arguably one of the most crucial of 
+play an important role in speciation~\cite{qvarnstrom2009speciation}, arguably one of the most crucial of 
 biological asymmetries.
 Many evolutionary computation systems other than tree-based GP also have 
-significant asymmetries. Many linear GP systems \cite{brameier2007linear} and stack-based GP 
-systems \cite{spector:2002:GPEM}, for example, have asymmetries where the last instructions executed can have a 
+significant asymmetries. Many linear GP systems~\cite{brameier2007linear} and stack-based GP 
+systems~\cite{spector:2002:GPEM}, for example, have asymmetries where the last instructions executed can have a 
 disproportionate impact on the results. Similarly, changes near the front of grammatical evolution 
 \cite{o2003grammatical} strings will have a 
 disproportionate impact by determining the important early choices in the grammar productions. 
@@ -160,7 +156,14 @@ The results presented here suggests that it may be important to more thoroughly 
 
 \section{Crossover Bias} \label{sec:XObias}
 
-For this work, we implemented crossover bias with a parameter specifying the probability of forcing the more fit parent to be the root parent when performing crossover, as detailed in Algorithm~\ref{alg:biasAlgorithm}. Every time a crossover event was to be performed, we would use this probability to decide whether to force the more fit parent to be the root parent. Note that if the random value in Algorithm~\ref{alg:biasAlgorithm} didn't cause crossover bias to be applied, then the parents were left in their original random order, meaning that there is a 50\% chance that the root parent is the more fit parent even without any crossover bias.
+For this work, we implemented crossover bias with a parameter specifying the probability of forcing 
+the more fit parent to be the root parent when performing crossover, as detailed in 
+Algorithm~\ref{alg:biasAlgorithm}. Every time a 
+crossover event was to be performed, we would use this probability to decide whether to force the 
+more fit parent to be the root parent. Note that if the random value in Algorithm~\ref{alg:biasAlgorithm} 
+didn't cause crossover bias to be applied, then the parents were left in their original random order, 
+meaning that there is a 50\% chance that the root 
+parent is the more fit parent even without any crossover bias.
 
 \begin{algorithm}
 \begin{algorithmic}
@@ -185,7 +188,10 @@ In this paper we focus on five levels of crossover bias:
 \end{itemize}
 The 0.00 case, where no crossover bias is applied, is just standard sub-tree crossover, where there will be a 50\% chance of the root parent being the more fit parent.
 
-We also experimented with \emph{reverse} bias, where the weaker parent was always forced to be the root parent. In general, however, the results with reverse bias were effectively the same as using no bias (i.e., differences between reverse bias and no bias weren't statistically significant), so in the interest of simplification we've omitted reverse bias from the remainder of the paper.
+We also experimented with \emph{reverse} bias, where the weaker parent was always forced to be 
+the root parent. In general, however, the results with reverse bias were effectively the same as using 
+no bias (i.e., differences between reverse bias and no bias weren't statistically significant), so in the 
+interest of simplification we've omitted reverse bias from the remainder of the paper.
 
 \section{Experimental Setup} \label{sec:Experiments}
 
@@ -218,11 +224,15 @@ Non-bias-effective settings, conversely, are:
 \item population size of 1,024;
 \end{itemize}
 
-All experiments were run using a copy of ECJ 21\footnote{\url{http://cs.gmu.edu/~eclab/projects/ecj/}} that we modified to support crossover bias.\footnote{Our intent is to submit our modifications back to the ECJ group to make it easy for other ECJ users to experiment with crossover bias.}
+All experiments were run using a copy of ECJ 21\footnote{\url{http://cs.gmu.edu/~eclab/projects/ecj/}} 
+that we modified to support crossover bias.\footnote{Our intent is to submit our modifications back to the 
+ECJ group to make it easy for other ECJ users to experiment with crossover bias.}
 
 \section{Results} \label{sec:Results}
 
-Unless noted otherwise, all mentions of statistical significance in this section are based on pairwise Wilcoxon tests with Holm corrections. All statistics calculations were performed with R \cite{R} and plots were generated using the ggplot2 package \cite{ggplot2Book}.
+Unless noted otherwise, all mentions of statistical significance in this section are based on 
+pairwise Wilcoxon tests with Holm corrections. All statistics calculations were performed with R~\cite{R} 
+and plots were generated using the ggplot2 package~\cite{ggplot2Book}.
 
 \textbf{Talk about the fact that we used pairwise Wilcoxon test with Holm corrections for the bulk of our statistical 
 tests, along with a reference/citation to R as generated inside R. I'm not sure if we want to mention pairwise test of 
@@ -232,7 +242,8 @@ proportions (chi-squared) or not, because I'm not sure how much we'll use it in 
 
 \subsubsection{K-Landscapes Problems}
 
-We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ and $K=6$, using various combinations of the following:
+We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ and $K=6$, 
+using various combinations of the following:
 
 \begin{itemize}
 	\item crossover biases of -1.00, 0.00, 0.25, 0.50, 0.75, and 1.00;
