@@ -108,11 +108,20 @@ population size, and possibly the difference in parental fitness.
 operators (which are very common in biology, e.g., sex-linked traits) and how we've identified an asymmetry in subtree
 crossover and a way to potentially exploit that.}
 
-In tree-based genetic programming, sub-tree crossover remains a very common reproduction mechanism
-\cite{poli08:fieldguide}. As Figure~\ref{fig:root_parent_illustration} illustrates, sub-tree crossover is an inherently
+As Figure~\ref{fig:root_parent_illustration} illustrates, the widely used sub-tree crossover operator in tree-based 
+genetic programming (GP) \cite{poli08:fieldguide} is an inherently
 asymmetric operation, with one parent contributing the root node and, in most cases, a substantially larger total
-number of nodes than the other parent. In this work we will refer to the individual which contributes the root node as
-the \emph{root parent} and the other as the \emph{non-root parent}.
+number of nodes than the other parent. This asymmetry has been noted before, e.g., \cite{mcphee1999analysis}
+where the parent that contributes the root node is referred to as the \emph{root parent} and the other parent as
+the \emph{non-root parent}.
+It has been previously observed 
+\cite{McPheeDonatucciDramdahl:2014, McPhee:2008:SBB:1792694.1792707} 
+that in many cases the root parent also tends to contribute more to the semantics of the resulting 
+individual than the non-root parent. This is in part because of the tendency of the root parent to contribute more 
+overall nodes, but is also because for most function sets the root node (and the nodes near it) have an especially 
+strong impact on the result of evaluating the tree in question. While the details and impact of this asymmetry will 
+depend a great deal on the details of the function set and the particular trees chosen as parents, in many common 
+tree-based GP settings the asymmetry has a quite substantial impact on the semantics of the offspring.
 
 \begin{figure}
 \centering
@@ -121,14 +130,20 @@ the \emph{root parent} and the other as the \emph{non-root parent}.
 \label{fig:root_parent_illustration}
 \end{figure}
 
-Crucial to this work, it has been previously noted 
-\cite{McPheeDonatucciDramdahl:2014, McPhee:2008:SBB:1792694.1792707} 
-that in many cases the root parent also tends to contribute more to the semantics of the resulting 
-individual than the non-root parent. This is in part because of the tendency of the root parent to contribute more 
-overall nodes, but is also because for most function sets the root node (and the nodes near it) have an especially 
-strong impact on the result of evaluating the tree in question. While the details and impact of this asymmetry will 
-depend a great deal on the details of the function set and the particular trees chosen as parents, in many common 
-tree-based GP settings the asymmetry has a quite substantial impact on the semantics of the offspring.
+An important impact of this asymmetry was recently noted in~\cite{McPheeDonatucciDramdahl:2014},
+where it was observed that the fitness of the offspring tended to be better when the root parent had a better 
+fitness than
+the non-root parent.
+To explore this further, we implemented what we refer to \emph{crossover bias}, which allowed us to
+probabilistically force the genetic programming system to assign the individual with the greater 
+fitness to be the root parent. Here we apply crossover bias (defined in Section~\ref{sec:XObias}) 
+to a variety of test problems (described in Section~\ref{sec:Experiments}). The results 
+(Section~\ref{sec:Results}) make it clear that crossover bias can have a substantial impact on the 
+results of GP runs, but that the results are heavily parameter dependent and, to a lesser degree 
+problem dependent. In general, however, we find (Section~\ref{sec:Discussion}) that incorporating 
+at least some crossover bias is, at least in these problems, usually either advantageous or neutral. 
+
+\textbf{Should this next paragraph be moved the Conclusions section instead of having it here?}
 
 While this paper focuses on the asymmetry in the context of tree-based GP and sub-tree crossover, it's important to 
 note that asymmetries like this are common in many evolutionary systems, both biological and artificial. Much 
@@ -138,18 +153,10 @@ biological asymmetries.
 Many evolutionary computation systems other than tree-based GP also have 
 significant asymmetries. Many linear GP systems \cite{brameier2007linear} and stack-based GP 
 systems \cite{spector:2002:GPEM}, for example, have asymmetries where the last instructions executed can have a 
-disproportionate impact on the results, and changes near the front of grammatical evolution 
+disproportionate impact on the results. Similarly, changes near the front of grammatical evolution 
 \cite{o2003grammatical} strings will have a 
-disproportionate impact by determining the important early choices in the grammar productions. In general these 
-asymmetries weren't intentional design goals, but were instead simple artifacts of other system design decisions, and 
-the potential impact of these asymmetries has been largely unstudied.
-
-In previous work~\cite{McPheeDonatucciDramdahl:2014},
-it was noted that when performing crossover, if the root parent had a better fitness than
-the non-root parent, then the fitness of the offspring produced tended to be greater than in the reverse scenario 
-where the less fit parent was the root parent.
-To explore this further, we implemented what we refer to crossover bias, which allowed us to
-probabilistically force the genetic programming system to assign the individual with the greater fitness to be the root parent.
+disproportionate impact by determining the important early choices in the grammar productions. 
+The results presented here suggests that it may be important to more thoroughly explore the impact of these asymmetries, both to better understand the performance and behavior of existing systems, but also as an aid to the design and discovery of new tools like recombination operators that leverage these asymmetries.
 
 \section{Crossover Bias} \label{sec:XObias}
 
@@ -775,6 +782,13 @@ about whether one should just use larger tournaments and ignore crossover bias. 
 think the answer is something like ``It doesn't hurt (at least in our experiments), and it sometimes helps, even for 
 tournament size 7 and with elitism. For interesting problems, you also don't know in advance what your best parameter 
 choices are, so it's at least worth including in your arsenal.''}
+
+\textbf{Return to the paragraph in the intro about how asymmetries are very common and that these results suggest that we should look at their impact in other EC system.}
+In general these 
+EC system
+asymmetries weren't intentional design goals, but were instead simple artifacts of other system design decisions, and 
+the potential impact of these asymmetries has been largely unstudied.
+
 
 % \section*{Acknowledgements}
 
