@@ -516,15 +516,7 @@ are statistically significant, with the exceptions being crossover bias 0.00 \em
 
 \subsubsection{Pagie-1 Problem}
 
-In addition to the parameters outlined in Section~\ref{sec:Experiments}, the following parameters were also implemented:
-
-\begin{itemize}
-	\item basic4 ($+, -, \times, \div$) and koza2 (complete - not discussed) function sets, and
-	\item with and without Tarpeian bloat control.
-\end{itemize}
-
-\textbf{When we remove koza2 from Fig 9 then I think we'll be able to remove any mention of koza2, 
-which means we can drop the bullet list and just make this a sentence.}
+In addition to the parameters outlined in Section~\ref{sec:Experiments}, the Pagie-1 problem was also run with the ``basic4'' ($+, -, \times, \div$) function set, and with and without Tarpeian bloat control.
 
 Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossover bias on the number of hits for the
 Pagie-1 regression problem, separated out by both tournament size and function set used. The results, as 
@@ -536,9 +528,7 @@ Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}.
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Hits_vs_Bias_Tournys_FunctionSet.pdf}
-\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, broken out for the
-four different tournament sizes (2, 3, 5, and 7) and the two different function sets (basic4 and koza2). The maximum
-number of possible hits is 676.}
+\caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, broken out across the four different tournament sizes (2, 3, 5, and 7). The maximum number of possible hits is 676.}
 \label{fig:Pagie1Hits_Bias_Tournys_FunctionSet}
 \end{figure}
 
