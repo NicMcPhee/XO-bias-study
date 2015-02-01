@@ -72,7 +72,7 @@ that asymmetry by introducing the notion of \emph{crossover bias}, which allows 
 having the more fit parent be the root parent.
 
 Here we apply crossover bias to a variety of problems. In most cases we found that using crossover bias either improved
-performance or had no impact -- although the effectiveness is somewhat dependent on the problem, and significantly dependent on other parameter choices. Our results do, however, indicate the possibility that crossover bias may increase selection pressure and premature convergence \textbf{-- undesirable behavior, as it encourages a genetic programming run to arrive at a solution too quickly, in the process potentially excluding more accurate solutions for a more generalized one}. \textbf{We have little to no text on this premature convergence point in the actual paper, and there's basically nothing on the broader question of asymmetry in the abstract, which I (Nic) think is part of what lifts the paper above just another random set of experiments.}
+performance or had no impact -- although the effectiveness is somewhat dependent on the problem, and significantly dependent on other parameter choices. \textbf{Talk about broader question of asymmetry.}
 
 \end{abstract}
 
@@ -691,6 +691,11 @@ We see similar results for the K Landscapes problem, as illustrated in Figure~\r
 \caption{Plot of the normalized differences in parent fitnesses from some K Landscape runs. \textbf{Explain this}.}
 \label{fig:parentDiffsKLandscapes}
 \end{figure}
+
+ Our results also indicate the possibility that crossover bias may increase selection pressure and premature
+ convergence (see Figures~\ref{fig:sineBiasFitnessVsGenStrong} and~\ref{fig:sineBiasFitnessVsGenWeak}) \textbf{--
+ undesirable behavior, as it encourages a genetic programming run to arrive at a solution too quickly, in the process
+ potentially excluding more accurate solutions for a more generalized one}.
 
 \section{Conclusions} \label{sec:Conclusions}
 
