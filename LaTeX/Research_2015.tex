@@ -248,8 +248,8 @@ and other parameter settings
 where crossover bias has almost no effect on the results. 
 Based on these observed patterns, 
 we found it useful to identify two specific subsets of the parameter settings listed in 
-Table~\ref{tab:sharedParameters}: \emph{``bias-effective settings''} and 
-\emph{``non-bias-effective settings''}.
+Table~\ref{tab:sharedParameters}: ``\emph{bias-effective settings}'' and 
+``\emph{non-bias-effective settings}''.
 The bias-effective settings are binary tournaments, no elitism, and population size of 10,240; 
 the non-bias-effective settings, conversely, are tournament size 7, non-zero elitism percentage, 
 and population size 1,024. These terms will be used in the remainder of the paper, which will 
@@ -379,21 +379,18 @@ Initial runs of this problem with (1.00) and without (0.00) crossover bias acros
 demonstrated that in each case, adding crossover bias improved fitness. Additionally, these improvements were
 statistically significant ($p < 0.002$).
 
-\textbf{This ``next set of runs'' refers to a figure that doesn't exist anymore. This paragraph and the next need to be combined into a single discussion of the Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15}.}
+Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this to cover the full range of crossover bias
+percentages. For binary tournaments, we observed a drop in fitness from bias 0.75 to bias 1.00, where the fitness for
+1.00 is actually slightly below that for 0.50 as well. All these differences are statistically significant ($p <
+0.03$), with the exception of the difference between bias 0.25 and bias 1.00, so bias 0.75 is the clear winner in this
+scenario. Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} demonstrates that the drop in fitness for bias 1.00
+observed for binary tournaments is consistent across the other three tournament sizes as well. However, it is also
+apparent from the figure that in general the impact of crossover bias lessens with the larger tournament sizes, both in
+the increase in fitness up to bias 0.75, and the drop from there to bias 1.00.
 
-However, in the next set of runs, using the full range of crossover bias values but limited to binary tournaments, we
-observed a drop in fitness from bias 0.75 to bias 1.00, and 1.00 is actually slightly below that for 0.50 as well. All
-these differences are statistically significant ($p < 0.03$), with the exception of the difference between bias 0.25
-and bias 1.00, so bias 0.75 is the clear winner in this scenario. \textbf{I (Nic) suspect this is actually quite
-interesting and might open interesting doors to things like premature convergence and need for being able to have a
-least a little variation in the system for a problem like this. Maybe we should talk about that in the "Future work"
-section?}
-
-Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this to cover all four tournament sizes. The
-figure demonstrates that the drop in fitness for bias 1.00 observed for binary tournaments is consistent across the
-other three tournament sizes as well. However, it is also apparent from the figure that in general the impact of
-crossover bias lessens with the larger tournament sizes, both in the increase in fitness up to bias 0.75, and the drop
-from there to bias 1.00.
+\textbf{I (Nic) suspect this is actually quite interesting and might open interesting doors to things like premature
+convergence and need for being able to have a least a little variation in the system for a problem like this. Maybe we
+should talk about that in the "Future work" section?}
 
 \begin{figure}
 \centering
