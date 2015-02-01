@@ -197,13 +197,13 @@ interest of simplification we've omitted reverse bias from the remainder of the 
 
 To better understand the impact of crossover bias on genetic programming performance, we experimented with five problems:
 \begin{itemize}
-	\item K-Landscapes, with $K=6$
-	\item Order Tree
+	\item K Landscapes, with $K=6$ \cite{vanneschi2011k}
+	\item Order Tree \cite{}
 	\item U.S. Change
-	\item Sine regression
-	\item Pagie-1 regression
+	\item Sine regression \cite{poli08:fieldguide}
+	\item Pagie-1 regression \cite{}
 \end{itemize}
-Three of these (K-Landscapes, Order Tree, and Pagie-1 regression) are taken from recent benchmark suggestions~\cite{gp-benchmarks-2013}. U.S. Change is a program synthesis problem taken from~\cite{USChangeSource}, and sine regression is the example problem used in earlier work on the impact of root and non-root parents~\cite{McPheeDonatucciDramdahl:2014}.
+Three of these (K Landscapes, Order Tree, and Pagie-1 regression) are taken from recent benchmark suggestions~\cite{gp-benchmarks-2013}. U.S. Change is a program synthesis problem taken from~\cite{USChangeSource}, and sine regression is the example problem used in earlier work on the impact of root and non-root parents~\cite{McPheeDonatucciDramdahl:2014}.
 
 \textbf{Add a footnote about the two function sets for Pagie-1 and their impact.}
 
@@ -240,9 +240,9 @@ proportions (chi-squared) or not, because I'm not sure how much we'll use it in 
 
 \subsection{Structural Problems}
 
-\subsubsection{K-Landscapes Problems}
+\subsubsection{K Landscapes Problems}
 
-We did a full sweep of parameters for the K-Landscapes problem with both $K=2$ and $K=6$, 
+We did a full sweep of parameters for the K Landscapes problem with both $K=2$ and $K=6$, 
 using various combinations of the following:
 
 \begin{itemize}
@@ -275,7 +275,7 @@ probability 0.75 and 1.00.
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_transformed_boxplot_alpha075.pdf}
-\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$ for a variety of treatments.}
+\caption{Impact of crossover bias on fitness for K Landscapes problem, $K=6$ for a variety of treatments.}
 \label{fig:KLandscapes6_results}
 \end{figure}
 
@@ -292,7 +292,7 @@ pairwise test of proportions.
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_strong_impact_alpha_075.pdf}
-\caption{Impact of crossover bias on fitness for K-Landscapes problem, $K=6$, restricted to binary tournament
+\caption{Impact of crossover bias on fitness for K Landscapes problem, $K=6$, restricted to binary tournament
 selection, no elitism, and population size 10,240.}
 \label{fig:KLandscapes6_strong_results}
 \end{figure}
@@ -340,7 +340,7 @@ For the OrderTree problem, a full sweep of the following parameters was used:
 	\item tournament sizes of 2, 3, 5, and 7.
 \end{itemize}
 
-While similar to the parameters used for the K-Landscapes problem, one difference is apparent: the population size for
+While similar to the parameters used for the K Landscapes problem, one difference is apparent: the population size for
 the OrderTree runs was limited to 1,024. This was a consequence of the large trees generated for this problem,
 resulting in out of memory errors for the larger population size of 10,240.
 
@@ -370,7 +370,7 @@ from there to bias 1.00.
 \end{figure}
 
 Compare this to the results shown in Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets}, which plots the corresponding
-data from the K-Landscapes runs. It is clear that for binary tournaments, increasing the crossover bias probability
+data from the K Landscapes runs. It is clear that for binary tournaments, increasing the crossover bias probability
 continues to improve the fitness - all the differences are strongly statistically significant ($p<6e-08$). This
 continues to be true for tournament size 3 - all the differences are statistically significant except for that between
 bias 0.50 and 0.75 and that was very close ($p=0.05620$). None of the differences for tournament size 5 are
@@ -383,7 +383,7 @@ keep it, or something like it.}
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_facets.pdf}
-\caption{Impact of crossover bias on fitness for K-Landcapes problem, K=6, for various tournament sizes. \textbf{Move this into the K-Landscapes section next to Figure 2, along with the associated discussion.}}
+\caption{Impact of crossover bias on fitness for K-Landcapes problem, K=6, for various tournament sizes. \textbf{Move this into the K Landscapes section next to Figure 2, along with the associated discussion.}}
 \label{fig:KLandscapes6_XO_bias_impact_facets}
 \end{figure}
 
@@ -767,13 +767,13 @@ the two errors are the same, and a maximum value approaching 1 for the case wher
 \label{fig:parentDiffsSine}
 \end{figure}
 
-We see similar results for the K-Landscapes problem, as illustrated in Figures~\ref{fig:parentFitnessesKLandscapes}
+We see similar results for the K Landscapes problem, as illustrated in Figures~\ref{fig:parentFitnessesKLandscapes}
 and~\ref{fig:parentDiffsKLandscapes}.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Parent_fitnesses_KLandscapes.pdf}
-\caption{Plot of the fitnesses of all individuals chosen as parents from some K-Landscape runs. \textbf{Explain this.}
+\caption{Plot of the fitnesses of all individuals chosen as parents from some K Landscape runs. \textbf{Explain this.}
 \textbf{Do we want/need this plot?} \textbf{We agreed to get rid of this.}}
 \label{fig:parentFitnessesKLandscapes}
 \end{figure}
@@ -781,7 +781,7 @@ and~\ref{fig:parentDiffsKLandscapes}.
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_fitness_diffs_KLandscapes.pdf}
-\caption{Plot of the normalized differences in parent fitnesses from some K-Landscape runs. \textbf{Explain this}.}
+\caption{Plot of the normalized differences in parent fitnesses from some K Landscape runs. \textbf{Explain this}.}
 \label{fig:parentDiffsKLandscapes}
 \end{figure}
 
