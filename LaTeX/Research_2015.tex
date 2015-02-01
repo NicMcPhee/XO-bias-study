@@ -198,12 +198,12 @@ interest of simplification we've omitted reverse bias from the remainder of the 
 To better understand the impact of crossover bias on genetic programming performance, we experimented with five problems:
 \begin{itemize}
 	\item K Landscapes, with $K=6$ \cite{vanneschi2011k}
-	\item Order Tree \cite{}
+	\item ORDERTREE \cite{hoang2006ordertree}
 	\item U.S. Change
 	\item Sine regression \cite{poli08:fieldguide}
 	\item Pagie-1 regression \cite{}
 \end{itemize}
-Three of these (K Landscapes, Order Tree, and Pagie-1 regression) are taken from recent benchmark suggestions~\cite{gp-benchmarks-2013}. U.S. Change is a program synthesis problem taken from~\cite{USChangeSource}, and sine regression is the example problem used in earlier work on the impact of root and non-root parents~\cite{McPheeDonatucciDramdahl:2014}.
+Three of these (K Landscapes, ORDERTREE, and Pagie-1 regression) are taken from recent benchmark suggestions~\cite{gp-benchmarks-2013}. U.S. Change is a program synthesis problem taken from~\cite{USChangeSource}, and sine regression is the example problem used in earlier work on the impact of root and non-root parents~\cite{McPheeDonatucciDramdahl:2014}.
 
 \textbf{Add a footnote about the two function sets for Pagie-1 and their impact.}
 
@@ -240,7 +240,7 @@ proportions (chi-squared) or not, because I'm not sure how much we'll use it in 
 
 \subsection{Structural Problems}
 
-\subsubsection{K Landscapes Problems}
+\subsubsection{K Landscapes}
 
 We did a full sweep of parameters for the K Landscapes problem with both $K=2$ and $K=6$, 
 using various combinations of the following:
@@ -329,9 +329,9 @@ selection, no elitism, and population size 10,240.}
 %
 %P value adjustment method: holm 
 
-\subsubsection{OrderTree Problem}
+\subsubsection{ORDERTREE}
 
-For the OrderTree problem, a full sweep of the following parameters was used:
+For the ORDERTREE problem, a full sweep of the following parameters was used:
 
 \begin{itemize}
 	\item crossover biases of -1.00, 0.00, 0.25, 0.50, 0.75, and 1.00;
@@ -341,7 +341,7 @@ For the OrderTree problem, a full sweep of the following parameters was used:
 \end{itemize}
 
 While similar to the parameters used for the K Landscapes problem, one difference is apparent: the population size for
-the OrderTree runs was limited to 1,024. This was a consequence of the large trees generated for this problem,
+the ORDERTREE runs was limited to 1,024. This was a consequence of the large trees generated for this problem,
 resulting in out of memory errors for the larger population size of 10,240.
 
 Initial runs of this problem with (1.00) and without (0.00) crossover bias across all four tournament sizes
@@ -365,7 +365,7 @@ from there to bias 1.00.
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results_all_tournaments_Jan15.pdf}
-\caption{Impact of crossover bias on fitness for OrderTree problem for multiple tournament sizes.}
+\caption{Impact of crossover bias on fitness for ORDERTREE problem for multiple tournament sizes.}
 \label{fig:Ordertree_results_all_tournaments_Jan15}
 \end{figure}
 
