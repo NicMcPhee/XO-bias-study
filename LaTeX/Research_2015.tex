@@ -666,16 +666,13 @@ population size 1,024.  \textbf{Move this to where we define non-bias-effective 
 Why does all this happen this way? For example, why does crossover bias have a much stronger effect when using binary
 tournaments than when using larger tournament sizes such as 7. One possible explanation is that with large tournaments,
 the difference in fitness between the two parents is likely to be closer, because the larger tournaments help ensure
-that both parents are from the more highly fit part of the population. To better understand this, blah, blah, blah
-\textbf{We need to turn this into actual text}.
-
-Figure~\ref{fig:parentDiffsSine} shows the distribution of relative difference in parent errors in the sine regression 
+that both parents are from the more highly fit part of the population. Since both of the contributing structures will most likely be from highly fit parents, the resulting offspring will likely obtain similiar fitness as one of these highly fit parent .  To better understand this, Figure~\ref{fig:parentDiffsSine} shows the distribution of relative difference in parent errors in the sine regression 
 problem. For each crossover event, the relative difference in parent errors is
 \[
 	|e_A - e_B] / (e_A + e_B)
 \]
 where $e_A$ and $e_B$ are the errors of the two chosen parents $A$ and $B$. This has a minimum value of 0 when 
-the two errors are the same, and a maximum value approaching 1 for the case where one of the errors is nearly 0.
+the two errors are the same, and a maximum value approaching 1 for the case where one of the errors is nearly 0. For larger tournament sizes, the difference in fitness drops significantly as the run progresses suggesting that the both of the parents are highly fit. Throughout the run, however, small tournament sizes do not exhibit these changes. (\textbf{not entirely sure what to say here})
 
 \begin{figure}
 \centering
