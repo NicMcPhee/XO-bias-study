@@ -266,15 +266,8 @@ and plots were generated using the ggplot2 package~\cite{ggplot2Book}.
 
 \subsubsection{K Landscapes}
 
-We did a full sweep of parameters for the K Landscapes problem with both $K=2$ and $K=6$, 
-using various combinations of the following:
-
-\begin{itemize}
-	\item crossover biases of 0.00, 0.25, 0.50, 0.75, and 1.00;
-	\item population sizes of 1,024 and 10,240;
-	\item elitism percentages of 0\% or 1\%; and
-	\item tournament sizes of 2, 3, 5, and 7.
-\end{itemize}
+We did a full sweep of parameters for the K Landscapes problem with both $K=2$ and $K=6$, using the various combinations
+of the parameters outlined in Section~\ref{sec:Results}.
 
 Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the combinations of
 parameter values. Increasing the amount of crossover bias consistently improves the fitness of the results. All the
@@ -372,18 +365,9 @@ selection, no elitism, and population size 10,240.}
 
 \subsubsection{ORDERTREE}
 
-For the ORDERTREE problem, a full sweep of the following parameters was used:
-
-\begin{itemize}
-	\item crossover biases of 0.00, 0.25, 0.50, 0.75, and 1.00;
-	\item population size of 1,024;
-	\item elitism percentages of 0\% or 1\%; and
-	\item tournament sizes of 2, 3, 5, and 7.
-\end{itemize}
-
-While similar to the parameters used for the K Landscapes problem, one difference is apparent: the population size for
-the ORDERTREE runs was limited to 1,024. This was a consequence of the large trees generated for this problem,
-resulting in out of memory errors for the larger population size of 10,240.
+For the ORDERTREE problem, a full sweep of the following parameters outlined in Section~\ref{sec:Results}, with on
+exception: the population size for the ORDERTREE runs was limited to 1,024. This was a consequence of the large trees
+generated for this problem, resulting in out of memory errors for the larger population size of 10,240.
 
 Initial runs of this problem with (1.00) and without (0.00) crossover bias across all four tournament sizes
 demonstrated that in each case, adding crossover bias improved fitness. Additionally, these improvements were
