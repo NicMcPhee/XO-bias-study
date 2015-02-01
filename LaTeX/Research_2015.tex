@@ -651,19 +651,6 @@ size 7, 0.1\% elitism, and population size 1,024.}
 \label{fig:sineBiasResultsWeak}
 \end{figure}
 
-Figures~\ref{fig:sineBiasFitnessVsGenStrong} and~\ref{fig:sineBiasFitnessVsGenWeak} show the change in fitness over
-time for the bias-effective and non-bias-effective configurations. In the bias-effective configuration we get a really
-clean ``adding bias is good'' demonstration. In the non-bias-effective configuration, the impact of crossover bias is
-quite minimal; \textbf{oddly, though, it does look like a crossover bias of 1.00 is worse by a little bit than
-everything else at the end, which is weird}. Figure~\ref{fig:sineBiasFitnessVsGenT2E01P10K} shows fitness over time for
-the non-bias-effective configuration with population size 10,240 (instead of 1,024 for the ``normal'' non-bias-effective
-configuration). Increasing the population size improves the performance significantly. The different bias levels are
-all essentially the same at the end of the 100 generations, but there is definitely a spread around 15-20 generations
-that is a really clean ``more bias is better'' demonstration (\textbf{Do we care?}) except for the fact that 0.75 and
-1.00 are essentially the same. \textbf{Do we want to include both Figures~\ref{fig:sineBiasFitnessVsGenWeak}
-and~\ref{fig:sineBiasFitnessVsGenT2E01P10K}? Do we want to combine them into a single graph (either just one graph, or
-as two ``panels'' like, e.g., in Figure~\ref{fig:parentErrorsSine}?}
-
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_fitness_vs_gen_strong.pdf}
@@ -678,14 +665,6 @@ population size 10,240. \textbf{Move this to where we define bias-effective para
 \caption{Impact of crossover bias on the sine symbolic regression problem with tournament size 7, 0.1\% elitism, and 
 population size 1,024.  \textbf{Move this to where we define non-bias-effective parameters, combined with the previous figure as a pair of panels.}}
 \label{fig:sineBiasFitnessVsGenWeak}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_fitness_vs_gen_t2_e01_p10K.pdf}
-\caption{Impact of crossover bias on the sine symbolic regression problem with tournament size 7, 0.1\% elitism, and 
-population size 10,240. \textbf{Drop this.}}
-\label{fig:sineBiasFitnessVsGenT2E01P10K}
 \end{figure}
 
 \section{Discussion} \label{sec:Discussion}
