@@ -523,8 +523,7 @@ For the Pagie-1 problem we did runs across the following parameters:
 However, for purposes of space conservation, we will not discuss the koza2 function set results here.
 
 Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossover bias on the number of hits for the
-Pagie-1 regression problem, separated out by both tournament size and function set used;
-Figure~\ref{fig:Pagie1Fitness_Bias_Tournys_FunctionSet} is similar, but plots fitness (total error) instead of hits.
+Pagie-1 regression problem, separated out by both tournament size and function set used.
 
 \begin{figure}
 \centering
@@ -535,18 +534,7 @@ number of possible hits is 676.}
 \label{fig:Pagie1Hits_Bias_Tournys_FunctionSet}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Fitness_vs_Bias_Tournys_FunctionSet.pdf}
-\caption{Impact of crossover bias on the fitness (total error) for the Pagie-1 symbolic regression problem, broken out 
-for the four different tournament sizes (2, 3, 5, and 7) and the two different function sets (basic4 and koza2). The
-best possible is an error of 0.}
-\label{fig:Pagie1Fitness_Bias_Tournys_FunctionSet}
-\end{figure}
-
-The results, as can be seen in Figures~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}
-and~\ref{fig:Pagie1Fitness_Bias_Tournys_FunctionSet} vary significantly. However, if limited to the following
-parameters:
+The results, as can be seen in Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}, vary significantly. However, if limited to the following parameters:
 \begin{itemize}
     \item crossover biases of -1.00, 0.00, 0.25, 0.50, 0.75, and 1.00;
     \item population size 10,240;
@@ -555,10 +543,8 @@ parameters:
 	\item basic4 ($+, -, \times, \div$) function set; and
 	\item Tarpeian bloat control;
 \end{itemize}
-then the complexities of Figures~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}
-and~\ref{fig:Pagie1Fitness_Bias_Tournys_FunctionSet} simplify to
-Figures~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet} and~\ref{fig:Pagie1StrongFitness_Bias_Tournys_FunctionSet}.
-For now we will focus on this specific subset of the data.
+then the complexities of Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} simplify to
+Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}. For now we will focus on this specific subset of the data.
 
 \begin{figure}
 \centering
@@ -567,15 +553,6 @@ For now we will focus on this specific subset of the data.
 tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set ($+, -, \times, \div$), no elitism, 
 population size 10,240, and Tarpeian bloat control. The maximum number of possible hits is 676.}
 \label{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_strong_Fitness_vs_Bias_Tournys_FunctionSet.pdf}
-\caption{Impact of crossover bias on the number of fitness (total error) for the Pagie-1 symbolic regression problem, 
-broken out by tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set ($+, -, \times, \div$), no 
-elitism, population size 10,240, and Tarpeian bloat control. The best possible is an error of 0.}
-\label{fig:Pagie1StrongFitness_Bias_Tournys_FunctionSet}
 \end{figure}
 
 Focusing on the data in Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}, the differences between crossover
@@ -602,13 +579,6 @@ substantial and significant manner.
 %
 %P value adjustment method: holm 
 
-The statistical significance in Figure~\ref{fig:Pagie1StrongFitness_Bias_Tournys_FunctionSet} is very similar to that
-in the previous figure (Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}). Here again adding bias for binary
-tournaments improves fitness, but none of the differences between biases 0.50, 0.75, and 1.00 are statistically
-significant. None of the differences for tournament sizes 3 and 5 are significant, and most of those for tournament
-size 7 are not significant. The one exception for tournament size 7 is that the difference between crossover biases
-0.00 and 1.00 is statistically significant ($p = 0.021$).
-
 Figure~\ref{fig:Pagie1StrongSuccesses} shows the number of successes (runs that exactly solve the problem). Almost none
 of these differences are statistically significant, with the major exception being the small number of successes (3)
 for binary tournaments without bias, which is significantly different from all the other bias values for binary
@@ -622,24 +592,6 @@ successes with crossover biases 0.00 and 1.00 is significant ($p=0.015$).
 symbolic regression problem broken out by tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set
 (just $+, -, \times, \div$), no elitism, population size 10,240, and Tarpeian bloat control.}
 \label{fig:Pagie1StrongSuccesses}
-\end{figure}
-
-\textbf{Waiting for treatment information on Figures~\ref{fig:Pagie1FitnessOverTime} and~\ref{fig:Pagie1SizeOverTime}.
-Figure~\ref{fig:Pagie1SizeOverTime} will eventually be removed, but the information is interesting, and I (Kirbie)
-would like as much information on it as possible before I remove it.}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_fitness_vs_time.png}
-\caption{Impact of crossover bias on the fitness over time for the Pagie-1 symbolic regression problem. \textbf{What's the data set this comes from?} \textbf{Drop this for now.}}
-\label{fig:Pagie1FitnessOverTime}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Pagie-1_size_vs_time.png}
-\caption{Impact of crossover bias on the tree size over time for the Pagie-1 symbolic regression problem. \textbf{Drop this for now.}}
-\label{fig:Pagie1SizeOverTime}
 \end{figure}
 
 \subsubsection{Sine Problem}
