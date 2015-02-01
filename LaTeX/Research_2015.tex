@@ -89,13 +89,13 @@ number of nodes than the other parent. This asymmetry has been noted before, e.g
 where they refer to the parent that contributes the root node as the \emph{root parent} and the other parent as
 the \emph{non-root parent}.
 It has also been previously observed 
-\cite{McPheeDonatucciDramdahl:2014, McPhee:2008:SBB:1792694.1792707} 
+\cite{burlacu2013visualization, McPheeDonatucciDramdahl:2014,  McPhee:2008:SBB:1792694.1792707} 
 that the root parent often contributes more to the semantics of the resulting 
-individual. This is in part because of the tendency of the root parent to contribute more 
-overall nodes, but also because the root node (and the nodes near it) frequently have an especially 
-strong impact on the result of evaluating the tree in question. While the specific impact of this asymmetry will 
+individual. This is in part due to the tendency of the root parent to contribute more 
+overall nodes, but also because the nodes closest to the root of the tree frequently have a stronger
+impact on the result of evaluating the tree in question. While the specific impact of this asymmetry will 
 depend on the details of the function set and the particular trees chosen as parents, in many common 
-tree-based GP settings the asymmetry does have a substantial effect on the semantics of the offspring.
+tree-based GP settings the asymmetry has a substantial effect on the semantics of the offspring.
 
 \begin{figure}
 \centering
@@ -108,7 +108,7 @@ An important impact of this asymmetry was recently noted in~\cite{McPheeDonatucc
 where they observed that the fitness of the offspring tended to be better when the root parent had a better 
 fitness than
 the non-root parent.
-To explore this further, we implemented what we refer to \emph{crossover bias}, which allowed us to
+To explore this further, we implemented what we refer to as \emph{crossover bias}, which allowed us to
 probabilistically force the genetic programming system to assign the individual with the greater 
 fitness to be the root parent. Here we apply crossover bias (defined in Section~\ref{sec:XObias}) 
 to a variety of test problems (described in Section~\ref{sec:Experiments}). The results 
