@@ -279,6 +279,24 @@ probability 0.75 and 1.00.
 \label{fig:KLandscapes6_results}
 \end{figure}
 
+Compare this to the results shown in Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets}, which plots the same data
+separated out by tournament size. It is clear that for binary tournaments, increasing the crossover bias probability
+continues to improve the fitness - all the differences are strongly statistically significant ($p<6e-08$). This
+continues to be true for tournament size 3 - all the differences are statistically significant except for that between
+bias 0.50 and 0.75 and that was very close ($p=0.05620$). None of the differences for tournament size 5 are
+significant, and so we will past over it here. For tournament 7, however, it does look like the reverse is true, where
+increasing crossover actually hurts fitness. Almost none of the differences for tournament size 7 are statistically
+significant, however, with the only exception being the difference between 0.25 and 1.00 ($p=0.21$ using a pairwise
+Wilcoxon test with Holm correction). \textbf{This paragraph might move to the Discussion or Conclusions section if we
+keep it, or something like it.}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_facets.pdf}
+\caption{Impact of crossover bias on fitness for K-Landcapes problem, K=6, for various tournament sizes.}
+\label{fig:KLandscapes6_XO_bias_impact_facets}
+\end{figure}
+
 Figure~\ref{fig:KLandscapes6_strong_results} filters out only the data gathered using the bias-effective treatment,
 discussed in Section~\ref{sec:Experiments}. It is clear that the impact of crossover bias is much stronger in this case
 than in the more general case shown in Figure~\ref{fig:KLandscapes6_results}. Here all the differences are strongly
@@ -367,24 +385,6 @@ from there to bias 1.00.
 \includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results_all_tournaments_Jan15.pdf}
 \caption{Impact of crossover bias on fitness for ORDERTREE problem for multiple tournament sizes.}
 \label{fig:Ordertree_results_all_tournaments_Jan15}
-\end{figure}
-
-Compare this to the results shown in Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets}, which plots the corresponding
-data from the K Landscapes runs. It is clear that for binary tournaments, increasing the crossover bias probability
-continues to improve the fitness - all the differences are strongly statistically significant ($p<6e-08$). This
-continues to be true for tournament size 3 - all the differences are statistically significant except for that between
-bias 0.50 and 0.75 and that was very close ($p=0.05620$). None of the differences for tournament size 5 are
-significant, and so we will past over it here. For tournament 7, however, it does look like the reverse is true, where
-increasing crossover actually hurts fitness. Almost none of the differences for tournament size 7 are statistically
-significant, however, with the only exception being the difference between 0.25 and 1.00 ($p=0.21$ using a pairwise
-Wilcoxon test with Holm correction). \textbf{This paragraph might move to the Discussion or Conclusions section if we
-keep it, or something like it.}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_facets.pdf}
-\caption{Impact of crossover bias on fitness for K-Landcapes problem, K=6, for various tournament sizes. \textbf{Move this into the K Landscapes section next to Figure 2, along with the associated discussion.}}
-\label{fig:KLandscapes6_XO_bias_impact_facets}
 \end{figure}
 
 %> pairwise.wilcox.test(subset(klandscapes6, Tourny.size==7)$Fitness, subset(klandscapes6, Tourny.size==7)$Bias.probability)
