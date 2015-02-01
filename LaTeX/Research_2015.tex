@@ -244,16 +244,16 @@ We did a full sweep of parameters for the K Landscapes problem with both $K=2$ a
 using various combinations of the following:
 
 \begin{itemize}
-	\item crossover biases of -1.00, 0.00, 0.25, 0.50, 0.75, and 1.00;
+	\item crossover biases of 0.00, 0.25, 0.50, 0.75, and 1.00;
 	\item population sizes of 1,024 and 10,240;
 	\item elitism percentages of 0\% or 1\%; and
 	\item tournament sizes of 2, 3, 5, and 7.
 \end{itemize}
 
 Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the combinations of
-parameter values (excepting reverse bias). Increasing the amount of crossover bias consistently improves the fitness of
-the results. All the differences are statistically significant ($p < 0.012$) except for the difference between bias
-probability 0.75 and 1.00.
+parameter values. Increasing the amount of crossover bias consistently improves the fitness of the results. All the
+differences are statistically significant ($p < 0.012$) except for the difference between bias probability 0.75 and
+1.00.
 
 %> pairwise.wilcox.test(klandscapes6$Fitness, klandscapes6$Bias.probability)
 %
@@ -298,12 +298,11 @@ keep it, or something like it.}
 Figure~\ref{fig:KLandscapes6_strong_results} filters out only the data gathered using the bias-effective treatment,
 discussed in Section~\ref{sec:Experiments}. It is clear that the impact of crossover bias is much stronger in this case
 than in the more general case shown in Figure~\ref{fig:KLandscapes6_results}. Here all the differences are strongly
-statistically significant ($p < 10^{-11}$), with the exception of the difference between reverse bias (-1.00; not shown)
-and no bias (0.00). In addition to improvements in fitness, increasing the crossover bias also increases the number of
-``perfect'' solutions discovered. Out of 100 runs with a crossover bias setting of 1.00, 15 of these runs resulted in
-the discovery of a ``perfect'' solution. By comparison, only 1 or 2 runs out of 100 resulted in ``perfect'' solutions
-for each of the other crossover probabilities. This difference is statistically significant with $p \leq 0.03$ using a
-pairwise test of proportions.
+statistically significant ($p < 10^{-11}$). In addition to improvements in fitness, increasing the crossover bias also
+increases the number of ``perfect'' solutions discovered. Out of 100 runs with a crossover bias setting of 1.00, 15 of
+these runs resulted in the discovery of a ``perfect'' solution. By comparison, only 1 or 2 runs out of 100 resulted in
+``perfect'' solutions for each of the other crossover probabilities. This difference is statistically significant with
+$p \leq 0.03$ using a pairwise test of proportions.
 
 \begin{figure}
 \centering
@@ -350,7 +349,7 @@ selection, no elitism, and population size 10,240.}
 For the ORDERTREE problem, a full sweep of the following parameters was used:
 
 \begin{itemize}
-	\item crossover biases of -1.00, 0.00, 0.25, 0.50, 0.75, and 1.00;
+	\item crossover biases of 0.00, 0.25, 0.50, 0.75, and 1.00;
 	\item population size of 1,024;
 	\item elitism percentages of 0\% or 1\%; and
 	\item tournament sizes of 2, 3, 5, and 7.
@@ -510,7 +509,7 @@ tournaments, no elitism, and population size 10,240.}
 For the Pagie-1 problem we did runs across the following parameters:
 
 \begin{itemize}
-	\item crossover biases of -1.00, 0.00, 0.25, 0.50, 0.75, and 1.00;
+	\item crossover biases of 0.00, 0.25, 0.50, 0.75, and 1.00;
 	\item population sizes of 1,024 and 10,240;
 	\item elitism percentages of 0\% or 1\%;
 	\item tournament sizes of 2, 3, 5, and 7;
@@ -534,7 +533,7 @@ number of possible hits is 676.}
 
 The results, as can be seen in Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}, vary significantly. However, if limited to the following parameters:
 \begin{itemize}
-    \item crossover biases of -1.00, 0.00, 0.25, 0.50, 0.75, and 1.00;
+    \item crossover biases of 0.00, 0.25, 0.50, 0.75, and 1.00;
     \item population size 10,240;
     \item no elitism;
     \item tournament sizes of 2, 3, 5, and 7;
