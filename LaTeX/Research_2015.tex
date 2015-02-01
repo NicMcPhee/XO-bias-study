@@ -262,23 +262,9 @@ performed using pairwise tests of proportions (chi-squared) with Holm correction
 All statistics calculations were performed with R~\cite{R} 
 and plots were generated using the ggplot2 package~\cite{ggplot2Book}.
 
-Additionally, various combinations of the following parameters were used across all tested problems:
-
-\begin{itemize}
-	\item crossover biases of 0.00, 0.25, 0.50, 0.75, and 1.00;
-	\item population sizes of 1,024 and 10,240;
-	\item elitism percentages of 0\% or 1\%; and
-	\item tournament sizes of 2, 3, 5, and 7.
-\end{itemize}
-
-Any additions or alterations to this list made for specific problems are discussed within their respective sections.
-
 \subsection{Structural Problems}
 
 \subsubsection{K Landscapes}
-
-We did a full sweep of parameters for the K Landscapes problem with both $K=2$ and $K=6$, using the various combinations
-of the parameters outlined in Section~\ref{sec:Results}.
 
 Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the combinations of
 parameter values. Increasing the amount of crossover bias consistently improves the fitness of the results. All the
@@ -376,9 +362,10 @@ selection, no elitism, and population size 10,240.}
 
 \subsubsection{ORDERTREE}
 
-For the ORDERTREE problem, a full sweep of the following parameters outlined in Section~\ref{sec:Results}, with on
-exception: the population size for the ORDERTREE runs was limited to 1,024. This was a consequence of the large trees
-generated for this problem, resulting in out of memory errors for the larger population size of 10,240.
+It should be noted that, for the ORDERTREE problem, a full sweep of the following parameters outlined in
+Section~\ref{sec:Experiments}}, with on exception: the population size for the ORDERTREE runs was limited to 1,024.
+This was a consequence of the large trees generated for this problem, resulting in out of memory errors for the larger
+population size of 10,240.
 
 Initial runs of this problem with (1.00) and without (0.00) crossover bias across all four tournament sizes
 demonstrated that in each case, adding crossover bias improved fitness. Additionally, these improvements were
@@ -420,8 +407,6 @@ from there to bias 1.00.
 %P value adjustment method: holm 
 
 \subsection{U.S. Change Problem}
-
-The full set of parameters outlined in Section~\ref{sec:Results} was used for the U.S. Change problem.
 
 In contrast to the structural problems discussed in the previous section, which used fitness as the measure of success
 of a run, for the U.S. Change problem measured success in ``hits'' (the number of test cases that are correctly
@@ -524,16 +509,6 @@ tournaments, no elitism, and population size 10,240.}
 \subsection{Symbolic Regression Problems}
 
 \subsubsection{Pagie-1 Problem}
-
-For the Pagie-1 problem we did runs across the parameters outlined in Section~\ref{sec:Results}, with the following
-additional parameters:
-
-\begin{itemize}
-	\item basic4 ($+, -, \times, \div$) and koza2 (complete) function sets, and
-	\item with and without Tarpeian bloat control.
-\end{itemize}
-
-However, for purposes of space conservation, we will not discuss the koza2 function set results here.
 
 Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossover bias on the number of hits for the
 Pagie-1 regression problem, separated out by both tournament size and function set used.
