@@ -260,9 +260,16 @@ Unless noted otherwise, all mentions of statistical significance in this section
 pairwise Wilcoxon tests with Holm corrections. All statistics calculations were performed with R~\cite{R} 
 and plots were generated using the ggplot2 package~\cite{ggplot2Book}.
 
-\textbf{Talk about the fact that we used pairwise Wilcoxon test with Holm corrections for the bulk of our statistical 
-tests, along with a reference/citation to R as generated inside R. I'm not sure if we want to mention pairwise test of 
-proportions (chi-squared) or not, because I'm not sure how much we'll use it in the paper.}
+Additionally, various combinations of the following parameters were used across all tested problems:
+
+\begin{itemize}
+	\item crossover biases of 0.00, 0.25, 0.50, 0.75, and 1.00;
+	\item population sizes of 1,024 and 10,240;
+	\item elitism percentages of 0\% or 1\%; and
+	\item tournament sizes of 2, 3, 5, and 7.
+\end{itemize}
+
+Any additions or alterations to this list made for specific problems are discussed within their respective sections.
 
 \subsection{Structural Problems}
 
