@@ -91,11 +91,10 @@ the \emph{non-root parent}.
 It has also been previously observed 
 \cite{burlacu2013visualization, McPheeDonatucciDramdahl:2014,  McPhee:2008:SBB:1792694.1792707} 
 that the root parent often contributes more to the semantics of the resulting 
-individual. This is in part due to the tendency of the root parent to contribute more 
+individual. This is in part due to the tendency of the root parent contributing more 
 overall nodes, but also because the nodes closest to the root of the tree frequently have a stronger
-impact on the result of evaluating the tree in question. While the specific impact of this asymmetry will 
-depend on the details of the function set and the particular trees chosen as parents, in many common 
-tree-based GP settings the asymmetry has a substantial effect on the semantics of the offspring.
+impact on the result of evaluating the tree in question. While the specific impact of this asymmetry depends on the details of the function set and the particular trees chosen as parents,  asymmetry has a substantial effect on the semantics of the offspring in many common 
+tree-based GP settings. 
 
 \begin{figure}
 \centering
@@ -109,7 +108,7 @@ where they observed that the fitness of the offspring tended to be better when t
 fitness than
 the non-root parent.
 To explore this further, we implemented what we refer to as \emph{crossover bias}, which allowed us to
-probabilistically force the genetic programming system to assign the individual with the greater 
+probabilistically force the GP system to assign the individual with the greater 
 fitness to be the root parent. Here we apply crossover bias (defined in Section~\ref{sec:XObias}) 
 to a variety of test problems (described in Section~\ref{sec:Experiments}). The results 
 (Section~\ref{sec:Results}) make it clear that crossover bias can have a substantial impact on the 
@@ -166,8 +165,8 @@ In this paper we focus on five levels of crossover bias:
 \end{itemize}
 The 0.00 case, where no crossover bias is applied, is just standard sub-tree crossover, where there will be a 50\% chance of the root parent being the more fit parent.
 
-We also experimented with \emph{reverse} bias, where the weaker parent was always forced to be 
-the root parent. In general, however, the results with reverse bias were effectively the same as using 
+We also experimented with \emph{reverse bias}, where the weaker parent was always forced to be 
+the root parent. In general, the results for reverse bias revealed that there was no significant difference from 
 no bias (i.e., differences between reverse bias and no bias weren't statistically significant), so in the 
 interest of simplification we've omitted reverse bias from the remainder of the paper.
 
@@ -183,7 +182,7 @@ interesting for evolutionary program synthesis\footnote{personal communication},
 is the example problem used in earlier work on the impact of root and non-root 
 parents~\cite{McPheeDonatucciDramdahl:2014}. 
 
-The one problem not described elsewhere in the literature is the U.S. Change problem, a program 
+The one problem not described elsewhere(\textbf{well? there is a paper that soft of describes it. search "us change problem" in gecco last year})  in the literature is the U.S. Change problem, a program 
 synthesis problem where the task is to take as input an amount and to return as output the minimum 
 number of coins required to make that amount, using (a subset of) standard U.S. coins with amounts 
 25, 10, 5, and 1. So, for example, given 118 as input, the result should be 9 since 
@@ -363,7 +362,7 @@ selection, no elitism, and population size 10,240.}
 \subsubsection{ORDERTREE}
 
 It should be noted that, for the ORDERTREE problem, a full sweep of the following parameters outlined in
-Section~\ref{sec:Experiments}}, with on exception: the population size for the ORDERTREE runs was limited to 1,024.
+Section~\ref{sec:Experiments}, with on exception: the population size for the ORDERTREE runs was limited to 1,024.
 This was a consequence of the large trees generated for this problem, resulting in out of memory errors for the larger
 population size of 10,240.
 
