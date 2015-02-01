@@ -182,7 +182,7 @@ interesting for evolutionary program synthesis\footnote{personal communication},
 is the example problem used in earlier work on the impact of root and non-root 
 parents~\cite{McPheeDonatucciDramdahl:2014}. 
 
-The one problem not described elsewhere(\textbf{well? there is a paper that soft of describes it. search "us change problem" in gecco last year})  in the literature is the U.S. Change problem, a program 
+The one problem not described elsewhere(\textbf{well? there is a paper that sort of describes it. search "us change problem" in gecco last year})  in the literature is the U.S. Change problem, a program 
 synthesis problem where the task is to take as input an amount and to return as output the minimum 
 number of coins required to make that amount, using (a subset of) standard U.S. coins with amounts 
 25, 10, 5, and 1. So, for example, given 118 as input, the result should be 9 since 
@@ -207,9 +207,9 @@ The function set given in~\cite{mcdermott2012genetic} and implemented in ECJ is 
 also includes various trigonometric and logarithmic functions. The performance of GP varies 
 substantially between the two function sets; here we follow the original Pagie-1 paper and use the 
 simpler function set.} which are shared throughout these experiments. Our evolutionary system is 
-generational, with all new individuals being generated via crossover (i.e., no mutation or reproduction) 
+generational, with all new individuals being generated via subtree crossover (i.e., no mutation or reproduction) 
 unless there is a non-zero elitism percentage. Our primary goal was to better understand the 
-impact of crossover bias, so we did runs with a variety of crossover bias probabilities. We also 
+impact of crossover bias, so we performed runs with a variety of crossover bias probabilities. In addition,  we
 wanted to see how crossover bias might interact with some other commonly manipulated parameters 
 as listed in the table. Unless otherwise noted, all plots, etc., In what follows will include results from 
 all possible combinations of values in Table~\ref{tab:sharedParameters}. Each box plot in 
