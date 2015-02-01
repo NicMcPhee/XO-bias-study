@@ -207,11 +207,25 @@ parents~\cite{McPheeDonatucciDramdahl:2014}. All our experiments used the previo
 settings, function sets, etc., with the exception of the parameters listed below.\footnote{The function 
 set for Pagie-1 specified in~\cite{pagie1997evolutionary} is simply +, -, *, and \% (protected division). 
 The function set given in~\cite{mcdermott2012genetic} and implemented in ECJ is ``koza2'', which 
-includes a number of other trigonometric and logarithmic functions. The performance of GP varies 
+also includes various trigonometric and logarithmic functions. The performance of GP varies 
 substantially between the two function sets; here we follow the original Pagie-1 paper and use the 
-simpler function set.} 
+simpler function set.}
 
-\textbf{Add a footnote about the two function sets for Pagie-1 and their impact.}
+The one problem not described elsewhere in the literature is the U.S. Change problem, a program 
+synthesis problem where the task is to take as input an amount and to return as output the minimum 
+number of coins required to make that amount, using (a subset of) standard U.S. coins with amounts 
+25, 10, 5, and 1. So, for example, given 118 as input, the result should be 9 since 
+\[
+	\underline{4} \times 25 + \underline{1} \times 10 + \underline{1} \times 5 + \underline{3} \times 1 = 118,
+\]
+and this set of $4+1+1+3 = 9$ coins is the minimal set 
+making a total of 118. Our function set for this problem was +, -, *, \%,\footnote{Protected integer 
+division (quotient), returning 1 if the denominator is 0.} \emph{mod}, \emph{min}, and \emph{max}. 
+The terminal set consisted of the input $x$, integer ephemeral random constants taken uniformly 
+from the range $[-50, 50]$, and the set of constants $\{ 0, 1, 4, 5, 9, 10, 24, 25 \}$. The test cases 
+were all inputs in the range $[0, 150)$.
+
+% This is all taken from Tom Helmuth's version of the problem, and if the paper is accepted we should credit him in the camera ready copy.
 
 In the following sections, the terms \emph{``bias-effective settings''} and \emph{``non-bias-effective settings''} 
 are used to
