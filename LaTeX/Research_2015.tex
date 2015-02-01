@@ -143,7 +143,7 @@ didn't cause crossover bias to be applied, then the parents were left in their o
 meaning that there is a 50\% chance that the root 
 parent is the more fit parent even without any crossover bias.
 
-\begin{algorithm}
+\begin{algorithm}[tb]
 \begin{algorithmic}
 \Require RP and NRP are two individuals chosen as parents, with RP initially (and randomly) chosen to be the root parent.
 \If {\Call{random}{0, 1} $\leq \textrm{XO\_bias}$} \Comment{Do we force bias?}
@@ -181,13 +181,7 @@ Three of these (K Landscapes, ORDERTREE, and Pagie-1 regression) are taken from 
 suggestions~\cite{gp-benchmarks-2013}. U.S. Change is a program synthesis problem  that has proven 
 interesting for evolutionary program synthesis\footnote{personal communication}, and sine regression 
 is the example problem used in earlier work on the impact of root and non-root 
-parents~\cite{McPheeDonatucciDramdahl:2014}. All our experiments used the previously published
-settings, function sets, etc., with the exception of the parameters listed below.\footnote{The function 
-set for Pagie-1 specified in~\cite{pagie1997evolutionary} is simply +, -, *, and \% (protected division). 
-The function set given in~\cite{mcdermott2012genetic} and implemented in ECJ is ``koza2'', which 
-also includes various trigonometric and logarithmic functions. The performance of GP varies 
-substantially between the two function sets; here we follow the original Pagie-1 paper and use the 
-simpler function set.}
+parents~\cite{McPheeDonatucciDramdahl:2014}. 
 
 The one problem not described elsewhere in the literature is the U.S. Change problem, a program 
 synthesis problem where the task is to take as input an amount and to return as output the minimum 
@@ -205,22 +199,56 @@ were all inputs in the range $[0, 150)$.
 
 % This is all taken from Tom Helmuth's version of the problem, and if the paper is accepted we should credit him in the camera ready copy.
 
-In the following sections, the terms \emph{``bias-effective settings''} and \emph{``non-bias-effective settings''} 
-are used to
-describe specific subsets of the parameters settings described above. As is seen in Section~\ref{sec:Results}, 
-there are parameter choices where crossover bias appears to have a fairly strong impact, and other choices 
-where crossover bias has almost no effect on the results. The ``bias-effective settings'' are:
-\begin{itemize}
-\item binary tournaments,
-\item no elitism, and
-\item population size of 10,240;
-\end{itemize}
-Non-bias-effective settings, conversely, are:
-\begin{itemize}
-\item tournament sizes of seven individuals,
-\item elitism of either 0.1\% or 1\%, and
-\item population size of 1,024;
-\end{itemize}
+
+All our experiments used the previously published
+settings, function sets, etc., with the exception of the parameters listed in 
+Table~\ref{tab:sharedParameters},\footnote{The function 
+set for Pagie-1 specified in~\cite{pagie1997evolutionary} is simply +, -, *, and \% (protected division). 
+The function set given in~\cite{mcdermott2012genetic} and implemented in ECJ is ``koza2'', which 
+also includes various trigonometric and logarithmic functions. The performance of GP varies 
+substantially between the two function sets; here we follow the original Pagie-1 paper and use the 
+simpler function set.} which are shared throughout these experiments. Our evolutionary system is 
+generational, with all new individuals being generated via crossover (i.e., no mutation or reproduction) 
+unless there is a non-zero elitism percentage. Our primary goal was to better understand the 
+impact of crossover bias, so we did runs with a variety of crossover bias probabilities. We also 
+wanted to see how crossover bias might interact with some other commonly manipulated parameters 
+as listed in the table. Unless otherwise noted, all plots, etc., In what follows will include results from 
+all possible combinations of values in Table~\ref{tab:sharedParameters}. Each box plot in 
+Figure~\ref{fig:KLandscapes6_results}, for example, includes the results of runs with all four 
+tournament sizes, both elitism proportions, and both population sizes; given that there are 100 runs 
+for each combinations of parameters, each box represents the results of 1,600 runs, i.e., 1,600 data points.
+
+\begin{table}[tb]
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Parameter} & \textbf{Values} \\
+% \hline
+Crossover bias & 0, 0.25, 0.5, 0.75, and 1 \\
+Tournament size & 2, 3, 5, and 7 \\
+Elitism \% & 0 and 1\% (\& sometimes 0.1\%) \\
+Population size & 1,024 and 10,240 \\
+\# of generations & 100 \\
+\# of runs per treatment & 100
+\end{tabular}
+\end{center}
+\vspace{-0.5cm}
+\caption{Shared parameters}
+\label{tab:sharedParameters}
+\end{table}
+
+As Section~\ref{sec:Results} shows, there were some quite substantial interactions between 
+crossover bias and some of the other parameter settings. In particular, we found that there are 
+parameter values where crossover bias appears to have a substantial and significant impact, 
+and other parameter settings
+where crossover bias has almost no effect on the results. 
+Based on these observed patterns, 
+we found it useful to identify two specific subsets of the parameter settings listed in 
+Table~\ref{tab:sharedParameters}: \emph{``bias-effective settings''} and 
+\emph{``non-bias-effective settings''}.
+The bias-effective settings are binary tournaments, no elitism, and population size of 10,240; 
+the non-bias-effective settings, conversely, are tournament size 7, non-zero elitism percentage, 
+and population size 1,024. These terms will be used in the remainder of the paper, which will 
+also include some discussion of why crossover bias might interact with these parameters in this way.
 
 All experiments were run using a copy of ECJ 21\footnote{\url{http://cs.gmu.edu/~eclab/projects/ecj/}} 
 that we modified to support crossover bias.\footnote{Our intent is to submit our modifications back to the 
