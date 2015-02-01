@@ -195,15 +195,21 @@ interest of simplification we've omitted reverse bias from the remainder of the 
 
 \section{Experimental Setup} \label{sec:Experiments}
 
-To better understand the impact of crossover bias on genetic programming performance, we experimented with five problems:
-\begin{itemize}
-	\item K Landscapes, with $K=6$ \cite{vanneschi2011k}
-	\item ORDERTREE \cite{hoang2006ordertree}
-	\item U.S. Change
-	\item Sine regression \cite{poli08:fieldguide}
-	\item Pagie-1 regression \cite{}
-\end{itemize}
-Three of these (K Landscapes, ORDERTREE, and Pagie-1 regression) are taken from recent benchmark suggestions~\cite{gp-benchmarks-2013}. U.S. Change is a program synthesis problem taken from~\cite{USChangeSource}, and sine regression is the example problem used in earlier work on the impact of root and non-root parents~\cite{McPheeDonatucciDramdahl:2014}.
+To better understand the impact of crossover bias on genetic programming performance, we 
+experimented with five problems: K Landscapes with $K=6$~\cite{vanneschi2011k}, 
+ORDER\-TREE~\cite{hoang2006ordertree}, U.S. Change, Sine regression~\cite{poli08:fieldguide}, 
+and Pagie-1 regression~\cite{pagie1997evolutionary}.
+Three of these (K Landscapes, ORDERTREE, and Pagie-1 regression) are taken from recent benchmark 
+suggestions~\cite{gp-benchmarks-2013}. U.S. Change is a program synthesis problem  that has proven 
+interesting for evolutionary program synthesis\footnote{personal communication}, and sine regression 
+is the example problem used in earlier work on the impact of root and non-root 
+parents~\cite{McPheeDonatucciDramdahl:2014}. All our experiments used the previously published
+settings, function sets, etc., with the exception of the parameters listed below.\footnote{The function 
+set for Pagie-1 specified in~\cite{pagie1997evolutionary} is simply +, -, *, and \% (protected division). 
+The function set given in~\cite{mcdermott2012genetic} and implemented in ECJ is ``koza2'', which 
+includes a number of other trigonometric and logarithmic functions. The performance of GP varies 
+substantially between the two function sets; here we follow the original Pagie-1 paper and use the 
+simpler function set.} 
 
 \textbf{Add a footnote about the two function sets for Pagie-1 and their impact.}
 
