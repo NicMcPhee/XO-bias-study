@@ -180,9 +180,15 @@ Three of these (K Landscapes, ORDERTREE, and Pagie-1 regression) are taken from 
 suggestions~\cite{gp-benchmarks-2013}. U.S. Change is a program synthesis problem  that has proven 
 interesting for evolutionary program synthesis\footnote{personal communication}, and sine regression 
 is the example problem used in earlier work on the impact of root and non-root 
-parents~\cite{McPheeDonatucciDramdahl:2014}. 
+parents~\cite{McPheeDonatucciDramdahl:2014}.
 
-The one problem not described elsewhere(\textbf{well? there is a paper that sort of describes it. search "us change problem" in gecco last year})  in the literature is the U.S. Change problem, a program 
+(\textbf{well? there is a paper that sort of describes it. search "us change problem" in gecco last year})
+
+\textbf{Good catch. That's actually one of Lee's undergrad students, and he doesn't actually properly 
+define the problem in the paper, unfortunately, so I wasn't sure whether to even bother linking to it. We
+certainly can, though.}
+
+The one problem not described elsewhere in the literature is the U.S. Change problem, a program 
 synthesis problem where the task is to take as input an amount and to return as output the minimum 
 number of coins required to make that amount, using (a subset of) standard U.S. coins with amounts 
 25, 10, 5, and 1. So, for example, given 118 as input, the result should be 9 since 
@@ -515,6 +521,9 @@ In addition to the parameters outlined in Section~\ref{sec:Experiments}, the fol
 	\item basic4 ($+, -, \times, \div$) and koza2 (complete - not discussed) function sets, and
 	\item with and without Tarpeian bloat control.
 \end{itemize}
+
+\textbf{When we remove koza2 from Fig 9 then I think we'll be able to remove any mention of koza2, 
+which means we can drop the bullet list and just make this a sentence.}
 
 Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossover bias on the number of hits for the
 Pagie-1 regression problem, separated out by both tournament size and function set used.
