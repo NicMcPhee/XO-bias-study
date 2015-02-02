@@ -244,7 +244,7 @@ Population size & 1,024 and 10,240 \\
 \label{tab:sharedParameters}
 \end{table}
 
- \textbf{Can we drop 0.1\% from the table and just handle it as an exception like Tarpeian?}
+\textbf{Can we drop 0.1\% from the table and just handle it as an exception like Tarpeian?}
 
 As Section~\ref{sec:Results} shows, there were some quite substantial interactions between 
 crossover bias and some of the other parameter settings. In particular, we found that there are 
@@ -384,18 +384,16 @@ Initial runs of this problem with (1.00) and without (0.00) crossover bias acros
 demonstrated that in each case, adding crossover bias improved fitness. Additionally, these improvements were
 statistically significant ($p < 0.002$).
 
-Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this to cover the full range of crossover bias
-percentages. For binary tournaments, we observed a drop in fitness from bias 0.75 to bias 1.00, where the fitness for
+Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this to cover the full range of 
+crossover bias
+percentages, and shows a more complex picture. 
+For binary tournaments, we observed a drop in fitness from bias 0.75 to bias 1.00, where the fitness for
 1.00 is actually slightly below that for 0.50 as well. All these differences are statistically significant ($p <
 0.03$), with the exception of the difference between bias 0.25 and bias 1.00, so bias 0.75 is the clear winner in this
-scenario. Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} demonstrates that the drop in fitness for bias 1.00
-observed for binary tournaments is consistent across the other three tournament sizes as well. However, it is also
+scenario. This drop in fitness for bias 1.00
+is consistent across the other three tournament sizes as well. However, it is also
 apparent from the figure that in general the impact of crossover bias lessens with the larger tournament sizes, both in
 the increase in fitness up to bias 0.75, and the drop from there to bias 1.00.
-
-\textbf{I (Nic) suspect this is actually quite interesting and might open interesting doors to things like premature
-convergence and need for being able to have a least a little variation in the system for a problem like this. Maybe we
-should talk about that in the "Future work" section?}
 
 \begin{figure}
 \centering
@@ -709,6 +707,9 @@ EC system
 asymmetries weren't intentional design goals, but were instead simple artifacts of other system design decisions, and 
 the potential impact of these asymmetries has been largely unstudied.
 
+\textbf{I (Nic) suspect that the drop in performance in ORDERTREE is actually quite interesting and might open interesting doors to things like premature
+	convergence and need for being able to have a least a little variation in the system for a problem like this. Maybe we
+	should talk about that in the "Future work" section?}
 
 % \section*{Acknowledgements}
 
