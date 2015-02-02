@@ -539,8 +539,7 @@ Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}.
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_strong_Hits_vs_Bias_Tournys_FunctionSet.pdf}
 \caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, 
 	broken out by tournament size. These runs use no elitism, 
-	population size 10,240, and Tarpeian bloat control. 
-	The maximum number of possible hits is 676.}
+	population size 10,240, and Tarpeian bloat control.}
 \label{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}
 \end{figure}
 
@@ -655,25 +654,50 @@ population size 1,024.  \emph{Move this to where we define non-bias-effective pa
 
 \section{Discussion} \label{sec:Discussion}
 
-Why does all this happen this way? For example, why does crossover bias have a much stronger effect when using binary
-tournaments than when using larger tournament sizes such as 7. One possible explanation is that with large tournaments,
-the difference in fitness between the two parents is likely to be closer, because the larger tournaments help ensure
-that both parents are from the more highly fit part of the population. Since both of the contributing structures will most likely be from highly fit parents, the resulting offspring will likely obtain similiar fitness as one of these highly fit parent .  To better understand this, Figure~\ref{fig:parentDiffsSine} shows the distribution of relative difference in parent errors in the sine regression 
-problem. For each crossover event, the relative difference in parent errors is
+In general our results indicate that adding crossover bias improves performanance, either generally
+(Figure~\ref{fig:KLandscapes6_results}) or when combined with certain other parameter choices
+(e.g., Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}). In some cases the improvements
+induced by crossover bias are quite substantial (e.g., Figures~\ref{fig:KLandscapes6_strong_results},
+\ref{fig:USChange_Successes_strong}, and~\ref{fig:sineBiasResultsStrong}), while in other situations 
+the improvements were quite small in magnitude even when statistically significant 
+(Figure~\ref{fig:KLandscapes6_results}). Not surprisingly, however, crossover bias is not
+universally helpful, and there are settings where some crossover bias improves performance more than
+when always applying crossover bias (Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15}), 
+and other settings where all tested crossover bias amounts were detrimental 
+(tournament sizes 3, 5, and 7 in Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}).
+
+One general trend seems to be that crossover bias is more effective when using the 
+\emph{bias-effective} parameter settings, namely smaller tournaments (size 2 instead of 7), 
+larger populations (10,240 instead of 1,024), and no elitism. One possible explanation for this
+pattern is that when using the 
+\emph{non-bias-effective} settings (larger tournaments, smaller populations, and elitism), 
+the difference in fitness between the two parents is 
+likely to be closer than when using bias-effective settings, thus
+reducing the difference in the fitness of the parents is
+likely to minimize the impact of crossover bias.
+
+%Larger tournaments, for example,
+%help ensure that both parents are from the more highly fit part of the population, especially
+%when using smaller population sizes. 
+
+To test this hypothesis, we looked at the impact of tournament size on the relative difference
+in parent fitness for the K Landscapes problem and the sine regression problem. For each
+crossover event, we compute the relative difference in parent fitness as
 \[
-	|e_A - e_B] / (e_A + e_B)
+	|f_A - f_B| / (f_A + f_B)
 \]
-where $e_A$ and $e_B$ are the errors of the two chosen parents $A$ and $B$. This has a minimum value of 0 when 
-the two errors are the same, and a maximum value approaching 1 for the case where one of the errors is nearly 0. For larger tournament sizes, the difference in fitness drops significantly as the run progresses suggesting that the both of the parents are highly fit. Throughout the run, however, small tournament sizes do not exhibit these changes. (\textbf{not entirely sure what to say here})
+where $f_A$ and $f_B$ are the errors of the two chosen parents $A$ and $B$. 
+This has a minimum value of 0 when the two errors are the same, 
+and a maximum value approaching 1 for the case where one of the values is nearly 0.
 
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_error_diffs_sine.pdf}
-\caption{Plot of the normalized differences in parent errors from some sine runs. \textbf{Explain this}.}
-\label{fig:parentDiffsSine}
-\end{figure}
-
-We see similar results for the K Landscapes problem, as illustrated in Figure~\ref{fig:parentDiffsKLandscapes}.
+Figure~\ref{fig:parentDiffsKLandscapes} shows the distribution of the relative differences
+in parent fitness for the K Landscapes problem both with and without crossover bias.
+For tournament size 7, the difference in fitness drops significantly 
+as the run progresses, suggesting that the both of the parents are highly fit. 
+When using binary tournaments, the relative differences in parent fitness remains fairly 
+stable (and high), which would suggest that crossover bias would continue to be effective
+throughout the run when using binary tournaments. We see similar
+results in the sine regression problem, as illustrated in Figure~\ref{fig:parentDiffsSine}.
 
 \begin{figure}
 \centering
@@ -682,8 +706,15 @@ We see similar results for the K Landscapes problem, as illustrated in Figure~\r
 \label{fig:parentDiffsKLandscapes}
 \end{figure}
 
-Our results also indicate that crossover bias may increase selection pressure, in some cases
-leading to premature convergence.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_error_diffs_sine.pdf}
+	\caption{Plot of the normalized differences in parent errors from some sine runs. \textbf{Explain this}.}
+	\label{fig:parentDiffsSine}
+\end{figure}
+
+Our results also indicate that crossover bias may increase certain types of selection pressure, 
+which could potentially increase the likelihood of premature convergence.
 % (see Figures~\ref{fig:sineBiasFitnessVsGenStrong} and~\ref{fig:sineBiasFitnessVsGenWeak}).
 It certainly heightens the focus on the fitter of the two parents, and increases the likelihood
 that that parent's semantics will be carried across into the next generation. Further research is
