@@ -259,7 +259,12 @@ performed using pairwise tests of proportions (chi-squared) with Holm correction
 All statistics calculations were performed with R~\cite{R} 
 and plots were generated using the\linebreak ggplot2 package~\cite{ggplot2Book}.
 
-\subsection{K Landscapes}
+\subsection{Structural Problems}
+
+Structural problems take a series of individuals and their respective fitnesses as inputs, and from this information
+design an individual with optimal fitness. Success is here measured in fitness.
+
+\subsubsection{K Landscapes}
 
 Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the combinations of
 parameter values in Table~\ref{tab:sharedParameters}. Increasing the amount of crossover bias consistently improves the fitness of the results. All the
@@ -356,7 +361,7 @@ $p \leq 0.03$.
 %
 %P value adjustment method: holm 
 
-\subsection{ORDERTREE}
+\subsubsection{ORDERTREE}
 
 It should be noted that, for the ORDERTREE problem we used the full set of parameters outlined in
 Section~\ref{sec:Experiments}, with one exception: the population size for the ORDERTREE 
@@ -402,7 +407,7 @@ the increase in fitness up to bias 0.75, and the drop from there to bias 1.00.
 %
 %P value adjustment method: holm 
 
-\subsection{U.S. Change Problem}
+\subsection{U.S. Change Problem} \label{sec:USChange}
 
 In contrast to the structural problems discussed in the previous section, which used fitness as the measure of success
 of a run, for the U.S. Change problem we measured success in ``hits'' (the number of test cases that are correctly
@@ -499,7 +504,12 @@ are statistically significant, with the exceptions being crossover bias 0.00 \em
 %\label{fig:USChangeBiasImpactVsSuccess}
 %\end{figure}
 
-\subsection{Pagie-1 Problem}
+\subsection{Regression Problems}
+
+Regression problems work backwards from a large data set of inputs and their respective outputs to generate an equation
+that fits the data. Success is here measured in hits, described in Section~\ref{sec:USChange}.
+
+\subsubsection{Pagie-1 Problem}
 
 In addition to the parameters outlined in Section~\ref{sec:Experiments}, the Pagie-1 problem was 
 also run both with and without Tarpeian bloat control.
@@ -567,7 +577,7 @@ symbolic regression problem broken out by tournament size (2, 3, 5, and 7). Thes
 \label{fig:Pagie1StrongSuccesses}
 \end{figure}
 
-\subsection{Sine Problem}
+\subsubsection{Sine Problem}
 
 For the sine regression problem, we limited our runs to bias-effective and non-bias-effective settings as outlined in
 detail in Section~\ref{sec:Experiments}.
