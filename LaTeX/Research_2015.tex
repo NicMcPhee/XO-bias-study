@@ -271,11 +271,7 @@ performed using pairwise tests of proportions (chi-squared) with Holm correction
 All statistics calculations were performed with R~\cite{R} 
 and plots were generated using the\linebreak ggplot2 package~\cite{ggplot2Book}.
 
-\subsection{Structural Problems}
-
-\textbf{Someone should invent a sentence to put here.}
-
-\subsubsection{K Landscapes}
+\subsection{K Landscapes}
 
 Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the combinations of
 parameter values in Table~\ref{tab:sharedParameters}. Increasing the amount of crossover bias consistently improves the fitness of the results. All the
@@ -372,7 +368,7 @@ $p \leq 0.03$.
 %
 %P value adjustment method: holm 
 
-\subsubsection{ORDERTREE}
+\subsection{ORDERTREE}
 
 It should be noted that, for the ORDERTREE problem we used the full set of parameters outlined in
 Section~\ref{sec:Experiments}, with one exception: the population size for the ORDERTREE 
@@ -515,9 +511,7 @@ are statistically significant, with the exceptions being crossover bias 0.00 \em
 %\label{fig:USChangeBiasImpactVsSuccess}
 %\end{figure}
 
-\subsection{Symbolic Regression Problems}
-
-\subsubsection{Pagie-1 Problem}
+\subsection{Pagie-1 Problem}
 
 In addition to the parameters outlined in Section~\ref{sec:Experiments}, the Pagie-1 problem was 
 also run both with and without Tarpeian bloat control.
@@ -586,7 +580,7 @@ symbolic regression problem broken out by tournament size (2, 3, 5, and 7). Thes
 \label{fig:Pagie1StrongSuccesses}
 \end{figure}
 
-\subsubsection{Sine Problem}
+\subsection{Sine Problem}
 
 For the sine regression problem, we limited our runs to bias-effective
 and non-bias-effective settings as discussed in detail in Section~\ref{sec:Experiments}. 
