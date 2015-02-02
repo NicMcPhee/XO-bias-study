@@ -179,7 +179,7 @@ interesting for evolutionary program synthesis~\cite{zhan2014quantitative}, and 
 is the example problem used in earlier work on the impact of root and non-root 
 parents~\cite{McPheeDonatucciDramdahl:2014}.
 
-The one problem not precisely described elsewhere in the literature is the U.S. Change problem, 
+The one problem not precisely described elsewhere in literature is the U.S. Change problem, 
 where the task is to take as input an amount, and to return as output the minimum 
 number of coins required to make that amount using (a subset of) standard U.S. coins with amounts 
 25, 10, 5, and 1. So, for example, given 118 as input, the result should be 9 since 
@@ -298,9 +298,9 @@ separated out by tournament size. It is clear that for binary tournaments, incre
 continues to improve the fitness -- all the differences are strongly statistically significant ($p<6\times 10^{-08}$). This
 continues to be true for tournament size 3; all the differences are statistically significant except for those between
 bias 0.50 and 0.75, which was very close ($p=0.05620$). None of the differences for tournament size 5 are
-significant. For tournament size 7, however, it does look like the reverse is true, where
+significant. For tournament size 7, however, it looks like the reverse is true, where
 increasing crossover actually hurts fitness. Almost none of the differences for tournament size 7 are statistically
-significant, however, with the only exception being the difference between 0.25 and 1.00 ($p=0.21$).
+significant with the only exception being the difference between 0.25 and 1.00 ($p=0.21$).
 
 \textbf{Nic needs to check the p=0.21 above since that clearly isn't signifiant. Either Nic was confused, or the number should be 0.021.}
 
@@ -722,8 +722,8 @@ results in the sine regression problem, as illustrated in Figure~\ref{fig:parent
 Our results also indicate that crossover bias may increase certain types of selection pressure, 
 which could potentially increase the likelihood of premature convergence.
 % (see Figures~\ref{fig:sineBiasFitnessVsGenStrong} and~\ref{fig:sineBiasFitnessVsGenWeak}).
-It certainly heightens the focus on the fitter of the two parents, and increases the likelihood
-that that parent's semantics will be carried across into the next generation. Further research is
+There is a heightened focus on the fitter of the two parents which increases the chance
+of the more fit parent's semantics being carried across into the next generation. This might limit the diversity of the root structures causing premature convergence. Further research is
 needed to understand if this does in fact lead to premature convergence in some cases, but it's
 possible, for example, that this explains the fact that using some crossover bias (0.75) is better 
 than always using crossover bias in the ORDERTREE problem (see, e.g., 
