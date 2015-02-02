@@ -64,18 +64,23 @@ Nicholas Freitag McPhee, M. Kirbie Dramdahl, David Donatucci\\
 
 \begin{abstract}
 
-In tree-based genetic programming with sub-tree crossover, the parent contributing the root portion of the tree (the
+In tree-based genetic programming (GP) with sub-tree crossover, the parent contributing the root portion of the tree (the
 \emph{root parent}) often contributes more to the semantics of the resulting child than the other parent (the
 \emph{non-root parent}). Previous research demonstrated that when the root parent had greater fitness than the non-root
 parent, the fitness of the child tended to be better than if the reverse were true. Here we explore the significance of
 that asymmetry by introducing the notion of \emph{crossover bias}, which allows us to bias the system in favor of
 having the more fit parent be the root parent.
 
-Here we apply crossover bias to a variety of problems. In most cases we found that using crossover bias either improved
-performance or had no impact -- although the effectiveness is somewhat dependent on the problem, and significantly dependent on other parameter choices. \textbf{Talk about broader question of asymmetry.}
+Here we apply crossover bias to a variety of problems. In most cases we found that using crossover bias 
+either improved performance or had no impact, although the effectiveness is somewhat dependent on the 
+problem, and significantly dependent on other parameter choices, and in certainly circumstances adding
+crossover bias can actually hurt performance.
+
+While this work focuses specifically on sub-tree crossover in tree-based GP, many biological and 
+artificial evolutionary systems have substantial asymmetries, many of which remain unstudied. This 
+work suggests that there is probably value in exploration of the impacts of those asymmetries.
 
 \end{abstract}
-
 
 \category{}{}{}
 \terms{}
