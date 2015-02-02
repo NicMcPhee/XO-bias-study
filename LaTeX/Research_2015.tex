@@ -569,10 +569,16 @@ symbolic regression problem broken out by tournament size (2, 3, 5, and 7). Thes
 
 \subsection{Sine Problem}
 
-For the sine regression problem, we limited our runs to bias-effective
-and non-bias-effective settings as discussed in detail in Section~\ref{sec:Experiments}. 
+For the sine regression problem, we limited our runs to bias-effective and non-bias-effective settings as outlined in
+detail in Section~\ref{sec:Experiments}.
 
-Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem using bias-effective settings. All these differences are statistically significant ($p < 10^{-5}$) except for the difference between the bias of 0.75 and 1.00. Figure~\ref{fig:sineBiasFitnessVsGenStrong} also shows the impact of crossover bias over time when using the bias-effective settings; the fitnesses are consistently different throughout the time of the runs, although the differences are shrinking towards the end as many runs find fairly highly fit individuals.
+Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem using bias-effective
+settings. All these differences are statistically significant ($p < 10^{-5}$) except for the difference between the
+bias of 0.75 and 1.00. Figure~\ref{fig:sineBiasFitnessVsGenStrong} illustrates the impact of crossover bias over time
+when using the bias-effective settings, demonstrating that the effects appear early in the run. Here, the fitnesses are
+consistently different throughout the time of the runs, with higher crossover bias settings arriving at fitter
+individuals earlier in the runs, although the differences are shrinking towards the end as many runs find fairly highly
+fit individuals.
 
 \textbf{Re-do sine figures to use bias-effective and non-bias-effective in titles.}
 
@@ -612,7 +618,12 @@ Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regre
 %P value adjustment method: holm 
 
 Figure~\ref{fig:sineBiasResultsWeak} shows the results for the sine regression problem using the non-bias-effective 
-parameter settings; none of these differences are statistically significant. Figure~\ref{fig:sineBiasFitnessVsGenWeak} also shows the impact of crossover bias over time when using the non-bias-effective settings. \textbf{Say they're all kinda the same.}
+parameter settings; none of these differences are statistically significant. Figure~\ref{fig:sineBiasFitnessVsGenWeak}
+illustrates the impact of crossover bias over time when using the non-bias-effective settings, demonstrating that the
+runs tend to produce individuals of similar fitness at similar points in the runs history (essentially, the runs are
+identical, regardless of crossover bias setting). However, in what little variation does exist between the runs, the
+figure shows that while higher crossover bias settings tend to produce slightly fitter individuals toward the beginning
+of the runs, this trend is reversed by the end of the runs.
 
 \begin{figure}
 \centering
