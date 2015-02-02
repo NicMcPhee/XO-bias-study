@@ -128,21 +128,6 @@ performance of GP runs, but that the results are heavily parameter dependent and
 problem dependent. In general, however, we find (Section~\ref{sec:Discussion}) that incorporating 
 some crossover bias is, at least in these problems, usually either advantageous or neutral. 
 
-\textbf{Should this next paragraph be moved the Conclusions section instead of having it here?}
-
-While this paper focuses on asymmetry in the context of tree-based GP and sub-tree crossover, it's important to 
-note that asymmetries like this are common in many evolutionary systems, both biological and artificial. Much 
-eukaryote reproduction is sexual, and brings with it numerous sex-linked traits and related asymmetries; this may
-play an important role in speciation~\cite{qvarnstrom2009speciation}, arguably one of the most crucial of 
-biological asymmetries.
-Many evolutionary computation systems other than tree-based GP also have 
-significant asymmetries. Linear GP systems~\cite{brameier2007linear} and stack-based GP 
-systems~\cite{spector:2002:GPEM}, for example, have asymmetries where the last instructions executed can have a 
-disproportionate impact on the results. Similarly, changes near the front of grammatical evolution 
-\cite{o2003grammatical} strings will have a 
-disproportionate impact by determining the important early choices in the grammar productions. 
-The results presented here suggest that it may be important to more thoroughly explore the impact of these asymmetries, both to better understand the performance and behavior of existing systems, but also as an aid to the design and discovery of new tools like recombination operators that leverage these asymmetries.
-
 \section{Crossover Bias} \label{sec:XObias}
 
 For this work, we implemented crossover bias with a parameter specifying the probability of forcing 
@@ -723,29 +708,58 @@ possible, for example, that this explains the fact that using some crossover bia
 than always using crossover bias in the ORDERTREE problem (see, e.g., 
 Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15}).
 
+%In most of these experiments we found better results with tournament sizes of 7 than with 
+%binary tournaments, and in general using larger tournaments appears to wash out much of the 
+%impact of crossover bias, so there's a fair question about whether one should just use 
+%larger tournaments and ignore crossover bias. 
+%\textbf{How do we respond to this? I 
+%	think the answer is something like ``It doesn't hurt (at least in our experiments), and it sometimes helps, even for 
+%	tournament size 7 and with elitism. For interesting problems, you also don't know in advance what your best parameter 
+%	choices are, so it's at least worth including in your arsenal.''}
+
 \section{Conclusions} \label{sec:Conclusions}
 
-In most of these experiments we found better results with tournament sizes of 7 than with binary tournaments, and in 
-general using larger tournaments appears to wash out much of the impact of crossover bias, so there's a fair question 
-about whether one should just use larger tournaments and ignore crossover bias. \textbf{How do we respond to this? I 
-think the answer is something like ``It doesn't hurt (at least in our experiments), and it sometimes helps, even for 
-tournament size 7 and with elitism. For interesting problems, you also don't know in advance what your best parameter 
-choices are, so it's at least worth including in your arsenal.''}
+Based on previous observations of interesting asymmetries in the behavior of sub-tree crossover 
+(e.g.,~\cite{McPheeDonatucciDramdahl:2014}), we introduced the idea of \emph{crossover bias}, where
+we probabilistically force the more fit parent to be the \emph{root parent} when performing crossover.
+We then applied this new bias to a experiments on several different problems. In general we found
+that adding crossover bias either helps or is neutral, although there were cases where its effect
+was detrimental.
 
-One outstanding question is how crossover bias affects generalization. Neither of the published versions 
-of the two regression problems specify a validation set, but it's clearly feasible to create validation sets 
-for both of those problems and the U.S. Change problem to see what impact, if any, crossover bias has 
-on how well evolved solutions generalize to unseen data.
+Given these results, it seems worthwhile to at least try crossover bias, especially in settings
+where there are reasons to suspect that there are substantial differences between parental
+fitnesses. This is likely to be the case wherever selection pressure is weak (e.g., our use
+of binary tournaments), but could also happen when there are
+unavoidable steep changes in fitness, or in settings where the fitness function may vary
+over either time or as a function of some other variable such as location.
 
-\textbf{Return to the paragraph in the intro about how asymmetries are very common and that these results suggest that we should look at their impact in other EC system.}
-In general these 
+One outstanding question is how crossover bias affects generalization, especially since it's possible
+that crossover bias increases selection pressure and could consequently encourage overfitting. 
+None of the problems used here specify a validation set, but it's clearly feasible to create 
+validation data for the U.S. Change problem and both of the regression problems. It would be
+useful to expand the existing work to include validation to see what impact, if any, crossover 
+bias has on how well evolved solutions generalize to unseen data.
+
+While this paper focuses on asymmetry in the context of tree-based GP and sub-tree crossover, 
+it's important to note that asymmetries like this are common in many evolutionary systems, 
+both biological and artificial. Much eukaryote reproduction is sexual, and brings with it 
+numerous sex-linked traits and related asymmetries; this may play an important role in 
+speciation~\cite{qvarnstrom2009speciation}, arguably one of the most crucial of biological 
+asymmetries. Many evolutionary computation systems other than tree-based GP also have 
+significant asymmetries. Linear GP systems~\cite{brameier2007linear} and stack-based GP 
+systems~\cite{spector:2002:GPEM}, for example, have asymmetries where the last instructions
+executed can have a disproportionate impact on the results. Similarly, changes near the front 
+of grammatical evolution \cite{o2003grammatical} strings will have a disproportionate impact 
+by determining the important early choices in the grammar productions. In general these 
 EC system
-asymmetries weren't intentional design goals, but were instead simple artifacts of other system design decisions, and 
+asymmetries weren't intentional, but were instead simple artifacts of other system design 
+decisions, and 
 the potential impact of these asymmetries has been largely unstudied.
-
-\textbf{I (Nic) suspect that the drop in performance in ORDERTREE is actually quite interesting and might open interesting doors to things like premature
-	convergence and need for being able to have a least a little variation in the system for a problem like this. Maybe we
-	should talk about that in the "Future work" section?}
+The results presented 
+here suggest that it may be important to more thoroughly explore the impact of such asymmetries, 
+both to better understand the performance and behavior of existing systems, but also as an aid 
+to the design and discovery of new tools like recombination operators that leverage these 
+asymmetries.
 
 % \section*{Acknowledgements}
 
