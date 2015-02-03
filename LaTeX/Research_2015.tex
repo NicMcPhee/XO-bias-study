@@ -168,7 +168,9 @@ regression~\cite{poli08:fieldguide}, and Pagie-1 regression~\cite{pagie1997evolu
 ORDERTREE, and Pagie-1 regression) are taken from recent benchmark suggestions~\cite{gp-benchmarks-2013}. U.S. Change
 is a program synthesis problem  that has proven interesting for evolutionary program
 synthesis~\cite{zhan2014quantitative}, and sine regression is the example problem used in earlier work on the impact of
-root and non-root parents~\cite{McPheeDonatucciDramdahl:2014}.
+root and non-root parents~\cite{McPheeDonatucciDramdahl:2014}. 
+All experiments were run using a copy of ECJ 21\footnote{\url{http://cs.gmu.edu/~eclab/projects/ecj/}} that we modified
+to support crossover bias.
 
 The one problem not precisely described elsewhere in the literature is the U.S. Change problem, where the task is to
 take as input an amount, and to return as output the minimum number of coins required to make that amount using (a
@@ -221,7 +223,8 @@ Population size & 1,024 and 10,240 \\
 
 \textbf{Can we drop 0.1\% from the table and just handle it as an exception like Tarpeian?}
 
-As Section~\ref{sec:Results} shows, there were some quite substantial interactions between crossover bias and some of
+In our experimentation we observed that
+there were quite substantial interactions between crossover bias and some of
 the other parameter settings. In particular, we found that there are parameter values where crossover bias appears to
 have a substantial and significant impact, and other parameter settings where crossover bias has almost no effect on
 the results. Based on these observed patterns, we found it useful to identify two specific subsets of the parameter
@@ -231,8 +234,20 @@ non-bias-effective settings, conversely, are tournament size 7, non-zero elitism
 These terms will be used in the remainder of the paper, which will also include some discussion of why crossover bias
 might interact with these parameters in this way.
 
-All experiments were run using a copy of ECJ 21\footnote{\url{http://cs.gmu.edu/~eclab/projects/ecj/}} that we modified
-to support crossover bias.
+To illustrate the impact of these parameter settings, 
+Figure~\ref{fig:sineFitnessVsGenFacets} shows the fitness (absolute error) over time for the sine regression problem
+(see Section~\ref{sec:sineRegression} for more on the sine regression results). 
+The bias-effective settings (left-hand panel) show a clear difference in the performance as a function of 
+crossover bias, where the non-bias-effective settings (right hand panel) show almost no difference as a function of
+the crossover bias probability.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45 \textwidth]{Plots/Sine_fitness_vs_gen_facets.pdf}
+	\caption{Impact of crossover bias over time on the sine symbolic regression problem with
+		\emph{bias-effective} and \emph{non-bias-effective} parameter sets.}
+	\label{fig:sineFitnessVsGenFacets}
+\end{figure}
 
 \section{Results} \label{sec:Results}
 
@@ -562,19 +577,18 @@ symbolic regression problem broken out by tournament size (2, 3, 5, and 7). Thes
 \end{figure}
 
 \subsubsection{Sine Problem}
+\label{sec:sineRegression}
 
 For the sine regression problem, we limited our runs to bias-effective and non-bias-effective settings as outlined in
 detail in Section~\ref{sec:Experiments}.
 
 Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem using bias-effective
 settings. All these differences are statistically significant ($p < 10^{-5}$) except for the difference between the
-bias of 0.75 and 1.00. Figure~\ref{fig:sineBiasFitnessVsGenStrong} illustrates the impact of crossover bias over time
+bias of 0.75 and 1.00. Figure~\ref{fig:sineFitnessVsGenFacets} illustrates the impact of crossover bias over time
 when using the bias-effective settings, demonstrating that the effects appear early in the run. Here, the fitnesses are
 consistently different throughout the time of the runs, with higher crossover bias settings arriving at fitter
 individuals earlier in the runs, although the differences are shrinking towards the end as many runs find fairly highly
 fit individuals.
-
-\textbf{Re-do sine figures to use bias-effective and non-bias-effective in titles.}
 
 \begin{figure}
 \centering
@@ -612,36 +626,23 @@ fit individuals.
 %P value adjustment method: holm 
 
 Figure~\ref{fig:sineBiasResultsWeak} shows the results for the sine regression problem using the non-bias-effective
-parameter settings; none of these differences are statistically significant. Figure~\ref{fig:sineBiasFitnessVsGenWeak}
-illustrates the impact of crossover bias over time when using the non-bias-effective settings, demonstrating that the
-runs tend to produce individuals of similar fitness at similar points in the runs history (essentially, the runs are
-identical, regardless of crossover bias setting). However, in what little variation does exist between the runs, the
-figure shows that while higher crossover bias settings tend to produce slightly fitter individuals toward the beginning
-of the runs, this trend is reversed by the end of the runs.
+parameter settings; none of these differences are statistically significant. Figure~\ref{fig:sineFitnessVsGenFacets}
+illustrates the impact of crossover bias over time when using the non-bias-effective settings, demonstrating that 
+with these settings 
+the runs tend to be highly similar, 
+regardless of crossover bias setting. 
+
+% I don't think that the following is actually supported by this plot, although it *might* be
+% supported by the plot with the 10K pop size. - Nic
+%However, in what little variation does exist between the runs, the
+%figure shows that while higher crossover bias settings tend to produce slightly fitter individuals toward the beginning
+%of the runs, this trend is reversed by the end of the runs.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_impact_weak_boxplot.pdf}
 \caption{Impact of crossover bias on the sine symbolic regression problem with non-bias-effective settings.}
 \label{fig:sineBiasResultsWeak}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_fitness_vs_gen_strong.pdf}
-\caption{Impact of crossover bias on the sine symbolic regression problem with \emph{bias-effective parameter
-settings}: binary tournaments, no elitism, and population size 10,240. \emph{Move this to where we define
-bias-effective parameters.}}
-\label{fig:sineBiasFitnessVsGenStrong}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_fitness_vs_gen_weak.pdf}
-\caption{Impact of crossover bias on the sine symbolic regression problem with \emph{non-bias-effective parameter
-settings}: tournament size 7, 0.1\% elitism, and population size 1,024.  \emph{Move this to where we define
-non-bias-effective parameters, combined with the previous figure as a pair of panels.}}
-\label{fig:sineBiasFitnessVsGenWeak}
 \end{figure}
 
 \section{Discussion} \label{sec:Discussion}
