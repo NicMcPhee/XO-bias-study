@@ -515,7 +515,7 @@ Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}, vary significantly. Howeve
 and no elitism then the complexities of Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} simplify to
 Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}.
 
-\begin{figure}
+\begin{figure}[tb]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Hits_vs_Bias_Tournys_FunctionSet.pdf}
 \caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, 
@@ -523,7 +523,7 @@ Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}.
 \label{fig:Pagie1Hits_Bias_Tournys_FunctionSet}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tb]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_strong_Hits_vs_Bias_Tournys_FunctionSet.pdf}
 \caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, 
@@ -566,10 +566,12 @@ successes with crossover biases 0.00 and 1.00 is significant ($p=0.015$).
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Strong_Successes_vs_Bias.pdf}
 \caption{Impact of crossover bias on the number of successes (runs that exactly solve the problem) for the Pagie-1
-symbolic regression problem broken out by tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set
-(just $+, -, \times, \div$), no elitism, population size 10,240, and Tarpeian bloat control.}
+symbolic regression problem broken out by tournament size. These runs use 
+no elitism, population size 10,240, and Tarpeian bloat control.}
 \label{fig:Pagie1StrongSuccesses}
 \end{figure}
+
+\pagebreak
 
 \subsubsection{Sine Problem}
 \label{sec:sineRegression}
