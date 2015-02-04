@@ -729,7 +729,9 @@ selection pressure is weak (e.g., our use of binary tournaments), but could also
 steep changes in fitness, or in settings where the fitness function may vary over either time or as a function of some
 other variable such as location.
 
-One outstanding question is how crossover bias affects generalization, especially since it's possible that crossover
+A question to consider is why shouldn't larger tournaments be utilized instead of crossover bias? According to Gustafson et al. \cite{Gustafson:2005}, matings between similiar parents are more likely to produce no change in fitness, whereas a more diverse crossover increases the chances of offspring improving fitness. Larger tournaments are more likely to select two parents that are similiar (as seen in Figures \ref{fig:parentDiffsKLandscapes}, \ref{fig:parentDiffsSine}). An excellent illustration of this can be seen in Figure 2 in \cite{Boetticher:2006}. Therefore, using crossover bias might be more effective than using a larger tournament size. 
+
+Another outstanding question is how crossover bias affects generalization, especially since it's possible that crossover
 bias increases selection pressure and could consequently encourage overfitting. None of the problems used here specify
 a validation set, but it's clearly feasible to create validation data for the U.S. Change problem and both of the
 regression problems. It would be useful to expand the existing work to include validation to see what impact, if any,
