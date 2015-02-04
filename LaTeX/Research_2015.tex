@@ -125,9 +125,9 @@ To better understand these asymmetries and impact of crossover bias,
 we implemented crossover bias with a parameter specifying the probability of forcing the more fit parent
 to be the root parent when performing crossover, as detailed in Algorithm~\ref{alg:biasAlgorithm}. Every time a
 crossover event was to be performed, we would use this probability to decide whether to force the more fit parent to be
-the root parent. Note that if the random value in Algorithm~\ref{alg:biasAlgorithm} didn't cause crossover bias to be
-applied, then the parents were left in their original random order, meaning that there is a 50\% chance that the root
-parent is the more fit parent even without any crossover bias.
+the root parent. 
+Note that when crossover bias isn't applied, there is still a 50\% chance that the root parent is the more fit
+parent.
 
 \begin{algorithm}[tb]
 \begin{algorithmic}
@@ -144,12 +144,16 @@ parent is the more fit parent even without any crossover bias.
 
 In this paper we focus on five levels of crossover bias:
 \begin{itemize}
-\item 0.00 bias - no crossover bias is applied, i.e., just standard sub-tree crossover;
-\item 0.25 bias - system forced to use the more fit parent as the root parent in 25\% of cases;
-\item 0.50 bias - system forced to use the more fit parent as the root parent in 50\% of cases;
-\item 0.75 bias - system forced to use the more fit parent as the root parent in 75\% of cases; and
-\item 1.00 bias - system forced to always use the more fit parent as the root parent, sometimes referred to as ``with
-crossover bias''.
+\item 0.00 bias - no crossover bias is applied, i.e., just standard sub-tree crossover; 
+	a 50\% probability of the more fit parent being the root parent;
+\item 0.25 bias - system forced to use the more fit parent as the root parent in 25\% of cases; 
+	a 62.5\% total probability of the more fit parent being the root parent;
+\item 0.50 bias - system forced to use the more fit parent as the root parent in 50\% of cases; 
+	a 75\% total probability of the more fit parent being the root parent;
+\item 0.75 bias - system forced to use the more fit parent as the root parent in 75\% of cases; 
+	a 87.5\% total probability of the more fit parent being the root parent; and
+\item 1.00 bias - system forced to always use the more fit parent as the root parent, sometimes 
+	referred to as ``with crossover bias''.
 \end{itemize}
 
 We also experimented with \emph{reverse bias}, where the weaker parent was always forced to be the root parent. In
@@ -249,7 +253,7 @@ the crossover bias probability.
 All tests of differences in fitness or hits in this section are performed using pairwise Wilcoxon tests with Holm
 corrections. Tests of differences in the number of successes are performed using pairwise tests of proportions
 (chi-squared) with Holm corrections. All statistics calculations were performed with R~\cite{R} and all plots were
-generated using the ggplot2 package~\cite{ggplot2Book}.
+generated using the ggplot2 package~\cite{ggplot2Book}. Statistical significance will require $p \leq 0.05$.
 
 \subsection{Structural Problems}
 
@@ -291,7 +295,7 @@ Compare this to the results shown in Figure~\ref{fig:KLandscapes6_XO_bias_impact
 separated out by tournament size. It is clear that for binary tournaments, increasing the crossover bias probability
 continues to improve the fitness -- all the differences are strongly statistically significant ($p<6\times 10^{-08}$).
 This continues to be true for tournament size 3; all the differences are statistically significant except for those
-between bias 0.50 and 0.75, which was very close ($p=0.05620$). None of the differences for tournament size 5 are
+between bias 0.50 and 0.75, which was very close ($p=0.056$). None of the differences for tournament size 5 are
 significant. For tournament size 7, however, it looks like the reverse is true, where increasing crossover actually
 hurts fitness. Almost none of the differences for tournament size 7 are statistically significant with the only
 exception being the difference between 0.25 and 1.00 ($p=0.021$).
@@ -430,9 +434,9 @@ if numerically small.
 However, if we limit our attention to the bias-effective parameter settings (Section~\ref{sec:Experiments}), then we
 find that crossover bias has a substantial and statistically significant impact, as is seen in
 Figure~\ref{fig:USChange_Hits_strong}. Here the bulk of these pairwise differences are statistically significant
-($p<0.0002$). The major exception is the difference between crossover bias 0.75 and 1.00 ($p=0.43078$). Two other
-adjacent pairs have $p$-values slightly above 0.05: crossover bias 0.25 \emph{vs.}\ 0.50 ($p=0.05036$), and 0.50
-\emph{vs.}\ 0.75 ($p=0.08019$).
+($p<0.0002$). The major exception is the difference between crossover bias 0.75 and 1.00 ($p=0.43$). Two other
+adjacent pairs have $p$-values slightly above 0.05: crossover bias 0.25 \emph{vs.}\ 0.50 ($p=0.0504$), and 0.50
+\emph{vs.}\ 0.75 ($p=0.0802$).
 
 \begin{figure}[tb]
 \centering
@@ -462,7 +466,7 @@ Figure~\ref{fig:USChange_Successes_strong} shows the number of successes for the
 using the bias-effective parameter settings. None of the adjacent differences (for example, crossover bias 0.50
 \emph{vs.}\ 0.75) are statistically significant, while most of the non-adjacent differences (for example, crossover bias
 0.25 \emph{vs.}\ 0.75) are statistically significant, with the exceptions being crossover bias 0.00 \emph{vs.}\ 0.50, and
-bias 0.50 \emph{vs.}\ 1.00 ($p=0.09361$ in both cases).
+bias 0.50 \emph{vs.}\ 1.00 ($p=0.094$ in both cases).
 
 \begin{figure}
 \centering
@@ -649,10 +653,10 @@ Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}).
 
 One general trend seems to be that crossover bias is more effective when using the \emph{bias-effective} parameter
 settings, namely smaller tournaments (size 2 instead of 7), larger populations (10,240 instead of 1,024), and no
-elitism. One possible explanation for this pattern is that when using the \emph{non-bias-effective} settings (larger
-tournaments, smaller populations, and elitism), the difference in fitness between the two parents is likely to be
-closer than when using bias-effective settings, thus reducing the difference in the fitness of the parents is likely to
-minimize the impact of crossover bias.
+elitism. One possible explanation for this pattern is that when using the \emph{non-bias-effective} settings, 
+the difference in fitness between the two parents is likely to be
+closer than when using bias-effective settings; this reduction in the the difference between the fitness of the 
+parents is thus likely to minimize the impact of crossover bias.
 
 %Larger tournaments, for example, help ensure that both parents are from the more highly fit part of the population,
 %especially when using smaller population sizes. 
