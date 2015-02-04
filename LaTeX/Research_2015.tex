@@ -359,11 +359,11 @@ population size of 10,240.
 
 Initial runs of this problem with (1.00) and without (0.00) crossover bias across all four tournament sizes
 demonstrated that in each case, adding crossover bias improved fitness. Additionally, these improvements were
-statistically significant ($p < 0.002$).
-
-Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this to cover the full range of crossover bias
+statistically significant ($p < 0.002$). Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this 
+result, covering the full range of crossover bias
 percentages, and shows a more complex picture. For binary tournaments, we observed a drop in fitness from bias 0.75 to
-bias 1.00, where the fitness for 1.00 is actually slightly below that for 0.50 as well. All these differences are
+bias 1.00, where the fitness for 1.00 is actually slightly below that for 0.50 as well. All the binary tournament 
+differences are
 statistically significant ($p < 0.03$), with the exception of the difference between bias 0.25 and bias 1.00, so bias
 0.75 is the clear winner in this scenario. This drop in fitness for bias 1.00 is consistent across the other three
 tournament sizes as well. However, it is also apparent from the figure that in general the impact of crossover bias
@@ -429,8 +429,8 @@ However, if we limit our attention to the bias-effective parameter settings (Sec
 find that crossover bias has a substantial and statistically significant impact, as is seen in
 Figure~\ref{fig:USChange_Hits_strong}. Here the bulk of these pairwise differences are statistically significant
 ($p<0.0002$). The major exception is the difference between crossover bias 0.75 and 1.00 ($p=0.43078$). Two other
-adjacent pairs have $p$-values slightly above 0.05: crossover bias 0.25 \emph{vs} 0.50 ($p=0.05036$), and 0.50
-\emph{vs} 0.75 ($p=0.08019$).
+adjacent pairs have $p$-values slightly above 0.05: crossover bias 0.25 \emph{vs.}\ 0.50 ($p=0.05036$), and 0.50
+\emph{vs.}\ 0.75 ($p=0.08019$).
 
 \begin{figure}[tb]
 \centering
@@ -458,14 +458,14 @@ If complete success was considered vital (which might be the case if we were evo
 system), then it would make sense to see if crossover bias has a significant impact on the success rate.
 Figure~\ref{fig:USChange_Successes_strong} shows the number of successes for the various crossover bias values when
 using the bias-effective parameter settings. None of the adjacent differences (for example, crossover bias 0.50
-\emph{vs} 0.75) are statistically significant, while most of the non-adjacent differences (for example, crossover bias
-0.25 \emph{vs} 0.75) are statistically significant, with the exceptions being crossover bias 0.00 \emph{vs} 0.50, and
-bias 0.50 \emph{vs} 1.00 ($p=0.09361$ in both cases).
+\emph{vs.}\ 0.75) are statistically significant, while most of the non-adjacent differences (for example, crossover bias
+0.25 \emph{vs.}\ 0.75) are statistically significant, with the exceptions being crossover bias 0.00 \emph{vs.}\ 0.50, and
+bias 0.50 \emph{vs.}\ 1.00 ($p=0.09361$ in both cases).
 
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/US_change_successes_strong.pdf}
-\caption{Impact of crossover bias on the number of successes runs for the U.S. Change problem when using to
+\caption{Impact of crossover bias on the number of successes runs for the U.S. Change problem when using
 bias-effective parameters.}
 \label{fig:USChange_Successes_strong}
 \end{figure}
@@ -503,10 +503,9 @@ In addition to the parameters outlined in Section~\ref{sec:Experiments}, the Pag
 without Tarpeian bloat control~\cite{poli2003simple}.
 
 Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossover bias on the number of hits for the
-Pagie-1 regression problem, separated out by both tournament size and function set used. The results, as can be seen in
-Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}, vary significantly. However, if limited to population size 10,240
-and no elitism then the complexities of Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} simplify to
-Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}.
+Pagie-1 regression problem, separated out by both tournament size and function set used. 
+Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet} is limited  to population size 10,240
+and no elitism.
 
 \begin{figure}[tb]
 \centering
