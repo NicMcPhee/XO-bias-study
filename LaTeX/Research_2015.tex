@@ -144,15 +144,13 @@ parent is the more fit parent even without any crossover bias.
 
 In this paper we focus on five levels of crossover bias:
 \begin{itemize}
-\item 0.00 bias - no crossover bias is applied;
+\item 0.00 bias - no crossover bias is applied, i.e., just standard sub-tree crossover;
 \item 0.25 bias - system forced to use the more fit parent as the root parent in 25\% of cases;
 \item 0.50 bias - system forced to use the more fit parent as the root parent in 50\% of cases;
 \item 0.75 bias - system forced to use the more fit parent as the root parent in 75\% of cases; and
 \item 1.00 bias - system forced to always use the more fit parent as the root parent, sometimes referred to as ``with
 crossover bias''.
 \end{itemize}
-The 0.00 case, where no crossover bias is applied, is just standard sub-tree crossover, where there will be a 50\%
-chance of the root parent being the more fit parent.
 
 We also experimented with \emph{reverse bias}, where the weaker parent was always forced to be the root parent. In
 general, the results for reverse bias showed no statistically significant difference from standard crossover (no bias),
