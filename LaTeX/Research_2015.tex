@@ -643,7 +643,7 @@ regardless of crossover bias setting.
 In general our results indicate that adding crossover bias improves performanance, either generally
 (Figure~\ref{fig:KLandscapes6_results}) or when combined with certain other parameter choices (e.g.,
 Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}). In some cases the improvements induced by crossover bias are
-quite substantial (e.g., Figures~\ref{fig:KLandscapes6_strong_results}, \ref{fig:USChange_Successes_strong},
+quite substantial (e.g., Figures~\ref{fig:KLandscapes6_strong_results},~\ref{fig:USChange_Successes_strong},
 and~\ref{fig:sineBiasResultsStrong}), while in other situations the improvements were quite small in magnitude even
 when statistically significant (Figure~\ref{fig:KLandscapes6_results}). Not surprisingly, however, crossover bias is
 not universally helpful, and there are settings where some crossover bias improves performance more than when always
@@ -722,7 +722,17 @@ selection pressure is weak (e.g., our use of binary tournaments), but could also
 steep changes in fitness, or in settings where the fitness function may vary over either time or as a function of some
 other variable such as location.
 
-A question to consider is why shouldn't larger tournaments be utilized instead of crossover bias? According to Gustafson et al. \cite{Gustafson:2005}, matings between similiar parents are more likely to produce no change in fitness, whereas a more diverse crossover increases the chances of offspring improving fitness. Larger tournaments are more likely to select two parents that are similiar (as seen in Figures \ref{fig:parentDiffsKLandscapes}, \ref{fig:parentDiffsSine}). An excellent illustration of this can be seen in Figure 2 in \cite{Boetticher:2006}. Therefore, using crossover bias might be more effective than using a larger tournament size. 
+A question to consider based on these results whether we shouldn't just use larger tournaments 
+instead of crossover bias, since in many cases the results with tournament size 7 without crossover bias
+were as good or better than those obtained with binary tournaments and crossover bias, 
+e.g., Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets}. 
+According to Gustafson, et al,~\cite{Gustafson:2005}, however, matings between similar parents are more likely 
+to produce no change in fitness, whereas a more diverse crossover increases the chances of offspring 
+improving fitness. Larger tournaments are more likely to select two parents that are similar, at 
+least in fitness, as seen in Figures~\ref{fig:parentDiffsKLandscapes} and~\ref{fig:parentDiffsSine}. 
+An excellent illustration of this can be seen in Figure 2 in~\cite{Boetticher:2006}. Therefore, 
+there may be circumstances where using crossover bias might be more effective than using 
+a larger tournament size. 
 
 Another outstanding question is how crossover bias affects generalization, especially since it's possible that crossover
 bias increases selection pressure and could consequently encourage overfitting. None of the problems used here specify
@@ -737,7 +747,7 @@ important role in speciation~\cite{qvarnstrom2009speciation}, arguably one of th
 asymmetries. Many evolutionary computation systems other than tree-based GP also have significant asymmetries. Linear
 GP systems~\cite{brameier2007linear} and stack-based GP systems~\cite{spector:2002:GPEM}, for example, have asymmetries
 where the last instructions executed can have a disproportionate impact on the results. Similarly, changes near the
-front of grammatical evolution \cite{o2003grammatical} strings will have a disproportionate impact by determining the
+front of grammatical evolution~\cite{o2003grammatical} strings will have a disproportionate impact by determining the
 important early choices in the grammar productions. Generally, these EC system asymmetries weren't intentional, but
 were instead simple artifacts of other system design decisions. Hence, the potential impact of these asymmetries has
 been largely unstudied. The results presented here suggest that it may be important to more thoroughly explore the
