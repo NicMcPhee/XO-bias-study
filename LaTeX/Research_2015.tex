@@ -121,7 +121,8 @@ bias is, at least in these problems, usually either advantageous or neutral.
 
 \section{Crossover Bias} \label{sec:XObias}
 
-For this work, we implemented crossover bias with a parameter specifying the probability of forcing the more fit parent
+To better understand these asymmetries and impact of crossover bias, 
+we implemented crossover bias with a parameter specifying the probability of forcing the more fit parent
 to be the root parent when performing crossover, as detailed in Algorithm~\ref{alg:biasAlgorithm}. Every time a
 crossover event was to be performed, we would use this probability to decide whether to force the more fit parent to be
 the root parent. Note that if the random value in Algorithm~\ref{alg:biasAlgorithm} didn't cause crossover bias to be
@@ -154,7 +155,7 @@ The 0.00 case, where no crossover bias is applied, is just standard sub-tree cro
 chance of the root parent being the more fit parent.
 
 We also experimented with \emph{reverse bias}, where the weaker parent was always forced to be the root parent. In
-general, the results for reverse bias revealed that there wasn't any statistically significant difference from no bias,
+general, the results for reverse bias showed no statistically significant difference from standard crossover (no bias),
 so in the interest of simplification we've omitted reverse bias from the remainder of the paper.
 
 \section{Experimental Setup} \label{sec:Experiments}
@@ -185,7 +186,8 @@ all inputs in the range $[0, 150)$.
 % This is all taken from Tom Helmuth's version of the problem, and if the paper is accepted we should credit him in the
 % camera ready copy.
 
-All our experiments used the previously published settings, function sets, etc., with the exception of the parameters
+All our experiments used the previously published settings, function sets, fitness functions, etc., with the 
+exception of the parameters
 listed in Table~\ref{tab:sharedParameters},\footnote{The function set for Pagie-1 specified
 in~\cite{pagie1997evolutionary} is simply +, -, $\times$, and \% (protected division). The function set given
 in~\cite{mcdermott2012genetic} and implemented in ECJ is ``koza2'', which also includes various trigonometric and
@@ -665,23 +667,26 @@ where $f_A$ and $f_B$ are the errors of the two chosen parents $A$ and $B$. This
 errors are the same, and a maximum value approaching 1 for the case where one of the values is nearly 0.
 
 Figure~\ref{fig:parentDiffsKLandscapes} shows the distribution of the relative differences in parent fitness for the K
-Landscapes problem both with and without crossover bias. For tournament size 7, the difference in fitness drops
-significantly as the run progresses, suggesting that the both of the parents are highly fit. When using binary
-tournaments, the relative differences in parent fitness remains fairly stable (and high), which would suggest that
+Landscapes problem both with (right-hand panel) and without (left-hand panel) crossover bias. 
+For tournament size 7, the difference in fitness drops
+significantly as the run progresses; this, combined with the substantial improvements in fitness, suggests that 
+both of the parents are highly fit. When using binary
+tournaments, the relative differences in parent fitness remains fairly stable (and higher than for tournament size 7), 
+which would suggest that
 crossover bias would continue to be effective throughout the run when using binary tournaments. We see similar results
 in the sine regression problem, as illustrated in Figure~\ref{fig:parentDiffsSine}.
 
 \begin{figure}[tb]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_fitness_diffs_KLandscapes.pdf}
-\caption{Plot of the normalized differences in parent fitnesses from some K Landscape runs. \textbf{Explain this}.}
+\caption{Plot of the normalized differences in parent fitnesses, K Landscape problem.}
 \label{fig:parentDiffsKLandscapes}
 \end{figure}
 
 \begin{figure}[tb]
 	\centering
 	\includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_error_diffs_sine.pdf}
-	\caption{Plot of the normalized differences in parent errors from some sine runs. \textbf{Explain this}.}
+	\caption{Plot of the normalized differences in parent errors, sine symbolic regression problem.}
 	\label{fig:parentDiffsSine}
 \end{figure}
 
