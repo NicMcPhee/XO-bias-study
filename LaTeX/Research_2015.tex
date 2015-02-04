@@ -571,11 +571,11 @@ detail in Section~\ref{sec:Experiments}.
 
 Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem using bias-effective
 settings. All these differences are statistically significant ($p < 10^{-5}$) except for the difference between the
-bias of 0.75 and 1.00. Figure~\ref{fig:sineFitnessVsGenFacets} illustrates the impact of crossover bias over time
-when using the bias-effective settings, demonstrating that the effects appear early in the run. Here, the fitnesses are
-consistently different throughout the time of the runs, with higher crossover bias settings arriving at fitter
-individuals earlier in the runs, although the differences are shrinking towards the end as many runs find fairly highly
-fit individuals.
+bias of 0.75 and 1.00. In Figure~\ref{fig:sineFitnessVsGenFacets}, the left panel illustrates the impact of crossover
+bias over time when using the bias-effective settings, demonstrating that the effects appear early in the run. Here,
+the fitnesses are consistently different throughout the time of the runs, with higher crossover bias settings arriving
+at fitter individuals earlier in the runs, although the differences are shrinking towards the end as many runs find
+fairly fit individuals.
 
 \begin{figure}
 \centering
@@ -613,12 +613,10 @@ fit individuals.
 %P value adjustment method: holm 
 
 Figure~\ref{fig:sineBiasResultsWeak} shows the results for the sine regression problem using the non-bias-effective
-parameter settings (except for the elitism percentage, which was 0.1\% instead of 1\%); 
-none of these differences are statistically significant. Figure~\ref{fig:sineFitnessVsGenFacets}
-illustrates the impact of crossover bias over time when using the non-bias-effective settings, demonstrating that 
-with these settings 
-the runs tend to be highly similar, 
-regardless of crossover bias setting. 
+parameter settings (except for the elitism percentage, which was 0.1\% instead of 1\%); none of these differences are
+statistically significant. In Figure~\ref{fig:sineFitnessVsGenFacets}, the right panel illustrates the impact of
+crossover bias over time when using the non-bias-effective settings, demonstrating that with these settings the runs
+tend to be highly similar throughout the duration of the runs, regardless of crossover bias setting. 
 
 % I don't think that the following is actually supported by this plot, although it *might* be
 % supported by the plot with the 10K pop size. - Nic
