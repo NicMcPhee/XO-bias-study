@@ -75,7 +75,7 @@ asymmetry by introducing the notion of \emph{crossover bias}, where we bias the 
 parent be the root parent.
 
 Here we apply crossover bias to several problems. In most cases we found that crossover bias either improved
-performance or had no impact, but in certain circumstances adding crossover bias actually hurt performance. We also
+performance or had no impact. We also
 found that the effectiveness of crossover bias is dependent on the problem, and significantly dependent on other
 parameter choices.
 
@@ -86,19 +86,9 @@ probably value in exploration of the impacts of those asymmetries.
 \end{abstract}
 
 \category{I.2.2}{Artificial Intelligence}{Automatic Programming}{Program transformation}
-\terms{Algorithms}
 \keywords{genetic programming, crossover bias, root parent, crossover asymmetry, sub-tree crossover}
 
-\pagebreak
-
 \section{Introduction} \label{sec:Introduction}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.45 \textwidth]{Plots/Root_parent_illustration_no_triangle.pdf}
-	\caption{Sub-tree crossover, illustrating the asymmetric role of the \emph{root} and \emph{non-root} parents.}
-	\label{fig:root_parent_illustration}
-\end{figure}
 
 As Figure~\ref{fig:root_parent_illustration} illustrates, the widely used sub-tree crossover operator in tree-based
 genetic programming (GP)~\cite{poli08:fieldguide} is an inherently asymmetric operation, with one parent contributing
@@ -110,7 +100,14 @@ often contributes more to the semantics of the resulting individual. This is in 
 contributes more overall nodes, and because the nodes closest to the root of the tree frequently have a stronger impact
 on the result of evaluating the tree in question. While the specific impact of this asymmetry depends on the details of
 the function set and the particular trees chosen as parents,  asymmetry has a substantial effect on the semantics of
-the offspring in many common tree-based GP settings. 
+the offspring in many common tree-based GP settings.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45 \textwidth]{Plots/Root_parent_illustration_no_triangle.pdf}
+	\caption{Sub-tree crossover, illustrating the asymmetric role of the \emph{root} and \emph{non-root} parents.}
+	\label{fig:root_parent_illustration}
+\end{figure}
 
 An important impact of this asymmetry was recently noted in~\cite{McPheeDonatucciDramdahl:2014}, where they observed
 that the fitness of the offspring tended to improve when the root parent had better fitness than the non-root parent.
@@ -251,8 +248,8 @@ the crossover bias probability.
 
 All tests of differences in fitness or hits in this section are performed using pairwise Wilcoxon tests with Holm
 corrections. Tests of differences in the number of successes are performed using pairwise tests of proportions
-(chi-squared) with Holm corrections. All statistics calculations were performed with R~\cite{R} and plots were
-generated using the\linebreak ggplot2 package~\cite{ggplot2Book}.
+(chi-squared) with Holm corrections. All statistics calculations were performed with R~\cite{R} and all plots were
+generated using the ggplot2 package~\cite{ggplot2Book}.
 
 \subsection{Structural Problems}
 
@@ -503,7 +500,7 @@ specified.
 \subsubsection{Pagie-1 Problem}
 
 In addition to the parameters outlined in Section~\ref{sec:Experiments}, the Pagie-1 problem was also run both with and
-without Tarpeian bloat control.
+without Tarpeian bloat control~\cite{poli2003simple}.
 
 Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossover bias on the number of hits for the
 Pagie-1 regression problem, separated out by both tournament size and function set used. The results, as can be seen in
@@ -761,7 +758,7 @@ aid to the design and discovery of new tools like recombination operators that l
 % Helmuth for introducing us to the U.S. Change problem. Thanks to W. B. Langdon for valuable feedback and numerous
 % suggestions.
 
-\bibliographystyle{acm}
+\bibliographystyle{abbrv}
 \bibliography{Research_2015}
 
 \end{document}
