@@ -210,7 +210,7 @@ all four tournament sizes, both elitism proportions, and both population sizes.
 % \hline
 Crossover bias & 0, 0.25, 0.5, 0.75, and 1 \\
 Tournament size & 2, 3, 5, and 7 \\
-Elitism \% & 0 and 1\% (\& sometimes 0.1\%) \\
+Elitism \% & 0 and 1\% \\
 Population size & 1,024 and 10,240 \\
 \# of generations & 100 \\
 \# of runs per treatment & 100
@@ -220,8 +220,6 @@ Population size & 1,024 and 10,240 \\
 \caption{Shared parameters}
 \label{tab:sharedParameters}
 \end{table}
-
-\textbf{Can we drop 0.1\% from the table and just handle it as an exception like Tarpeian?}
 
 In our experimentation we observed that
 there were quite substantial interactions between crossover bias and some of
@@ -298,10 +296,7 @@ This continues to be true for tournament size 3; all the differences are statist
 between bias 0.50 and 0.75, which was very close ($p=0.05620$). None of the differences for tournament size 5 are
 significant. For tournament size 7, however, it looks like the reverse is true, where increasing crossover actually
 hurts fitness. Almost none of the differences for tournament size 7 are statistically significant with the only
-exception being the difference between 0.25 and 1.00 ($p=0.21$).
-
-\textbf{Nic needs to check the p=0.21 above since that clearly isn't signifiant. Either Nic was confused, or the number
-should be 0.021.}
+exception being the difference between 0.25 and 1.00 ($p=0.021$).
 
 \begin{figure}
 \centering
@@ -309,8 +304,6 @@ should be 0.021.}
 \caption{Impact of crossover bias on fitness for K Landscapes problem, for various tournament sizes.}
 \label{fig:KLandscapes6_XO_bias_impact_facets}
 \end{figure}
-
-\textbf{Take hyphen out of K Landscapes graph titles, and remove K=6.}
 
 Figure~\ref{fig:KLandscapes6_strong_results} filters out only the data gathered using the bias-effective treatment,
 discussed in Section~\ref{sec:Experiments}. It is clear that the impact of crossover bias is much stronger in this case
@@ -520,7 +513,7 @@ Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}, vary significantly. Howeve
 and no elitism then the complexities of Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} simplify to
 Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}.
 
-\begin{figure}
+\begin{figure}[tb]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Hits_vs_Bias_Tournys_FunctionSet.pdf}
 \caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, 
@@ -528,7 +521,7 @@ Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet}.
 \label{fig:Pagie1Hits_Bias_Tournys_FunctionSet}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tb]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_strong_Hits_vs_Bias_Tournys_FunctionSet.pdf}
 \caption{Impact of crossover bias on the number of hits for the Pagie-1 symbolic regression problem, 
@@ -571,10 +564,12 @@ successes with crossover biases 0.00 and 1.00 is significant ($p=0.015$).
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Pagie_1_Strong_Successes_vs_Bias.pdf}
 \caption{Impact of crossover bias on the number of successes (runs that exactly solve the problem) for the Pagie-1
-symbolic regression problem broken out by tournament size (2, 3, 5, and 7). These runs use the ``basic4'' function set
-(just $+, -, \times, \div$), no elitism, population size 10,240, and Tarpeian bloat control.}
+symbolic regression problem broken out by tournament size. These runs use 
+no elitism, population size 10,240, and Tarpeian bloat control.}
 \label{fig:Pagie1StrongSuccesses}
 \end{figure}
+
+\pagebreak
 
 \subsubsection{Sine Problem}
 \label{sec:sineRegression}
@@ -626,7 +621,8 @@ fit individuals.
 %P value adjustment method: holm 
 
 Figure~\ref{fig:sineBiasResultsWeak} shows the results for the sine regression problem using the non-bias-effective
-parameter settings; none of these differences are statistically significant. Figure~\ref{fig:sineFitnessVsGenFacets}
+parameter settings (except for the elitism percentage, which was 0.1\% instead of 1\%); 
+none of these differences are statistically significant. Figure~\ref{fig:sineFitnessVsGenFacets}
 illustrates the impact of crossover bias over time when using the non-bias-effective settings, demonstrating that 
 with these settings 
 the runs tend to be highly similar, 
@@ -641,7 +637,8 @@ regardless of crossover bias setting.
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_impact_weak_boxplot.pdf}
-\caption{Impact of crossover bias on the sine symbolic regression problem with non-bias-effective settings.}
+\caption{Impact of crossover bias on the sine symbolic regression problem with non-bias-effective settings, 
+	except the elitism percentage, which was 0.1\% instead of 1\%.}
 \label{fig:sineBiasResultsWeak}
 \end{figure}
 
