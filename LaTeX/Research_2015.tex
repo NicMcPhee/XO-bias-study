@@ -407,7 +407,7 @@ crossover bias; while most of the differences in this plot are not statistically
 between crossover bias 0.00 and crossover bias 0.50 and 0.75 are both statistically significant ($p \leq 0.015$), even
 if numerically small.
 
-\begin{figure}
+\begin{figure}[tb]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/US_change_hits.pdf}
 \caption{Impact of crossover bias on the number of hits for the U.S. Change problem across a variety of treatments.}
@@ -435,7 +435,7 @@ Figure~\ref{fig:USChange_Hits_strong}. Here the bulk of these pairwise differenc
 adjacent pairs have $p$-values slightly above 0.05: crossover bias 0.25 \emph{vs} 0.50 ($p=0.05036$), and 0.50
 \emph{vs} 0.75 ($p=0.08019$).
 
-\begin{figure}
+\begin{figure}[tb]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/US_change_hits_strong.pdf}
 \caption{Impact of crossover bias on the number of hits for the U.S. Change problem, limited to bias-effective
@@ -567,8 +567,6 @@ no elitism, population size 10,240, and Tarpeian bloat control.}
 \label{fig:Pagie1StrongSuccesses}
 \end{figure}
 
-\pagebreak
-
 \subsubsection{Sine Problem}
 \label{sec:sineRegression}
 
@@ -679,14 +677,14 @@ tournaments, the relative differences in parent fitness remains fairly stable (a
 crossover bias would continue to be effective throughout the run when using binary tournaments. We see similar results
 in the sine regression problem, as illustrated in Figure~\ref{fig:parentDiffsSine}.
 
-\begin{figure}
+\begin{figure}[tb]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_fitness_diffs_KLandscapes.pdf}
 \caption{Plot of the normalized differences in parent fitnesses from some K Landscape runs. \textbf{Explain this}.}
 \label{fig:parentDiffsKLandscapes}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_error_diffs_sine.pdf}
 	\caption{Plot of the normalized differences in parent errors from some sine runs. \textbf{Explain this}.}
