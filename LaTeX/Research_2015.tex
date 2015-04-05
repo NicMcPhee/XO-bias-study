@@ -640,7 +640,7 @@ tend to be highly similar throughout the duration of the runs, regardless of cro
 
 \section{Discussion} \label{sec:Discussion}
 
-In general our results indicate that adding crossover bias improves performanance, either generally
+In general our results indicate that adding crossover bias improves performance, either generally
 (Figure~\ref{fig:KLandscapes6_results}) or when combined with certain other parameter choices (e.g.,
 Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}). In some cases the improvements induced by crossover bias are
 quite substantial (e.g., Figures~\ref{fig:KLandscapes6_strong_results},~\ref{fig:USChange_Successes_strong},
@@ -655,7 +655,7 @@ One general trend seems to be that crossover bias is more effective when using t
 settings, namely smaller tournaments (size 2 instead of 7), larger populations (10,240 instead of 1,024), and no
 elitism. One possible explanation for this pattern is that when using the \emph{non-bias-effective} settings, 
 the difference in fitness between the two parents is likely to be
-closer than when using bias-effective settings; this reduction in the the difference between the fitness of the 
+closer than when using bias-effective settings; this reduction in the difference between the fitness of the 
 parents is thus likely to minimize the impact of crossover bias.
 
 %Larger tournaments, for example, help ensure that both parents are from the more highly fit part of the population,
@@ -716,7 +716,7 @@ Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15}).
 Based on previous observations of interesting asymmetries in the behavior of sub-tree crossover
 (e.g.,~\cite{McPheeDonatucciDramdahl:2014}), we introduced the idea of \emph{crossover bias}, where we
 probabilistically force the more fit parent to be the \emph{root parent} when performing crossover. We then applied
-this new bias to a experiments on several different problems. In general, we found that adding crossover bias either
+this new bias to several different problems. In general, we found that adding crossover bias either
 helps or is neutral, although there were cases where its effect was detrimental.
 
 Given these results, it seems worthwhile to at least try crossover bias, especially in settings where there are reasons
