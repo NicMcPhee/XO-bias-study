@@ -135,3 +135,5 @@ sympy-plots-for-*.tex/
 *.aux
 *.log
 Research_2015.synctex.gz
+Research_2015.txss
+results
