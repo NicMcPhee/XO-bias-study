@@ -23,43 +23,27 @@
     
 \title{Impact of Crossover Bias in Genetic Programming}
 
-\numberofauthors{1}
-\author{Left blank for anonymous review}
-
-%\numberofauthors{1}
-%\author{
-%\alignauthor
-%Nicholas Freitag McPhee, M. Kirbie Dramdahl, David Donatucci\\
-%	\affaddr{Division of Science and Mathematics}\\
-%	\affaddr{University of Minnesota, Morris}\\
-%	\affaddr{Morris, MN USA-56267}\\
-%	\email{\{mcphee, dramd002, donat056\}@morris.umn.edu}
-%}
-
-% This is more like how it "should" be done, but I think the previous approach might look nicer. They
-% may force us to change it, though, to make it easier to scrape information.
-
-%\numberofauthors{3}
-%\author{
-%\alignauthor
-%Nicholas Freitag McPhee\\
-%	\affaddr{Division of Science and Mathematics}\\
-%	\affaddr{University of Minnesota, Morris}\\
-%	\affaddr{Morris, MN USA-56267}\\
-%	\email{mcphee@morris.umn.edu}
-%\alignauthor
-%M. Kirbie Dramdahl\\
-%	\affaddr{Division of Science and Mathematics}\\
-%	\affaddr{University of Minnesota, Morris}\\
-%	\affaddr{Morris, MN USA-56267}\\
-%	\email{dramd002@morris.umn.edu}
-%\alignauthor
-%David Donatucci\\
-%	\affaddr{Division of Science and Mathematics}\\
-%	\affaddr{University of Minnesota, Morris}\\
-%	\affaddr{Morris, MN USA-56267}\\
-%	\email{donat056@morris.umn.edu}
-%}
+\numberofauthors{3}
+\author{
+\alignauthor
+Nicholas Freitag McPhee\\
+	\affaddr{\normalsize Div. of Science and Mathematics}\\
+	\affaddr{\normalsize University of Minnesota, Morris}\\
+	\affaddr{\normalsize Morris, MN USA-56267}\\
+	\email{\large mcphee@morris.umn.edu}
+\alignauthor
+M. Kirbie Dramdahl\\
+	\affaddr{\normalsize Div. of Science and Mathematics}\\
+	\affaddr{\normalsize University of Minnesota, Morris}\\
+	\affaddr{\normalsize Morris, MN USA-56267}\\
+	\email{\large dramd002@morris.umn.edu}
+\alignauthor
+David Donatucci\\
+	\affaddr{\normalsize Div. of Science and Mathematics}\\
+	\affaddr{\normalsize University of Minnesota, Morris}\\
+	\affaddr{\normalsize Morris, MN USA-56267}\\
+	\email{\large donat056@morris.umn.edu}
+}
 
 \date{} 
 
@@ -118,6 +102,17 @@ paper, we apply crossover bias (Section~\ref{sec:XObias}) to a variety of test p
 substantial impact on the performance of GP runs, but that the results are heavily parameter dependent and, to a lesser
 degree problem dependent. In general, however, we find (Section~\ref{sec:Discussion}) that incorporating some crossover
 bias is, at least in these problems, usually either advantageous or neutral. 
+
+This work is related to some previous work which aims to deliberately create an asymmetry 
+between parents (e.g.,~\cite{ryan1994pygmies,gohsexualselection}) as a mechanism to increase 
+diversity and (in the case of~\cite{ryan1994pygmies}) combat bloat. There has also been a 
+blossoming of work in the last few years based on the semantics of GP trees (e.g.,~\cite{McPhee:2008:SBB:1792694.1792707,moraglio2012geometric}). This includes a 
+number of proposed mechanisms that encourage or force semantic differences (asymmetries) 
+between parents and children~\cite{uy2011semantically,beadle2008semantically}. Some~\cite{uy2013roles} 
+also \emph{limit} the differences between parents and offspring, in some sense reducing the impact 
+of asymmetries between the parents, and smoothing out the fitness landscape as a result. These 
+proposals typically focus on the semantic relationship between parents and children, however, and 
+don't directly take into account any asymmetries between the parents.
 
 \section{Crossover Bias} \label{sec:XObias}
 
@@ -283,7 +278,7 @@ between bias probability 0.75 and 1.00.
 %
 %P value adjustment method: holm 
 
-\begin{figure}
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_transformed_boxplot_alpha075.pdf}
 \caption{Impact of crossover bias on fitness for K Landscapes problem, over all the combinations of 
@@ -300,7 +295,7 @@ significant. For tournament size 7, however, it looks like the reverse is true, 
 hurts fitness. Almost none of the differences for tournament size 7 are statistically significant with the only
 exception being the difference between 0.25 and 1.00 ($p=0.021$).
 
-\begin{figure}
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_facets.pdf}
 \caption{Impact of crossover bias on fitness for K Landscapes problem, for various tournament sizes.}
@@ -316,7 +311,7 @@ these runs resulted in the discovery of a ``perfect'' solution. By comparison, o
 ``perfect'' solutions for each of the other crossover bias probabilities. This difference is statistically significant
 ($p \leq 0.03$).
 
-\begin{figure}
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_strong_impact_alpha_075.pdf}
 \caption{Impact of crossover bias on fitness for K Landscapes problem, restricted to bias-effective parameter settings.}
@@ -500,7 +495,7 @@ bias-effective parameters.}
 \subsection{Regression Problems}
 
 Regression problems work backwards from a large data set of inputs and their respective outputs to generate an equation
-that fits the data. Success is here measured in hits, described in Section~\ref{sec:USChange}, with the exception that a test which has an error less than 0.01 is considered a hit. 
+that fits the data. Success is here measured in hits, described in Section~\ref{sec:USChange}, with the exception that a test which has an fitness less than 0.01 is considered a hit. 
 
 \subsubsection{Pagie-1 Problem}
 
@@ -704,17 +699,13 @@ selection pressure is weak (e.g., our use of binary tournaments), but could also
 steep changes in fitness, or in settings where the fitness function may vary over either time or as a function of some
 other variable such as location.
 
-A question to consider based on these results whether we shouldn't just use larger tournaments 
-instead of crossover bias, since in many cases the results with tournament size 7 without crossover bias
-were as good or better than those obtained with binary tournaments and crossover bias, 
-e.g., Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets}. 
-According to Gustafson, et al,~\cite{Gustafson:2005}, however, matings between similar parents are more likely 
+A question to consider based on these results is whether or not we should use larger tournaments instead of crossover bias, since in many cases the results with tournament size 7 without crossover bias was as good or better than those obtained with binary tournaments and crossover bias, e.g., Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets}. 
+According to Gustafson et al,~\cite{Gustafson:2005}, however, matings between similar parents are more likely 
 to produce no change in fitness, whereas a more diverse crossover increases the chances of offspring 
 improving fitness. Larger tournaments are more likely to select two parents that are similar, at 
 least in fitness, as seen in Figures~\ref{fig:parentDiffsKLandscapes} and~\ref{fig:parentDiffsSine}. 
-An excellent illustration of this can be seen in Figure 2 in~\cite{Boetticher:2006}. Therefore, 
-there may be circumstances where using crossover bias might be more effective than using 
-a larger tournament size. 
+An excellent illustration of this can be seen in Figure 2 in~\cite{Boetticher:2006}. Another attempt to find a balance of diversity between parents is called sexual selection proposed by Goh et al~\cite{gohsexualselection}. Sexual selection uses about half the population of individuals labeled as females to mate with individuals labeled as males. All of the females mate with only the fittest males (usually selected with tournament selection). Due to the lack of selection pressure on females, matings between a female and male tend to have a larger difference in fitness than other styles of selection methods which tend to select the best individuals of the population. Goh et al showed that sexual selection performed as well or better than tournament or rank-based selection methods for a variety of common problems. Therefore, based on these examples, 
+there may be circumstances where using crossover bias and hence increasing diversity, might be more effective than using a larger tournament size. 
 
 Another outstanding question is how crossover bias affects generalization, especially since it's possible that crossover
 bias increases selection pressure and could consequently encourage overfitting. None of the problems used here specify
