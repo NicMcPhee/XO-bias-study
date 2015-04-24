@@ -15,9 +15,13 @@
 
 \begin{document}
 
-\conferenceinfo{GECCO'15,} {July 11-15, 2015, Madrid, Spain.}
-\CopyrightYear{2015}
-\crdata{TBA}
+\setcopyright{acmlicensed}
+\conferenceinfo{GECCO '15,}{July 11 - 15, 2015, Madrid, Spain}
+\isbn{978-1-4503-3472-3/15/07}\acmPrice{\$15.00}
+\doi{http://dx.doi.org/10.1145/2739480.2754778}
+
+%\CopyrightYear{2015}
+%\crdata{TBA}
 \clubpenalty=10000
 \widowpenalty = 10000
     
@@ -700,11 +704,11 @@ steep changes in fitness, or in settings where the fitness function may vary ove
 other variable such as location.
 
 A question to consider based on these results is whether or not we should use larger tournaments instead of crossover bias, since in many cases the results with tournament size 7 without crossover bias was as good or better than those obtained with binary tournaments and crossover bias, e.g., Figure~\ref{fig:KLandscapes6_XO_bias_impact_facets}. 
-According to Gustafson et al,~\cite{Gustafson:2005}, however, matings between similar parents are more likely 
+According to Gustafson et al.~\cite{Gustafson:2005}, however, matings between similar parents are more likely 
 to produce no change in fitness, whereas a more diverse crossover increases the chances of offspring 
 improving fitness. Larger tournaments are more likely to select two parents that are similar, at 
 least in fitness, as seen in Figures~\ref{fig:parentDiffsKLandscapes} and~\ref{fig:parentDiffsSine}. 
-An excellent illustration of this can be seen in Figure 2 in~\cite{Boetticher:2006}. Another attempt to find a balance of diversity between parents is called sexual selection proposed by Goh et al~\cite{gohsexualselection}. Sexual selection uses about half the population of individuals labeled as females to mate with individuals labeled as males. All of the females mate with only the fittest males (usually selected with tournament selection). Due to the lack of selection pressure on females, matings between a female and male tend to have a larger difference in fitness than other styles of selection methods which tend to select the best individuals of the population. Goh et al showed that sexual selection performed as well or better than tournament or rank-based selection methods for a variety of common problems. Therefore, based on these examples, 
+An excellent illustration of this can be seen in Figure 2 in~\cite{Boetticher:2006}. Another attempt to find a balance of diversity between parents is called sexual selection proposed by Goh et al.~\cite{gohsexualselection}. Sexual selection uses about half the population of individuals labeled as females to mate with individuals labeled as males. All of the females mate with only the fittest males (usually selected with tournament selection). Due to the lack of selection pressure on females, matings between a female and male tend to have a larger difference in fitness than other styles of selection methods which tend to select the best individuals of the population. Goh et al., showed that sexual selection performed as well or better than tournament or rank-based selection methods for a variety of common problems. Therefore, based on these examples, 
 there may be circumstances where using crossover bias and hence increasing diversity, might be more effective than using a larger tournament size. 
 
 Another outstanding question is how crossover bias affects generalization, especially since it's possible that crossover
