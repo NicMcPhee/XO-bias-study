@@ -721,9 +721,8 @@ that improve performance. Based on these examples,
 there may be circumstances where combining crossover bias with a weaker selection mechanism might be a reasonable alternative to using a larger tournament size. 
 
 Another outstanding question is how crossover bias affects generalization, especially since it's possible that crossover
-bias increases selection pressure and could consequently encourage overfitting. None of the problems used here specify
-a validation set, but it's clearly feasible to create validation data for the U.S. Change problem and both of the
-regression problems. It would be useful to expand the existing work to include validation to see what impact, if any,
+bias increases selection pressure and could consequently encourage overfitting. We didn't explore this question here, but
+it would be useful to expand the existing work to include validation to see what impact, if any,
 crossover bias has on how well evolved solutions generalize to unseen data.
 
 While this paper focuses on asymmetry in the context of tree-based GP and sub-tree crossover, it's important to note
