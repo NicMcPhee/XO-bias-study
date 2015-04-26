@@ -179,7 +179,7 @@ subset of) standard U.S. coins with amounts 25, 10, 5, and 1. So, for example, g
 	\underline{4} \times 25 + \underline{1} \times 10 + \underline{1} \times 5 + \underline{3} \times 1 = 118,
 \]
 and this set of $4+1+1+3 = 9$ coins is the minimal set making a total of 118. Our function set for this problem was +,
--, $\times$, \%,\footnote{Protected integer division (quotient), returning 1 if the denominator is 0.} \emph{mod},
+-, $\times$, \%,\footnote{Protected integer division (quotient), returning 1 if the denominator is 0.} \emph{mod},\footnote{Also returns 1 if the denominator is 0.}
 \emph{min}, and \emph{max}. The terminal set consisted of the input $x$, integer ephemeral random constants taken
 uniformly from the range $[-50, 50]$, and the set of constants $\{ 0, 1, 4, 5, 9, 10, 24, 25 \}$. The test cases were
 all inputs in the range $[0, 150)$.
@@ -256,12 +256,14 @@ generated using the ggplot2 package~\cite{ggplot2Book}. Statistical significance
 
 \subsection{Structural Problems}
 
-Structural problems (also referred to as constructed problems) take a series of individuals and their respective
-fitnesses as inputs, and from this information design an individual with optimal fitness. The fitness scale is problem dependent and will be described for each problem.
+Most GP problems evaluate the evolved trees on a set of inputs, looking for some desired behavior or semantics.
+Structural problems (also referred to as constructed problems), however, have fitness functions that are entirely 
+based on the overall structure of the evolved trees (e.g., size, shape, distribution of particular leaves) without 
+any sort of ``evaluation" being involved.
 
 \subsubsection{K Landscapes}
 
-The fitness scale for the K Landscape problem is measured from 0 to 1 with a fitness of one being a perfect solution.
+Fitnesses for the K Landscape problem are between 0 and 1, with a fitness of 1 being a perfect solution.
 Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the combinations of
 parameter values in Table~\ref{tab:sharedParameters}. Increasing the amount of crossover bias consistently improves the
 fitness of the results. All the differences are statistically significant ($p < 0.012$) except for the difference
@@ -310,7 +312,8 @@ Figure~\ref{fig:KLandscapes6_strong_results} filters out only the data gathered 
 discussed in Section~\ref{sec:Experiments}. It is clear that the impact of crossover bias is much stronger in this case
 than in the more general case shown in Figure~\ref{fig:KLandscapes6_results}. Here all the differences are strongly
 statistically significant ($p < 10^{-11}$). In addition to improvements in fitness, increasing the crossover bias also
-increases the number of ``perfect'' solutions discovered. Out of 100 runs with a crossover bias setting of 1.00, 15 of
+increases the number of ``perfect'' solutions discovered when using the bias effective settings. 
+Out of 100 runs with a crossover bias setting of 1.00, 15 of
 these runs resulted in the discovery of a ``perfect'' solution. By comparison, only 1 or 2 runs out of 100 resulted in
 ``perfect'' solutions for each of the other crossover bias probabilities. This difference is statistically significant
 ($p \leq 0.03$).
@@ -359,13 +362,16 @@ these runs resulted in the discovery of a ``perfect'' solution. By comparison, o
 It should be noted that, for the ORDERTREE problem we used the full set of parameters outlined in
 Section~\ref{sec:Experiments}, with one exception: the population size for the ORDERTREE runs was limited to 1,024.
 This was a consequence of the large trees generated for this problem, resulting in out of memory errors for the larger
-population size of 10,240. It should also be noted that an individual with fitness of zero is a perfect solution. The metric for fitness is described in~\citep{hoang2006ordertree}.
+population size of 10,240. 
 
-Initial runs of this problem with (1.00) and without (0.00) crossover bias across all four tournament sizes
-demonstrated that in each case, adding crossover bias improved fitness. Additionally, these improvements were
-statistically significant ($p < 0.002$). Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this 
-result, covering the full range of crossover bias
-percentages, and shows a more complex picture. For binary tournaments, we observed a drop in fitness from bias 0.75 to
+ORDERTREE has a difficulty tuning parameter $n$; we used $n=10$, which meant that the fitnesses ranged from 
+0 to 1,022 with larger values being better, so the best possible fitness is 1,022. The details for the ORDERTREE fitness 
+computation are described in~\citep{hoang2006ordertree}.
+
+Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} shows the impact of crossover bias across all parameter 
+combinations. 
+For binary tournaments, adding crossover bias leads to improved performance when compared to no crossover bias,
+but we observed a drop in fitness from bias 0.75 to
 bias 1.00, where the fitness for 1.00 is actually slightly below that for 0.50 as well. All the binary tournament 
 differences are
 statistically significant ($p < 0.03$), with the exception of the difference between bias 0.25 and bias 1.00, so bias
@@ -498,13 +504,14 @@ bias-effective parameters.}
 
 \subsection{Regression Problems}
 
-Regression problems work backwards from a large data set of inputs and their respective outputs to generate an equation
-that fits the data. Success is here measured in hits, described in Section~\ref{sec:USChange}, with the exception that a test which has an fitness less than 0.01 is considered a hit. 
+Regression problems attempt to evolve a function that is able to match a given set of input-output pairs. 
+Success is here measured in hits, where a ``hit'' is awarded when the output of the evolved function is within 0.01
+of the target value.
 
 \subsubsection{Pagie-1 Problem}
 
 Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet} shows the impact of crossover bias on the number of hits for the
-Pagie-1 regression problem, separated out by both tournament size and function set used. 
+Pagie-1 regression problem, separated out by tournament size. 
 Figure~\ref{fig:Pagie1StrongHits_Bias_Tournys_FunctionSet} is limited  to population size 10,240
 and no elitism.
 
@@ -531,7 +538,7 @@ statistically significant ($p<0.0002$).
 None of the differences among 0.25, 0.50, 0.75, and 1.00 are statistically significant, however, and
 none of the differences for tournament sizes 3, 5, or 7 are statistically significant. This indicates that for binary
 tournaments, including crossover bias substantially and significantly improves the hit rate, although all bias rates
-above 0.25 are very similar. For larger tournament sizes 7, however, it appears that adding crossover bias doesn't have a significant effect.
+above 0.25 are very similar. For larger tournament sizes, however, it appears that adding crossover bias doesn't have a significant effect and in some cases (e.g., tournament sizes 5 and 7 in Figure~\ref{fig:Pagie1Hits_Bias_Tournys_FunctionSet}) may hurt performance.
 
 %> pairwise.wilcox.test(subset(pagie1_strong_no_Tarpeian, Tourny.size==2)$Hits, 
 %+                      subset(pagie1_strong_no_Tarpeian, Tourny.size==2)$Bias)
@@ -551,8 +558,7 @@ above 0.25 are very similar. For larger tournament sizes 7, however, it appears 
 \subsubsection{Sine Problem}
 \label{sec:sineRegression}
 
-For the sine regression problem, we limited our runs to bias-effective and non-bias-effective settings as outlined in
-detail in Section~\ref{sec:Experiments}.
+For the sine regression problem, we limited our runs to bias-effective and non-bias-effective settings as described in Section~\ref{sec:Experiments}.
 
 Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem using bias-effective
 settings. All these differences are statistically significant ($p < 10^{-5}$) except for the difference between the
@@ -645,8 +651,8 @@ in parent fitness as
 \[
 	|f_A - f_B| / (f_A + f_B)
 \]
-where $f_A$ and $f_B$ are the errors of the two chosen parents $A$ and $B$. This has a minimum value of 0 when the two
-errors are the same, and a maximum value approaching 1 for the case where one of the values is nearly 0.
+where $f_A$ and $f_B$ are the fitnesses of the two chosen parents $A$ and $B$. This has a minimum value of 0 when the two
+fitnesses are the same, and a maximum value approaching 1 for the case where one of the values is nearly 0.
 
 Figure~\ref{fig:parentDiffsKLandscapes} shows the distribution of the relative differences in parent fitness for the K
 Landscapes problem both with (right-hand panel) and without (left-hand panel) crossover bias. 
@@ -707,14 +713,16 @@ A question to consider based on these results is whether or not we should use la
 According to Gustafson et al.~\cite{Gustafson:2005}, however, matings between similar parents are more likely 
 to produce no change in fitness, whereas a more diverse crossover increases the chances of offspring 
 improving fitness. Larger tournaments are more likely to select two parents that are similar, at 
-least in fitness, as seen in Figures~\ref{fig:parentDiffsKLandscapes} and~\ref{fig:parentDiffsSine}. 
-An excellent illustration of this can be seen in Figure 2 in~\cite{Boetticher:2006}. Another attempt to find a balance of diversity between parents is called sexual selection proposed by Goh et al.~\cite{gohsexualselection}. Sexual selection uses about half the population of individuals labeled as females to mate with individuals labeled as males. All of the females mate with only the fittest males (usually selected with tournament selection). Due to the lack of selection pressure on females, matings between a female and male tend to have a larger difference in fitness than other styles of selection methods which tend to select the best individuals of the population. Goh et al., showed that sexual selection performed as well or better than tournament or rank-based selection methods for a variety of common problems. Therefore, based on these examples, 
-there may be circumstances where using crossover bias and hence increasing diversity, might be more effective than using a larger tournament size. 
+least in fitness, as seen in Figures~\ref{fig:parentDiffsKLandscapes} and~\ref{fig:parentDiffsSine};
+an excellent illustration of this can be seen in Figure 2 in~\cite{Boetticher:2006}. Another attempt to find a balance of diversity between parents is called sexual selection proposed by Goh et al.~\cite{gohsexualselection}. Their sexual selection
+system mates individuals chosen at random (with no regard to fitness) with individuals chosen via tournament selection.
+This creates a strong asymmetry between the parents which appears to increase diversity in certain circumstances in ways
+that improve performance. Based on these examples, 
+there may be circumstances where combining crossover bias with a weaker selection mechanism might be a reasonable alternative to using a larger tournament size. 
 
 Another outstanding question is how crossover bias affects generalization, especially since it's possible that crossover
-bias increases selection pressure and could consequently encourage overfitting. None of the problems used here specify
-a validation set, but it's clearly feasible to create validation data for the U.S. Change problem and both of the
-regression problems. It would be useful to expand the existing work to include validation to see what impact, if any,
+bias increases selection pressure and could consequently encourage overfitting. We didn't explore this question here, but
+it would be useful to expand the existing work to include validation to see what impact, if any,
 crossover bias has on how well evolved solutions generalize to unseen data.
 
 While this paper focuses on asymmetry in the context of tree-based GP and sub-tree crossover, it's important to note
@@ -725,7 +733,7 @@ asymmetries. Many evolutionary computation systems other than tree-based GP also
 GP systems~\cite{brameier2007linear} and stack-based GP systems~\cite{spector:2002:GPEM}, for example, have asymmetries
 where the last instructions executed can have a disproportionate impact on the results. Similarly, changes near the
 front of grammatical evolution~\cite{o2003grammatical} strings will have a disproportionate impact by determining the
-important early choices in the grammar productions. Generally, these EC system asymmetries weren't intentional, but
+important early choices in the grammar productions. Generally, these asymmetries weren't intentional, but
 were instead simple artifacts of other system design decisions. Hence, the potential impact of these asymmetries has
 been largely unstudied. The results presented here suggest that it may be important to more thoroughly explore the
 impact of such asymmetries, both to better understand the performance and behavior of existing systems, but also as an
