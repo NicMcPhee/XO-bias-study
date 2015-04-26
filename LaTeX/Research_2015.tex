@@ -88,7 +88,7 @@ often contributes more to the semantics of the resulting individual. This is in 
 contributes more overall nodes, and because the nodes closest to the root of the tree frequently have a stronger impact
 on the result of evaluating the tree in question. While the specific impact of this asymmetry depends on the details of
 the function set and the particular trees chosen as parents,  asymmetry has a substantial effect on the semantics of
-the offspring in many common tree-based GP settings.
+the offspring in many common GP settings.
 
 \begin{figure}
 	\centering
@@ -97,15 +97,16 @@ the offspring in many common tree-based GP settings.
 	\label{fig:root_parent_illustration}
 \end{figure}
 
-An important impact of this asymmetry was recently noted in~\cite{McPheeDonatucciDramdahl:2014}, where they observed
+An important impact of this asymmetry was recently noted in~\cite{McPheeDonatucciDramdahl:2014}, where it was observed
 that the fitness of the offspring tended to improve when the root parent had better fitness than the non-root parent.
 To explore this further, we implemented what we refer to as \emph{crossover bias}, which allowed us to
-probabilistically force the GP system to assign the individual with the greater fitness to be the root parent. In this
-paper, we apply crossover bias (Section~\ref{sec:XObias}) to a variety of test problems
+probabilistically force the GP system to assign the individual with the greater fitness to be the root parent. 
+After reviewing some related work (Section~\ref{sec:relatedWork}),
+we apply crossover bias (Section~\ref{sec:XObias}) to a variety of test problems
 (Section~\ref{sec:Experiments}). The results (Section~\ref{sec:Results}) make it clear that crossover bias can have a
 substantial impact on the performance of GP runs, but that the results are heavily parameter dependent and, to a lesser
 degree problem dependent. In general, however, we find (Section~\ref{sec:Discussion}) that incorporating some crossover
-bias is, at least in these problems, usually either advantageous or neutral. 
+bias is, at least in these problems, usually either advantageous or neutral.
 
 This work is related to some previous work which aims to deliberately create an asymmetry 
 between parents (e.g.,~\cite{ryan1994pygmies,gohsexualselection}) as a mechanism to increase 
@@ -120,7 +121,7 @@ don't directly take into account any asymmetries between the parents.
 
 \section{Crossover Bias} \label{sec:XObias}
 
-To better understand these asymmetries and impact of crossover bias, 
+To better understand parent asymmetries and the impact of bias in crossover, 
 we implemented crossover bias with a parameter specifying the probability of forcing the more fit parent
 to be the root parent when performing crossover, as detailed in Algorithm~\ref{alg:biasAlgorithm}. Every time a
 crossover event was to be performed, we would use this probability to decide whether to force the more fit parent to be
@@ -130,7 +131,7 @@ parent.
 
 \begin{algorithm}[tb]
 \begin{algorithmic}
-\Require Two individuals, RP (root parent) and NRP (non-root parent), are chosen as parents.
+\Require Two individuals are chosen as parents: RP (root parent) and NRP (non-root parent).
 \If {\Call{random}{0, 1} $\leq \textrm{XO\_bias}$} \Comment{Do we force bias?}
     \If {\Call{fitness}{RP} \textrm{worse than} \Call{fitness}{NRP}}
         \State RP, NRP := NRP, RP \Comment{Swap so RP is more fit} 
@@ -171,7 +172,7 @@ root and non-root parents~\cite{McPheeDonatucciDramdahl:2014}.
 All experiments were run using a copy of ECJ 21\footnote{\url{http://cs.gmu.edu/~eclab/projects/ecj/}} that we modified
 to support crossover bias.
 
-The one problem not precisely described elsewhere in the literature is the U.S. Change problem, where the task is to
+The one problem not precisely described elsewhere in the literature is the U.S. Change problem. Here the task is to
 take as input an amount, and to return as output the minimum number of coins required to make that amount using (a
 subset of) standard U.S. coins with amounts 25, 10, 5, and 1. So, for example, given 118 as input, the result should be
 9 since 
@@ -261,7 +262,7 @@ Structural problems (also referred to as constructed problems), however, have fi
 based on the overall structure of the evolved trees (e.g., size, shape, distribution of particular leaves) without 
 any sort of ``evaluation" being involved.
 
-\subsubsection{K Landscapes}
+\subsubsection{K Landscapes Problem}
 
 Fitnesses for the K Landscape problem are between 0 and 1, with a fitness of 1 being a perfect solution.
 Figure~\ref{fig:KLandscapes6_results} shows the impact of crossover bias on this problem across all the combinations of
@@ -287,7 +288,7 @@ between bias probability 0.75 and 1.00.
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_transformed_boxplot_alpha075.pdf}
-\caption{Impact of crossover bias on fitness for K Landscapes problem, over all the combinations of 
+\caption{Impact of crossover bias on fitness for the K Landscapes problem, over all the combinations of 
 	parameters in Table~\ref{tab:sharedParameters}.}
 \label{fig:KLandscapes6_results}
 \end{figure}
@@ -297,31 +298,32 @@ separated out by tournament size. It is clear that for binary tournaments, incre
 continues to improve the fitness -- all the differences are strongly statistically significant ($p<6\times 10^{-08}$).
 This continues to be true for tournament size 3; all the differences are statistically significant except for those
 between bias 0.50 and 0.75, which was very close ($p=0.056$). None of the differences for tournament size 5 are
-significant. For tournament size 7, however, it looks like the reverse is true, where increasing crossover actually
+significant. For tournament size 7, however, it looks like the reverse is true, where increasing crossover bias actually
 hurts fitness. Almost none of the differences for tournament size 7 are statistically significant with the only
 exception being the difference between 0.25 and 1.00 ($p=0.021$).
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_impact_facets.pdf}
-\caption{Impact of crossover bias on fitness for K Landscapes problem, for various tournament sizes.}
+\caption{Impact of crossover bias on fitness for the K Landscapes problem, for various tournament sizes.}
 \label{fig:KLandscapes6_XO_bias_impact_facets}
 \end{figure}
 
 Figure~\ref{fig:KLandscapes6_strong_results} filters out only the data gathered using the bias-effective treatment,
-discussed in Section~\ref{sec:Experiments}. It is clear that the impact of crossover bias is much stronger in this case
+as defined in Section~\ref{sec:Experiments}. It is clear that the impact of crossover bias is much stronger in this case
 than in the more general case shown in Figure~\ref{fig:KLandscapes6_results}. Here all the differences are strongly
 statistically significant ($p < 10^{-11}$). In addition to improvements in fitness, increasing the crossover bias also
 increases the number of ``perfect'' solutions discovered when using the bias effective settings. 
 Out of 100 runs with a crossover bias setting of 1.00, 15 of
 these runs resulted in the discovery of a ``perfect'' solution. By comparison, only 1 or 2 runs out of 100 resulted in
-``perfect'' solutions for each of the other crossover bias probabilities. This difference is statistically significant
+``perfect'' solutions for each of the other crossover bias probabilities. 
+These differences in the number of perfect solutions are statistically significant
 ($p \leq 0.03$).
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/KLandscapes6_XO_bias_strong_impact_alpha_075.pdf}
-\caption{Impact of crossover bias on fitness for K Landscapes problem, restricted to bias-effective parameter settings.}
+\caption{Impact of crossover bias on fitness for the K Landscapes problem, restricted to bias-effective parameter settings.}
 \label{fig:KLandscapes6_strong_results}
 \end{figure}
 
@@ -357,7 +359,7 @@ these runs resulted in the discovery of a ``perfect'' solution. By comparison, o
 %
 %P value adjustment method: holm 
 
-\subsubsection{ORDERTREE}
+\subsubsection{ORDERTREE Problem}
 
 It should be noted that, for the ORDERTREE problem we used the full set of parameters outlined in
 Section~\ref{sec:Experiments}, with one exception: the population size for the ORDERTREE runs was limited to 1,024.
@@ -365,7 +367,7 @@ This was a consequence of the large trees generated for this problem, resulting 
 population size of 10,240. 
 
 ORDERTREE has a difficulty tuning parameter $n$; we used $n=10$, which meant that the fitnesses ranged from 
-0 to 1,022 with larger values being better, so the best possible fitness is 1,022. The details for the ORDERTREE fitness 
+0 to 1,022 with larger values being better. The details for the ORDERTREE fitness 
 computation are described in~\citep{hoang2006ordertree}.
 
 Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} shows the impact of crossover bias across all parameter 
@@ -383,7 +385,7 @@ bias 1.00.
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Ordertree_results_all_tournaments_Jan15.pdf}
-\caption{Impact of crossover bias on fitness for ORDERTREE problem for multiple tournament sizes.}
+\caption{Impact of crossover bias on fitness for \mbox{ORDERTREE} problem for multiple tournament sizes.}
 \label{fig:Ordertree_results_all_tournaments_Jan15}
 \end{figure}
 
@@ -436,7 +438,7 @@ if numerically small.
 %
 %P value adjustment method: holm 
 
-However, if we limit our attention to the bias-effective parameter settings (Section~\ref{sec:Experiments}), then we
+However, if we limit our attention to the bias-effective parameter settings defined in Section~\ref{sec:Experiments}, then we
 find that crossover bias has a substantial and statistically significant impact, as is seen in
 Figure~\ref{fig:USChange_Hits_strong}. Here the bulk of these pairwise differences are statistically significant
 ($p<0.0002$). The major exception is the difference between crossover bias 0.75 and 1.00 ($p=0.43$). Two other
@@ -476,7 +478,7 @@ bias 0.50 \emph{vs.}\ 1.00 ($p=0.094$ in both cases).
 \begin{figure}
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/US_change_successes_strong.pdf}
-\caption{Impact of crossover bias on the number of successes runs for the U.S. Change problem when using
+\caption{Impact of crossover bias on the number of successful runs for the U.S. Change problem when using
 bias-effective parameters.}
 \label{fig:USChange_Successes_strong}
 \end{figure}
@@ -555,12 +557,15 @@ above 0.25 are very similar. For larger tournament sizes, however, it appears th
 %
 %P value adjustment method: holm 
 
+\pagebreak
+
 \subsubsection{Sine Problem}
 \label{sec:sineRegression}
 
-For the sine regression problem, we limited our runs to bias-effective and non-bias-effective settings as described in Section~\ref{sec:Experiments}.
+For the sine regression problem, we limited our runs to bias-effective and non-bias-effective settings as defined in Section~\ref{sec:Experiments}.
 
-Figure~\ref{fig:sineBiasResultsStrong} shows the hits results for the sine regression problem using bias-effective
+Figure~\ref{fig:sineBiasResultsStrong} shows the results for the number of hits 
+for the sine regression problem using bias-effective
 settings. All these differences are statistically significant ($p < 10^{-5}$) except for the difference between the
 bias of 0.75 and 1.00. In Figure~\ref{fig:sineFitnessVsGenFacets}, the left panel illustrates the impact of crossover
 bias over time when using the bias-effective settings, demonstrating that the effects appear early in the run. Here,
@@ -618,9 +623,11 @@ tend to be highly similar throughout the duration of the runs, regardless of cro
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Sine_XO_impact_weak_e01_boxplot.pdf}
-\caption{Impact of crossover bias on sine symbolic regression problem with non-bias-effective settings.}
+\caption{Impact of crossover bias on the sine symbolic regression problem with non-bias-effective settings.}
 \label{fig:sineBiasResultsWeak}
 \end{figure}
+
+\pagebreak
 
 \section{Discussion} \label{sec:Discussion}
 
@@ -659,7 +666,7 @@ Landscapes problem both with (right-hand panel) and without (left-hand panel) cr
 For tournament size 7, the difference in fitness drops
 significantly as the run progresses; this, combined with the substantial improvements in fitness, suggests that 
 both of the parents are highly fit. When using binary
-tournaments, the relative differences in parent fitness remains fairly stable (and higher than for tournament size 7), 
+tournaments, the relative differences in parent fitness remains fairly stable and higher than for tournament size 7, 
 which would suggest that
 crossover bias would continue to be effective throughout the run when using binary tournaments. We see similar results
 in the sine regression problem, as illustrated in Figure~\ref{fig:parentDiffsSine}.
@@ -667,21 +674,21 @@ in the sine regression problem, as illustrated in Figure~\ref{fig:parentDiffsSin
 \begin{figure}[tb]
 \centering
 \includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_fitness_diffs_KLandscapes.pdf}
-\caption{Plot of the normalized differences in parent fitnesses, K Landscape problem. The left-hand (and higher) boxplot in each pair of boxplots is for the binary tournament runs.}
+\caption{Plot of the normalized differences in parent fitnesses for the K Landscapes problem. The left-hand (and higher) boxplot in each pair of boxplots is for the binary tournament runs.}
 \label{fig:parentDiffsKLandscapes}
 \end{figure}
 
 \begin{figure}[tb]
 	\centering
 	\includegraphics[width=0.45 \textwidth]{Plots/Parent_normalized_error_diffs_sine.pdf}
-	\caption{Plot of the normalized differences in parent errors, sine symbolic regression problem.  The left-hand (and higher) boxplot in each pair of boxplots is for the binary tournament runs.}
+	\caption{Plot of the normalized differences in parent errors for the sine symbolic regression problem.  The left-hand (and higher) boxplot in each pair of boxplots is for the binary tournament runs.}
 	\label{fig:parentDiffsSine}
 \end{figure}
 
 Our results also indicate that crossover bias may increase certain types of selection pressure, which could potentially
 increase the likelihood of premature convergence.
 % (see Figures~\ref{fig:sineBiasFitnessVsGenStrong} and~\ref{fig:sineBiasFitnessVsGenWeak}).
-There is a heightened focus on the fitter of the two parents which increases the chance of the more fit parent's
+There is a heightened focus on the better of the two parents which increases the chance of the more fit parent's
 semantics being carried across into the next generation. This might limit the diversity of the root structures causing
 premature convergence. Further research is needed to understand if this does in fact lead to premature convergence in
 some cases, but it's possible, for example, that this explains the fact that using some crossover bias (0.75) is better
@@ -694,6 +701,8 @@ Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15}).
 %think the answer is something like ``It doesn't hurt (at least in our experiments), and it sometimes helps, even for
 %tournament size 7 and with elitism. For interesting problems, you also don't know in advance what your best parameter
 %choices are, so it's at least worth including in your arsenal.''}
+
+\pagebreak 
 
 \section{Conclusions} \label{sec:Conclusions}
 
@@ -714,7 +723,8 @@ According to Gustafson et al.~\cite{Gustafson:2005}, however, matings between si
 to produce no change in fitness, whereas a more diverse crossover increases the chances of offspring 
 improving fitness. Larger tournaments are more likely to select two parents that are similar, at 
 least in fitness, as seen in Figures~\ref{fig:parentDiffsKLandscapes} and~\ref{fig:parentDiffsSine};
-an excellent illustration of this can be seen in Figure 2 in~\cite{Boetticher:2006}. Another attempt to find a balance of diversity between parents is called sexual selection proposed by Goh et al.~\cite{gohsexualselection}. Their sexual selection
+an excellent illustration of this can be seen in Figure 2 in~\cite{Boetticher:2006}. Another attempt to find a balance of 
+diversity between parents is called sexual selection, proposed by Goh et al.~\cite{gohsexualselection}. Their sexual selection
 system mates individuals chosen at random (with no regard to fitness) with individuals chosen via tournament selection.
 This creates a strong asymmetry between the parents which appears to increase diversity in certain circumstances in ways
 that improve performance. Based on these examples, 
