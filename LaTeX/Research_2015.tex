@@ -362,13 +362,16 @@ these runs resulted in the discovery of a ``perfect'' solution. By comparison, o
 It should be noted that, for the ORDERTREE problem we used the full set of parameters outlined in
 Section~\ref{sec:Experiments}, with one exception: the population size for the ORDERTREE runs was limited to 1,024.
 This was a consequence of the large trees generated for this problem, resulting in out of memory errors for the larger
-population size of 10,240. It should also be noted that an individual with fitness of zero is a perfect solution. The metric for fitness is described in~\citep{hoang2006ordertree}.
+population size of 10,240. 
 
-Initial runs of this problem with (1.00) and without (0.00) crossover bias across all four tournament sizes
-demonstrated that in each case, adding crossover bias improved fitness. Additionally, these improvements were
-statistically significant ($p < 0.002$). Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} generalizes this 
-result, covering the full range of crossover bias
-percentages, and shows a more complex picture. For binary tournaments, we observed a drop in fitness from bias 0.75 to
+ORDERTREE has a difficulty tuning parameter $n$; we used $n=10$, which meant that the fitnesses ranged from 
+0 to 1,022 with larger values being better, so the best possible fitness is 1,022. The details for the ORDERTREE fitness 
+computation are described in~\citep{hoang2006ordertree}.
+
+Figure~\ref{fig:Ordertree_results_all_tournaments_Jan15} shows the impact of crossover bias across all parameter 
+combinations. 
+For binary tournaments, adding crossover bias leads to improved performance when compared to no crossover bias,
+but we observed a drop in fitness from bias 0.75 to
 bias 1.00, where the fitness for 1.00 is actually slightly below that for 0.50 as well. All the binary tournament 
 differences are
 statistically significant ($p < 0.03$), with the exception of the difference between bias 0.25 and bias 1.00, so bias
