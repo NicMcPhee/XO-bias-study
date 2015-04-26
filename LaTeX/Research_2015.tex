@@ -256,8 +256,10 @@ generated using the ggplot2 package~\cite{ggplot2Book}. Statistical significance
 
 \subsection{Structural Problems}
 
-Structural problems (also referred to as constructed problems) take a series of individuals and their respective
-fitnesses as inputs, and from this information design an individual with optimal fitness. The fitness scale is problem dependent and will be described for each problem.
+Most GP problems evaluate the evolved trees on a set of inputs, looking for some desired behavior or semantics.
+Structural problems (also referred to as constructed problems), however, have fitness functions that are entirely 
+based on the overall structure of the evolved trees (e.g., size, shape, distribution of particular leaves) without 
+any sort of ``evaluation" being involved.
 
 \subsubsection{K Landscapes}
 
