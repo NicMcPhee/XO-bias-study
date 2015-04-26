@@ -108,12 +108,18 @@ substantial impact on the performance of GP runs, but that the results are heavi
 degree problem dependent. In general, however, we find (Section~\ref{sec:Discussion}) that incorporating some crossover
 bias is, at least in these problems, usually either advantageous or neutral.
 
-This work is related to some previous work which aims to deliberately create an asymmetry 
-between parents (e.g.,~\cite{ryan1994pygmies,gohsexualselection}) as a mechanism to increase 
-diversity and (in the case of~\cite{ryan1994pygmies}) combat bloat. There has also been a 
-blossoming of work in the last few years based on the semantics of GP trees (e.g.,~\cite{McPhee:2008:SBB:1792694.1792707,moraglio2012geometric}). This includes a 
+\section{Related work}
+\label{sec:relatedWork}
+
+Several previous papers have deliberately created asymmetries between parents
+(e.g.,~\cite{gohsexualselection,ryan1994pygmies}) as a mechanism to increase 
+diversity and (in the case of~\cite{ryan1994pygmies}) combat bloat. 
+
+There has also been a 
+blossoming of work in the last few years based on the semantics of GP trees 
+(e.g.,~\cite{McPhee:2008:SBB:1792694.1792707,moraglio2012geometric}). This includes a 
 number of proposed mechanisms that encourage or force semantic differences (asymmetries) 
-between parents and children~\cite{uy2011semantically,beadle2008semantically}. Some~\cite{uy2013roles} 
+between parents and children~\cite{beadle2008semantically,uy2011semantically}. Some~\cite{uy2013roles} 
 also \emph{limit} the differences between parents and offspring, in some sense reducing the impact 
 of asymmetries between the parents, and smoothing out the fitness landscape as a result. These 
 proposals typically focus on the semantic relationship between parents and children, however, and 
