@@ -504,8 +504,9 @@ bias-effective parameters.}
 
 \subsection{Regression Problems}
 
-Regression problems work backwards from a large data set of inputs and their respective outputs to generate an equation
-that fits the data. Success is here measured in hits, described in Section~\ref{sec:USChange}, with the exception that a test which has an fitness less than 0.01 is considered a hit. 
+Regression problems attempt to evolve a function that is able to match a given set of input-output pairs. 
+Success is here measured in hits, where a ``hit'' is awarded when the output of the evolved function is within 0.01
+of the target value.
 
 \subsubsection{Pagie-1 Problem}
 
