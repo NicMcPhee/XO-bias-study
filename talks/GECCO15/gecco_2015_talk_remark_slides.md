@@ -14,7 +14,10 @@ _Keep this short since the audience will mostly be quite familiar with these ide
 
 1. Define Root Parent
 2. Define Non-Root Parent
-        
+
+.right[![Right-aligned image](../../LaTeX/Plots/Root_parent_illustration_no_triangle.pdf)]
+ 
+       
 ---
 
 ## Impact of Crossover Asymmetry on Semantics
@@ -24,6 +27,8 @@ _Keep this short since the audience will mostly be quite familiar with these ide
 3. We observed in one setting (show MICS plot?) that Fitness of Offspring Tends to Improve When Root Parent Has Better Fitness Than Non-Root Parent
 4. Is this true more generally?
 5. Mention some of the related work, especially the semantic work focusing on _reducing_ the asymmetry between parents and children. Focus is typically on relationship between parents and offspring, though, where we're looking at asymmetries between parents. Other work (e.g., Ryan's "Pygmies and civil servants" and sexual selection) tries to _increase_ the asymmetry between parents, but doesn't then use that to structure the crossover.
+
+---
 
 ## Introduce Crossover Bias
 
