@@ -70,11 +70,11 @@
 						Here we try this on a variety of problems and configurations.
 					</p>
 					<p>
-						Results are weakly positive:
+						Results are slightly positive:
 						<ul>
 							<li>Definitely improved results for some situations</li>
 							<li>In general led to an improvement or no difference</li>
-							<li>Were some instances where it hurt</li>
+							<li>In some instances it hurt</li>
 						</ul>
 					</p>
 					<p>
@@ -115,18 +115,103 @@
 				</section>
 
 				<section>
-					<h2>Crossover bias</h2>
+					<h2>Crossover bias probability</h2>
 
-					<p>
-						Introduce <em>crossover bias probability</em>:
-						<blockquote>
-							The likelihood that
+					<blockquote>
+						The likelihood that
 						parents will be swapped (if necessary) to ensure that the more fit
 						parent is the root parent.
 					</blockquote>
+					<p>
+						Explore crossover bias probabilities 0, 0.25, 0.5, 0.75, &amp; 1.00.
+					</p>
+
+					<ul>
+						<li>0.00 bias probability: Never swap; like regular crossover</li>
+						<li>1.00: <em>Always</em> ensure more fit parent is root parent.</li>
+					</ul>
+
+					<p>
+						Note: We have 50% chance that more fit parent is root parent even
+						without swapping. E.g., 50% bias implies 75% of
+						crossovers have more fit parent as root parent.
+					</p>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Experimental setup</h2>
+
+					<div class="twocol">
+						<p>
+							<b>5 test problems</b>
+						</p>
+						<p>
+							<ul>
+								<li>K Landscapes (K=6)</li>
+								<li>ORDERTREE</li>
+								<li>U.S. Change</li>
+								<li>Sine regression</li>
+								<li>Pagie-1 regression</li>
+							</ul>
+						</p>
+
+						<br>
+
+						<table>
+							<thead>
+								<tr>
+									<th>Parameter</th>
+									<th>Values</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Crossover bias</td>
+									<td>0, 0.25, 0.5, 0.75, 1</td>
+								</tr>
+								<tr>
+									<td>Tournament size</td>
+									<td>2, 3, 5, 7</td>
+								</tr>
+								<tr>
+									<td>Elitism</td>
+									<td>0 and 1%</td>
+								</tr>
+								<tr>
+									<td>Population size</td>
+									<td>1,024 and 10,240</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>
+						100 runs per treatment, each of 100 generations. <br>
+						All implemented in <a href="https://cs.gmu.edu/~eclab/projects/ecj/">ECJ</a>.
 					</p>
 				</section>
 
+				<section>
+					<h2>(Non-)Effective settings</h2>
+
+					<img align="right" src="figures/Sine_fitness_vs_gen_facets.svg">
+					<p>
+						Results indicate bias is (more) effective for some
+						settings.
+					</p>
+					<p>
+						Most effective for
+						<ul>
+							<li>Binary tournaments</li>
+							<li>No elitism</li>
+							<li>Larger populations (10,240)</li>
+						</ul>
+					</p>
+					<p>
+						Least effective for "reverse".
+					</p>
+				</section>
 			</section>
 
 				<section>
