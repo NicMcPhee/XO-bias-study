@@ -58,3 +58,9 @@ $heading1Size: 2.8em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   margin: 10px 10px;
 }
+
+.twocol {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+}
