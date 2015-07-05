@@ -48,6 +48,11 @@ $heading1Size: 2.8em;
 .reveal ul {
 	display: block;
 }
+
+.reveal blockquote {
+	font-style: normal;
+}
+
 .reveal section img {
 	border: 2px solid $mainColor;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
