@@ -278,6 +278,9 @@ body {
 .reveal blockquote {
   font-style: normal; }
 
+.reveal h1#contrast_color {
+  color: #c7c2c2; }
+
 .reveal section img {
   border: 2px solid #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
