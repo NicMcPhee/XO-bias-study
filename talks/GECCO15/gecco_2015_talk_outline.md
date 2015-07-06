@@ -38,7 +38,7 @@ _It turns out that basic Markdown (including Github Markdown) doesn't support ne
         1. Good for binary tournaments, bad for larger tournaments: Fig 10
         2. For bias effective settings, good for binary, neutral elsewhere: Fig 11 _Put these in their own column, making Figure 11 optional in the presentation, but included in the slide deck._
     5. Sine: Good for effective (Fig 12) and flat for non-effective (Fig 13). _Probably try to combine those onto one slide._
-    6. Looked at relative different in parent fitnesses over time (Fig 14). _Maybe make this "optional" depending on time?_
+    6. Looked at relative differences in parent fitnesses over time (Fig 14). _Maybe make this "optional" depending on time?_
 
 3. Conclusions
      1. Summary
