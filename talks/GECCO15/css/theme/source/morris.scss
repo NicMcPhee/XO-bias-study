@@ -69,3 +69,8 @@ $heading1Size: 2.8em;
   -moz-column-count: 2; /* Firefox */
   column-count: 2;
 }
+
+.reveal table {
+  break-before: column;
+  -webkit-column-break-before: always;
+}
