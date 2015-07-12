@@ -47,6 +47,7 @@
 					<p>
 						<a href="http://www.sigevo.org/gecco-2015/">GECCO 2015</a> / Madrid
 					</p>
+
 					<p>
 							<a href="http://twitter.com/NicMcPhee">@Nic McPhee</a> </br>
 							(w/ Kirbie Dramdahl &amp; David Donatucci) <br>
@@ -57,35 +58,46 @@
 				<section>
 					<section>
 						<h2>The big picture</h2>
+						<img align="right" style="padding: 15px; background-color: #FFFFFF" data-src="figures/Root_parent_illustration_no_triangle.png" width="45%">
+						<br>
+						<br>
+						<p>
+							Strong asymmetry between <em>root parent</em> and
+							<em>non-root parent</em> when performing sub-tree crossover.
+						</p>
+					</section>
+					<section>
+						<h2>The big picture</h2>
+						<img data-src="figures/Combined_fitness_over_time_no_dashed.svg" width="65%">
 						<p>
 							<a href="https://wiki.umn.edu/pub/UMMCSci/MICS2014TalksAndSlides/Analyzing_GP_with_Neo4j_MICS_2014.pdf">Earlier graph database work</a>
-							suggested we might want the "better" parent be the root parent.
+							suggested we might want the "better" parent be the root parent:
+							<em>crossover bias</em>.
 						</p>
-					<img data-src="figures/Combined_fitness_over_time_no_dashed.svg">
-					<aside class="notes">
-						Make sure I explain this figure!
-					</aside>
+						<aside class="notes">
+							Make sure I explain this figure!
+						</aside>
 					</section>
 
-				<section>
-					<h2>The big picture</h2>
-					<p>
-						Here we apply <em>crossover bias</em> to a variety of settings.
-					</p>
-					<p>
-						Results are slightly positive:
-						<ul>
-							<li>Definitely improved results for some situations</li>
-							<li>In general led to an improvement or no difference</li>
-							<li>In some instances it hurt</li>
-						</ul>
-					</p>
-					<p>
-						Suggests that parental asymmetries can matter and deserve further
-						study.
-					</p>
+					<section>
+						<h2>The big picture</h2>
+						<p>
+							Here we apply <em>crossover bias</em> to a variety of settings.
+						</p>
+						<p>
+							Results are slightly positive:
+							<ul>
+								<li>Definitely improved results for some situations</li>
+								<li>In general led to an improvement or no difference</li>
+								<li>In some instances it hurt</li>
+							</ul>
+						</p>
+						<p>
+							Suggests that parental asymmetries can matter and deserve further
+							study.
+						</p>
+					</section>
 				</section>
-			</section>
 
 			<section>
 				<h2>Outline</h2>
@@ -104,7 +116,7 @@
 
 			<section>
 				<section>
-					<h2>Sub-tree crossover</h2>
+					<h2>Parental asymmetries</h2>
 					<img align="right" style="padding: 15px; background-color: #FFFFFF" data-src="figures/Root_parent_illustration_no_triangle.png" width="40%">
 					<p>
 						Root parent vs. non-root parent
